@@ -1,0 +1,202 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { notices } from "./community/page";
+
+export default function HomePage() {
+  const images = [
+    "/images/home3.png",
+    "/images/gym2.jpg",
+    "/images/ART-2.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // 4초마다 변경
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <main>
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          {images.map((img, index) => (
+            <img
+              key={img}
+              src={img}
+              alt={`CEDAR HILL Global Prep ${index === 0 ? '홈 이미지' : index === 1 ? '체육관' : '예술 활동'}`}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          {/* 그라데이션 오버레이 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+        </div>
+
+        {/* 중앙 콘텐츠 영역 */}
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
+          <div className="flex flex-col items-center justify-center min-h-[500px] sm:min-h-[600px] text-center text-white">
+            <h1 
+              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4"
+              style={{
+                fontFamily: "var(--font-cinzel), serif",
+                color: "#ffffff",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)"
+              }}
+            >
+              CEDAR HILL
+              <br />
+              GLOBAL PREP
+            </h1>
+            <p 
+              className="text-lg sm:text-xl text-white drop-shadow-lg max-w-2xl mb-8"
+              style={{
+                textShadow: "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)"
+              }}
+            >
+              글로벌 기준의 유아 교육,
+              <br />
+              아이의 성장을 함께 설계합니다
+            </p>
+            
+            {/* CTA 버튼 그룹 */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              <a
+                href="tel:032-875-8733"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
+                style={{ backgroundColor: "var(--brand-burgundy)" }}
+              >
+                📞 입학 상담 신청하기
+              </a>
+              <a
+                href="/about"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl border-2 border-white/90 bg-white/10 backdrop-blur-sm"
+              >
+                더 알아보기
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* 슬라이더 인디케이터 */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2 rounded-full transition-all ${
+                index === currentIndex
+                  ? "w-8 bg-white"
+                  : "w-2 bg-white/50 hover:bg-white/75"
+              }`}
+              aria-label={`이미지 ${index + 1}로 이동`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* 1) 핵심 강점 3카드 */}
+      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
+        <div className="mb-12">
+          <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+          <p className="mt-4 text-zinc-600 text-lg max-w-2xl">
+            글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+        {[
+  {
+    title: "Accredited Global Curriculum",
+    desc: "미국 학력 인증기관 Cognia 인증을 기반으로, 전 세계에서 활용되는 ASI(Advantages School International) 정규 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 운영합니다.",
+  },
+  {
+    title: "Theme-Based STEAM & Whole-Child Growth",
+    desc: "STEAM 교육에 감각·정서·체육 활동을 융합한 테마 기반 수업으로, 놀이와 학습을 자연스럽게 연결합니다. 아이의 균형 잡힌 성장과 학습 몰입을 함께 설계합니다.",
+  },
+  {
+    title: "100% English Immersion + Individualized Tracking",
+    desc: "검증된 교사진과 100% 영어 몰입 환경에서 배움의 즐거움과 성취를 높입니다. Brightwheel 기반의 체계적인 관리로 학생 개별 학습과 전반적 성장을 지속적으로 지원합니다.",
+  },
+].map((item) => (
+  <div key={item.title} className="rounded-2xl border-2 bg-white p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+    <div
+      className="h-1 w-12 rounded-full"
+      style={{ background: "var(--brand-burgundy)" }}
+    />
+    <h3 className="mt-6 font-semibold" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
+    <p className="mt-4 text-base leading-7 text-zinc-700">{item.desc}</p>
+  </div>
+))}
+
+        
+        </div>
+      </section>
+
+      {/* 2) 대표 프로그램 3카드 */}
+      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
+        <div className="mb-12">
+          <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
+          <p className="mt-4 text-zinc-600 text-lg max-w-2xl">
+            학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            { title: "Early Literacy", desc: "읽기·말하기 기반의 언어 발달 프로그램", img: "/images/programs-hero.jpg" },
+            { title: "STEAM Activity", desc: "탐구·실험 중심의 창의 융합 활동", img: "/images/AI-classroom-2.jpg" },
+            { title: "Social & Emotional", desc: "사회성·정서 발달을 돕는 활동", img: "/images/gym2.jpg" },
+          ].map((p) => (
+            <div key={p.title} className="overflow-hidden rounded-2xl border-2 bg-white shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="aspect-[16/9] w-full">
+                <img src={p.img} alt={`${p.title} 프로그램 이미지`} className="h-full w-full object-cover" />
+              </div>
+              <div className="p-8">
+                <h3 className="font-semibold" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>
+                <p className="mt-4 text-base leading-7 text-zinc-700">{p.desc}</p>
+                <a href="/programs" className="mt-6 inline-block text-sm font-semibold hover:underline"
+                   style={{ color: "var(--brand-burgundy)" }}>
+                  프로그램 보기 →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3) 공지사항 3개 */}
+      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
+        <div className="mb-12 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <p className="mt-4 text-zinc-600 text-lg">
+              최신 소식과 안내를 확인하세요.
+            </p>
+          </div>
+          <a href="/community" className="text-sm font-semibold hover:underline"
+             style={{ color: "var(--brand-burgundy)" }}>
+            커뮤니티로 이동 →
+          </a>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {notices.slice(0, 3).map((n) => (
+            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="text-xs text-zinc-500">{n.date}</div>
+              <div className="mt-4 font-semibold" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
+              <p className="mt-4 text-base leading-7 text-zinc-700">{n.summary}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}

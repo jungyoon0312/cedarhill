@@ -37,12 +37,7 @@ function NoticeCard({ n }: { n: Notice }) {
         </div>
         <div className="text-xs text-zinc-500 whitespace-nowrap">{n.date}</div>
       </div>
-      <p className="mt-4 text-sm sm:text-base leading-relaxed text-zinc-700">{n.summary}</p>
-
-      {/* 나중에 상세 공지 페이지 연결하면 Link로 바꾸면 됨 */}
-      <button className="mt-4 text-sm font-medium hover:underline" style={{ color: "var(--brand-burgundy)" }}>
-        자세히 보기
-      </button>
+      <div className="mt-4 text-sm sm:text-base leading-relaxed text-zinc-700 whitespace-pre-line">{n.summary}</div>
     </div>
   );
 }
@@ -79,7 +74,7 @@ export const notices: Notice[] = [
     title: "씨더힐 글로벌 프렙 유치부 입학설명회",
     date: "2026-01-24",
     summary:
-      "2026년 1월 24일 (토) 11시 입학설명회를 진행합니다. 장소: 인천시 미추홀구 학익동 30 씨더힐 글로벌 프렙. 입학상담: 032-875-8733-4",
+      "날짜: 2026년 1월 24일 (토) 11시\n장소: 인천시 미추홀구 학익동 30 씨더힐 글로벌 프렙\n연락처: 032-875-8733~4",
   },
   {
     category: "공지",

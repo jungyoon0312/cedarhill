@@ -181,11 +181,83 @@ export default function ProgramsPage() {
           <p className="mt-4 text-base text-zinc-600 mb-6">
             정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          {/* Wittiverse 상세 섹션 */}
+          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>WITTYVERSE Digital Learning</h3>
+              <p className="text-lg font-semibold mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
+              <p className="text-lg font-semibold mb-4 text-zinc-800">
+                창의력과 사고력을 키우는 AI 메타버스 학습공간
+              </p>
+              <p className="text-base text-zinc-700 leading-7 mb-4">
+                즐거운 학습과 디지털 체험을 통해<br />
+                성장하는 아이들을 위한 교육 플랫폼
+              </p>
+              <p className="text-base text-zinc-700 leading-7">
+                위티버스는 미래 교육 변화를 예측하여, 메타버스 플랫폼 공간에서 일상과 삶, 발달과 놀이 등을 아우르는 총체적 경험을 제공하는 슈가레인 키즈 전용 메타버스 플랫폼입니다.
+              </p>
+              <p className="mt-4 text-sm text-zinc-600 italic">
+                놀이처럼 배우고, 도전하며 성장하고, 창의와 사고를 여는 창의융합 프로그램<br />
+                미래를 살아갈 핵심 역량을 기르는 글로벌 키즈 러닝 랩
+              </p>
+            </div>
+
+            {/* 4가지 핵심 교육 프로그램 */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>핵심 교육 프로그램</h4>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Creative Convergence Curriculum</h5>
+                  <p className="text-sm text-zinc-600 mb-1">융합형 커리큘럼</p>
+                  <p className="text-sm text-zinc-700">(한글, 수학, 영어, 창의, 예술 등)<br />주제를 다각도로 탐색하며 사고력 확장</p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Play-based Active Learning</h5>
+                  <p className="text-sm text-zinc-600 mb-1">'흥미 → 몰입 → 성취'로 이어지는</p>
+                  <p className="text-sm text-zinc-700">자기주도 학습 환경 제공</p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Digital & Analog Hybrid System</h5>
+                  <p className="text-sm text-zinc-600 mb-1">디지털 & 아날로그 하이브리드 시스템</p>
+                  <p className="text-sm text-zinc-700">AI, 인터랙티브 콘텐츠, 실물 조작 활동을 유기적으로 결합<br />단순 디지털 소비형 콘텐츠를 넘어선 '체험형 학습 환경' 제공</p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Project-based & Team Learning</h5>
+                  <p className="text-sm text-zinc-600 mb-1">팀 기반 프로젝트 수행을 통해 협업,</p>
+                  <p className="text-sm text-zinc-700">리더십, 의사소통 능력 함양<br />혼자가 아닌 '함께 자라는 경험'을 핵심 가치로 설정</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 3가지 주요 특징 */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주요 특징</h4>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Personalized Learning Data</h5>
+                  <p className="text-sm text-zinc-600 mb-1">개인 학습 데이터</p>
+                  <p className="text-sm text-zinc-700">학습 수행 이력과 활동별 성취를 개인 학습 리포터로 제공합니다.</p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Self-Directed Learning</h5>
+                  <p className="text-sm text-zinc-600 mb-1">자기주도 학습</p>
+                  <p className="text-sm text-zinc-700">개인 태블릿 기반 디지털 학습 환경과 맞춤형 AI 튜터 기능으로 자기주도 학습 역량을 강화합니다.</p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Concept-Based Thinking</h5>
+                  <p className="text-sm text-zinc-600 mb-1">개념 기반 사고 학습</p>
+                  <p className="text-sm text-zinc-700">국제 학교 IB 기반의 개념 중심 학습 설계로 문제 해결력과 사고력이 향상됩니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 기타 Co-Curricular Activities */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { title: "Cheerleading", desc: "팀워크와 자신감을 기르는 치어리딩 활동" },
               { title: "Gym", desc: "대형 낙하산 등 다양한 체육 활동을 통한 신체 발달" },
-              { title: "Wittiverse", desc: "자기주도 학습을 위한 인터랙티브 디지털 학습" },
               { title: "Renzulli-AI Coding", desc: "로봇 조작을 통한 AI 코딩 프로그램" },
               { title: "Art", desc: "다양한 미술 활동을 통한 창의성 발달" },
             ].map((activity) => (

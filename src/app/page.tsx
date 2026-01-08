@@ -192,7 +192,7 @@ export default function HomePage() {
             <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="text-xs text-zinc-500 mb-2 sm:mb-3">{n.date}</div>
               <div className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
-              <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">{n.summary}</p>
+              <div className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 whitespace-pre-line">{n.summary}</div>
             </Link>
           ))}
         </div>

@@ -26,6 +26,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/90">
               <li><a href="/about" className="hover:underline">소개</a></li>
               <li><a href="/programs" className="hover:underline">프로그램</a></li>
+              <li><a href="/co-curricular-activities" className="hover:underline">Co-Curricular</a></li>
               <li><a href="/admissions" className="hover:underline">입학</a></li>
               <li><a href="/community" className="hover:underline">커뮤니티</a></li>
             </ul>

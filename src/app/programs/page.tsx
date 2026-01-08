@@ -200,6 +200,7 @@ export default function ProgramsPage() {
             </div>
           </div>
         </div>
+        </div>
         )}
 
         {/* 교육 특징 탭 */}

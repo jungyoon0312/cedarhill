@@ -322,11 +322,75 @@ export default function ProgramsPage() {
             </div>
           </div>
 
+          {/* Power Place 상세 섹션 */}
+          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>Cedar Hill Power Place</h3>
+              <p className="text-base text-zinc-700 leading-7 mb-4">
+                뉴스포츠, 놀이체육, 키즈성장 스포츠를 통한 전인적 신체 발달 프로그램입니다.
+              </p>
+            </div>
+
+            {/* 3가지 주요 프로그램 */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주요 프로그램</h4>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>뉴스포츠</h5>
+                  <p className="text-sm text-zinc-700">새로운 스포츠 활동을 통한 다양한 체험</p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>놀이체육</h5>
+                  <p className="text-sm text-zinc-700">놀이 중심의 즐거운 체육 활동</p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>키즈성장 스포츠</h5>
+                  <p className="text-sm text-zinc-700">연령별 발육 발달에 맞춘 특화된 교육</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 운동발달검사 */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>운동발달검사 (Motor Development Test)</h4>
+              <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                <p className="text-sm text-zinc-700">
+                  우리 아이의 성장 발달 수준을 측정할 수 있는 전문검사 PST를 제공합니다.
+                </p>
+              </div>
+            </div>
+
+            {/* 체육 프로그램 상세 */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>체육 프로그램</h4>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>축구, 발레, 치어리딩</h5>
+                  <ul className="text-sm text-zinc-700 space-y-1 list-disc pl-5">
+                    <li>'생각하는 힘' 판단력과 시야 확장</li>
+                    <li>창의적인 놀이 중심</li>
+                    <li>연령별 발육 발달에 맞춰 특화된 교육</li>
+                  </ul>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Performance PE (퍼포먼스 체육)</h5>
+                  <p className="text-sm text-zinc-700">
+                    매달 특별한 퍼포먼스 체육 활동을 진행합니다.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Snag Golf (스내그 골프)</h5>
+                  <p className="text-sm text-zinc-700">
+                    골프를 익힐 수 있도록 도와주는 프로그램입니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* 기타 Co-Curricular Activities */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-1">
             {[
-              { title: "Cheerleading", desc: "팀워크와 자신감을 기르는 치어리딩 활동" },
-              { title: "Gym", desc: "대형 낙하산 등 다양한 체육 활동을 통한 신체 발달" },
               { title: "Art", desc: "다양한 미술 활동을 통한 창의성 발달" },
             ].map((activity) => (
               <div key={activity.title} className="rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>

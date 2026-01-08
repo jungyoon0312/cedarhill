@@ -185,7 +185,7 @@ export default function ProgramsPage() {
           {/* Wittiverse 상세 섹션 */}
           <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>WITTYVERSE Digital Learning</h3>
+              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>Digital Wittiverse</h3>
               <p className="text-lg font-semibold mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
               <p className="text-lg font-semibold mb-4 text-zinc-800">
                 창의력과 사고력을 키우는 AI 메타버스 학습공간

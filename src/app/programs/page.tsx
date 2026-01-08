@@ -253,12 +253,80 @@ export default function ProgramsPage() {
             </div>
           </div>
 
+          {/* Renzulli-AI Coding 상세 섹션 */}
+          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>Renzulli-AI Coding</h3>
+              <p className="text-lg font-semibold mb-4" style={{ color: "var(--brand-burgundy)" }}>AI Coding Experience Center & Specialized Education Center</p>
+              <p className="text-base text-zinc-700 leading-7 mb-4">
+                다양한 AI 코딩 프로그램을 자유롭게 체험하고 놀이처럼 배울 수 있는 'AI Coding Experience Center'와, 다양한 AI 코딩 프로그램을 소그룹 수업으로 코딩 전문 강사와 함께 배우는 'AI Coding Specialized Education Center'를 운영합니다.
+              </p>
+            </div>
+
+            {/* AI Coding Experience Center */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>AI Coding Experience Center</h4>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg" style={{ background: "var(--brand-navy)" }}>
+                      01
+                    </div>
+                    <h5 className="font-semibold" style={{ color: "var(--brand-navy)" }}>체험 성장 중심 활동</h5>
+                  </div>
+                  <p className="text-sm text-zinc-700">
+                    컴퓨팅 사고력의 핵심 요소인 문제 분해/분석, 추상화, 알고리즘 설계, 자동화를 균형 있게 다루는 활동을 제공합니다.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg" style={{ background: "var(--brand-navy)" }}>
+                      02
+                    </div>
+                    <h5 className="font-semibold" style={{ color: "var(--brand-navy)" }}>자율 코딩 체험 활동</h5>
+                  </div>
+                  <p className="text-sm text-zinc-700">
+                    고급 디지털 환경에서 상상을 현실로 만드는 자율 코딩 체험 활동을 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Coding Specialized Education Center */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>AI Coding Specialized Education Center</h4>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg" style={{ background: "var(--brand-burgundy)" }}>
+                      01
+                    </div>
+                    <h5 className="font-semibold" style={{ color: "var(--brand-navy)" }}>렌쥴리 기반 커리큘럼</h5>
+                  </div>
+                  <p className="text-sm text-zinc-700">
+                    렌쥴리 부설 연구소의 교육 이론을 바탕으로 학교 교육과정과 연계하여 개발된 AI 코딩 교육 커리큘럼으로 운영됩니다.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg" style={{ background: "var(--brand-burgundy)" }}>
+                      02
+                    </div>
+                    <h5 className="font-semibold" style={{ color: "var(--brand-navy)" }}>팀 프로젝트 활동</h5>
+                  </div>
+                  <p className="text-sm text-zinc-700">
+                    팀 프로젝트 활동을 통해 생각하고, 소통하고, 함께 해결하는 힘을 키우는 교육을 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* 기타 Co-Curricular Activities */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { title: "Cheerleading", desc: "팀워크와 자신감을 기르는 치어리딩 활동" },
               { title: "Gym", desc: "대형 낙하산 등 다양한 체육 활동을 통한 신체 발달" },
-              { title: "Renzulli-AI Coding", desc: "로봇 조작을 통한 AI 코딩 프로그램" },
               { title: "Art", desc: "다양한 미술 활동을 통한 창의성 발달" },
             ].map((activity) => (
               <div key={activity.title} className="rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>

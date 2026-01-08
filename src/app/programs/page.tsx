@@ -1,10 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import type { Metadata } from "next";
 import SubHero from "../components/SubHero";
 
-export const metadata: Metadata = {
-  title: "프로그램 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep의 교육 프로그램을 소개합니다. Pre-K 과정, STEAM 기반 테마 학습, 통합형 활동 등 다양한 프로그램을 확인하세요.",
-};
+// Note: metadata는 클라이언트 컴포넌트에서 사용할 수 없으므로 제거했습니다.
 
 type ProgramCardProps = {
   title: string;
@@ -27,6 +27,8 @@ function ProgramCard({ title, bullets }: ProgramCardProps) {
 }
 
 export default function ProgramsPage() {
+  const [activeTab, setActiveTab] = useState<"age" | "features" | "activities">("age");
+
   const programBlocks: ProgramCardProps[] = [
     {
       title: "Pre-K 과정",
@@ -97,7 +99,60 @@ export default function ProgramsPage() {
           </p>
         </div>
 
-        {/* 연령별 프로그램 */}
+        {/* 탭 네비게이션 */}
+        <div className="border-b-2" style={{ borderColor: "var(--brand-navy)" }}>
+          <div className="flex flex-wrap gap-2 sm:gap-4">
+            <button
+              onClick={() => setActiveTab("age")}
+              className={`px-6 py-3 text-base font-semibold transition-all ${
+                activeTab === "age"
+                  ? "text-white border-b-4"
+                  : "text-zinc-600 hover:text-zinc-800"
+              }`}
+              style={
+                activeTab === "age"
+                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
+                  : {}
+              }
+            >
+              연령별 프로그램
+            </button>
+            <button
+              onClick={() => setActiveTab("features")}
+              className={`px-6 py-3 text-base font-semibold transition-all ${
+                activeTab === "features"
+                  ? "text-white border-b-4"
+                  : "text-zinc-600 hover:text-zinc-800"
+              }`}
+              style={
+                activeTab === "features"
+                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
+                  : {}
+              }
+            >
+              교육 특징
+            </button>
+            <button
+              onClick={() => setActiveTab("activities")}
+              className={`px-6 py-3 text-base font-semibold transition-all ${
+                activeTab === "activities"
+                  ? "text-white border-b-4"
+                  : "text-zinc-600 hover:text-zinc-800"
+              }`}
+              style={
+                activeTab === "activities"
+                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
+                  : {}
+              }
+            >
+              Co-Curricular Activities
+            </button>
+          </div>
+        </div>
+
+        {/* 연령별 프로그램 탭 */}
+        {activeTab === "age" && (
+        <div className="space-y-8">
         <div>
           <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>연령별 프로그램</h2>
           <p className="mt-4 text-base text-zinc-600 mb-8">
@@ -160,9 +215,11 @@ export default function ProgramsPage() {
             </div>
           </div>
         </div>
+        )}
 
-        {/* 프로그램 카드 */}
-        <div>
+        {/* 교육 특징 탭 */}
+        {activeTab === "features" && (
+        <div className="space-y-8">
           <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
           <p className="mt-4 text-base text-zinc-600">
             주요 교육 특징을 영역별로 정리하였습니다.
@@ -174,9 +231,11 @@ export default function ProgramsPage() {
             ))}
           </div>
         </div>
+        )}
 
-        {/* Co-Curricular Activities */}
-        <div>
+        {/* Co-Curricular Activities 탭 */}
+        {activeTab === "activities" && (
+        <div className="space-y-8">
           <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Co-Curricular Activities</h2>
           <p className="mt-4 text-base text-zinc-600 mb-6">
             정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
@@ -470,6 +529,7 @@ export default function ProgramsPage() {
             </div>
           </div>
         </div>
+        )}
       </section>
     </>
   );

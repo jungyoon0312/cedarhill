@@ -28,16 +28,16 @@ export default function AdmissionsPage() {
     <>
       <SubHero title="입학" breadcrumb="HOME > 입학" />
 
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:py-28 space-y-16 bg-white">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-10 sm:space-y-14 md:space-y-16 bg-white">
         {/* 안내 요약 */}
-        <div className="space-y-6 max-w-3xl">
-          <p className="text-zinc-800 text-base sm:text-lg leading-relaxed">
+        <div className="space-y-4 sm:space-y-6 max-w-3xl">
+          <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
             CEDAR HILL Global Prep의 입학은 사전 상담을 통해 진행되며,
             학생의 연령 및 발달 단계에 따라 적합한 과정이 안내됩니다.
           </p>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="text-xs sm:text-sm text-zinc-500">교육 시작</div>
               <div className="mt-3 font-semibold text-base sm:text-lg" style={{ color: "var(--brand-navy)" }}>2026년 3월</div>
             </div>
@@ -53,9 +53,9 @@ export default function AdmissionsPage() {
         </div>
 
         {/* 일과표 */}
-        <div className="space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-title mb-4" style={{ color: "var(--brand-navy)" }}>Daily Schedule</h2>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
+        <div className="space-y-4 sm:space-y-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Daily Schedule</h2>
+          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed">
             일과표는 기관 운영에 따라 일부 조정될 수 있습니다.
           </p>
 
@@ -84,13 +84,13 @@ export default function AdmissionsPage() {
         </div>
 
         {/* 입학 절차 */}
-        <div className="space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-title mb-4" style={{ color: "var(--brand-navy)" }}>Admission Process</h2>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
+        <div className="space-y-4 sm:space-y-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Admission Process</h2>
+          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed">
             입학 절차는 다음과 같이 진행됩니다.
           </p>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 step: "1",

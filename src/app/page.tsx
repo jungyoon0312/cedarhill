@@ -103,15 +103,15 @@ export default function HomePage() {
       </section>
 
       {/* 1) 핵심 강점 3카드 */}
-      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
-          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
         {[
   {
     title: "Accredited Global Curriculum",
@@ -126,13 +126,13 @@ export default function HomePage() {
     desc: "검증된 교사진과 100% 영어 몰입 환경에서 배움의 즐거움과 성취를 높입니다. Brightwheel과 ClassDojo 기반의 체계적인 관리로 학생 개별 학습과 전반적 성장을 지속적으로 지원하며, 학부모와의 정기적인 소통을 통해 교육 경험을 확장합니다.",
   },
 ].map((item) => (
-  <div key={item.title} className="rounded-2xl border-2 bg-white p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+  <div key={item.title} className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
     <div
       className="h-1 w-12 rounded-full"
       style={{ background: "var(--brand-burgundy)" }}
     />
-    <h3 className="mt-6 text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
-    <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{item.desc}</p>
+    <h3 className="mt-4 sm:mt-6 text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
+    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">{item.desc}</p>
   </div>
 ))}
 
@@ -141,15 +141,15 @@ export default function HomePage() {
       </section>
 
       {/* 2) 대표 프로그램 3카드 */}
-      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
-          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
           {[
             { title: "Early Literacy", desc: "읽기·말하기 기반의 언어 발달 프로그램", img: "/images/programs-hero.jpg" },
             { title: "STEAM Activity", desc: "탐구·실험 중심의 창의 융합 활동", img: "/images/AI-classroom-2.jpg" },
@@ -173,26 +173,26 @@ export default function HomePage() {
       </section>
 
       {/* 3) 공지사항 3개 */}
-      <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
-        <div className="mb-12 flex items-end justify-between gap-4">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
+        <div className="mb-8 sm:mb-12 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
-            <p className="text-base sm:text-lg text-zinc-600 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
               최신 소식과 안내를 확인하세요.
             </p>
           </div>
-          <a href="/community" className="text-sm font-semibold hover:underline"
+          <a href="/community" className="text-xs sm:text-sm font-semibold hover:underline"
              style={{ color: "var(--brand-burgundy)" }}>
             커뮤니티로 이동 →
           </a>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
           {notices.slice(0, 3).map((n) => (
-            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="text-xs text-zinc-500 mb-3">{n.date}</div>
-              <div className="text-base sm:text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
-              <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{n.summary}</p>
+            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="text-xs text-zinc-500 mb-2 sm:mb-3">{n.date}</div>
+              <div className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
+              <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">{n.summary}</p>
             </Link>
           ))}
         </div>

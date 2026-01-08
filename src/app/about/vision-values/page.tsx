@@ -53,11 +53,11 @@ export default function AboutVisionValuesPage() {
     <>
       <SubHero title="비전과 가치" breadcrumb="HOME > 소개 > 비전과 가치" />
 
-      <section className="mx-auto max-w-6xl px-4 py-16 space-y-12">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16 space-y-8 sm:space-y-12">
         {/* 미션 */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">미션</h2>
-          <div className="mt-4 rounded-2xl border bg-white p-6 shadow-sm">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">미션</h2>
+          <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our mission is to cultivate each student's potential through meaningful learning experiences that integrate academic excellence, character education, and global awareness. We strive to guide students to become confident, compassionate, and innovative leaders who contribute positively to their communities and the world.
             </p>
@@ -69,8 +69,8 @@ export default function AboutVisionValuesPage() {
 
         {/* 비전 */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">비전</h2>
-          <div className="mt-4 rounded-2xl border bg-white p-6 shadow-sm">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">비전</h2>
+          <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our vision represents our commitment to discovering each student's unique potential and nurturing it as the foundation for growth into future leaders. By balancing academic excellence with character development, we empower well-rounded individuals to thrive in an interconnected world—not only adapting to the future, but shaping it with compassion, integrity, and innovative thinking.
             </p>
@@ -82,12 +82,12 @@ export default function AboutVisionValuesPage() {
 
         {/* 핵심 가치 카드 */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">핵심 가치</h2>
-          <p className="mt-3 text-sm text-zinc-500 leading-relaxed">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">핵심 가치</h2>
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-zinc-500 leading-relaxed">
             교육 운영 전반에서 아래 가치를 기준으로 학습 경험을 설계합니다.
           </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 sm:mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
               <ValueCard key={v.title} title={v.title} desc={v.desc} />
             ))}

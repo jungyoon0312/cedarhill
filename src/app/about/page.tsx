@@ -27,15 +27,15 @@ const cards = [
 
 export default function AboutPage() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-24 sm:py-28 bg-white">
+    <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 bg-white">
       {/* 타이틀 */}
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
-      <p className="text-base sm:text-lg text-zinc-700 max-w-3xl leading-relaxed">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
+      <p className="text-sm sm:text-base md:text-lg text-zinc-700 max-w-3xl leading-relaxed">
         CEDAR HILL Global Prep을 소개합니다.
       </p>
 
       {/* 카드 그리드 */}
-      <div className="mt-16 grid gap-6 sm:grid-cols-2">
+      <div className="mt-10 sm:mt-14 md:mt-16 grid gap-4 sm:gap-6 sm:grid-cols-2">
         {cards.map((card) => (
           <Link
             key={card.title}

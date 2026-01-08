@@ -105,10 +105,10 @@ export default function CommunityPage() {
     <>
       <SubHero title="커뮤니티" breadcrumb="HOME > 커뮤니티" />
 
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:py-28 space-y-16 bg-white">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-10 sm:space-y-14 md:space-y-16 bg-white">
         {/* 안내 요약 */}
-        <div className="space-y-6 max-w-3xl">
-          <p className="text-zinc-800 text-base sm:text-lg leading-relaxed">
+        <div className="space-y-4 sm:space-y-6 max-w-3xl">
+          <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
             커뮤니티에서는 CEDAR HILL Global Prep의 공지사항과 주요 소식,
             활동 안내를 확인하실 수 있습니다. 학부모와의 원활한 소통을 위해
             정기적으로 정보를 업데이트합니다.
@@ -124,15 +124,15 @@ export default function CommunityPage() {
         </div>
 
         {/* 공지사항 */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
             <button className="text-xs sm:text-sm font-medium hover:underline" style={{ color: "var(--brand-burgundy)" }}>
               전체 보기
             </button>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-2">
+          <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
             {notices.map((n) => (
               <NoticeCard key={`${n.date}-${n.title}`} n={n} />
             ))}
@@ -140,12 +140,12 @@ export default function CommunityPage() {
         </div>
 
         {/* 갤러리 */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: "var(--brand-navy)" }}>갤러리</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: "var(--brand-navy)" }}>갤러리</h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((item) => (
               <GalleryCard key={`${item.date}-${item.title}`} item={item} />
             ))}

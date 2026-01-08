@@ -14,10 +14,10 @@ type ProgramCardProps = {
 
 function ProgramCard({ title, bullets }: ProgramCardProps) {
   return (
-    <div className="rounded-2xl border-2 bg-white p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-      <div className="h-1 w-12 rounded-full mb-6" style={{ background: "var(--brand-burgundy)" }} />
-      <h3 className="font-semibold" style={{ color: "var(--brand-navy)" }}>{title}</h3>
-      <ul className="mt-6 list-disc pl-5 space-y-2.5 text-sm sm:text-base leading-relaxed text-zinc-700">
+    <div className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+      <div className="h-1 w-12 rounded-full mb-4 sm:mb-6" style={{ background: "var(--brand-burgundy)" }} />
+      <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>{title}</h3>
+      <ul className="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">
         {bullets.map((b, idx) => (
           <li key={`${title}-${idx}`}>{b}</li>
         ))}
@@ -84,16 +84,16 @@ export default function ProgramsPage() {
     <>
       <SubHero title="프로그램" breadcrumb="HOME > 프로그램" />
 
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:py-28 space-y-16 bg-white">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-8 sm:space-y-12 md:space-y-16 bg-white">
         {/* 프로그램 소개 */}
-        <div className="space-y-5 max-w-3xl">
-          <p className="text-zinc-800 text-base sm:text-lg leading-relaxed">
+        <div className="space-y-3 sm:space-y-5 max-w-3xl">
+          <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
             CEDAR HILL Global Prep은 유아기의 핵심 발달 영역을 고려한
             통합형 커리큘럼을 기반으로 교육 프로그램을 운영합니다.
             모든 과정은 영어 몰입 환경에서 진행되며, 학생의 성장 단계에 맞춘
             학습 경험을 제공합니다.
           </p>
-          <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
+          <p className="text-zinc-700 text-xs sm:text-sm md:text-base leading-relaxed">
             본 페이지의 프로그램 구성은 기관 운영 방향에 따라 조정될 수 있으며,
             상세 사항은 상담을 통해 안내드립니다.
           </p>
@@ -219,13 +219,13 @@ export default function ProgramsPage() {
 
         {/* 교육 특징 탭 */}
         {activeTab === "features" && (
-        <div className="space-y-8">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-title mb-4" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed mb-6">
+        <div className="space-y-6 sm:space-y-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
+          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed mb-4 sm:mb-6">
             주요 교육 특징을 영역별로 정리하였습니다.
           </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 sm:mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {programBlocks.map((p) => (
               <ProgramCard key={p.title} title={p.title} bullets={p.bullets} />
             ))}
@@ -235,38 +235,38 @@ export default function ProgramsPage() {
 
         {/* Co-Curricular Activities 탭 */}
         {activeTab === "activities" && (
-        <div className="space-y-8">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight font-title mb-4" style={{ color: "var(--brand-navy)" }}>Co-Curricular Activities</h2>
-          <p className="text-sm sm:text-base text-zinc-600 mb-6 leading-relaxed">
+        <div className="space-y-6 sm:space-y-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Co-Curricular Activities</h2>
+          <p className="text-xs sm:text-sm md:text-base text-zinc-600 mb-4 sm:mb-6 leading-relaxed">
             정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
           </p>
 
           {/* Wittiverse 상세 섹션 */}
-          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <div className="mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3" style={{ color: "var(--brand-navy)" }}>Digital Wittiverse</h3>
-              <p className="text-base sm:text-lg font-semibold mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
-              <p className="text-base sm:text-lg font-semibold mb-4 text-zinc-800 leading-relaxed">
+          <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>Digital Wittiverse</h3>
+              <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
+              <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-zinc-800 leading-relaxed">
                 창의력과 사고력을 키우는 AI 메타버스 학습공간
               </p>
-              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
                 즐거운 학습과 디지털 체험을 통해<br />
                 성장하는 아이들을 위한 교육 플랫폼
               </p>
-              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
                 위티버스는 미래 교육 변화를 예측하여, 메타버스 플랫폼 공간에서 일상과 삶, 발달과 놀이 등을 아우르는 총체적 경험을 제공하는 슈가레인 키즈 전용 메타버스 플랫폼입니다.
               </p>
-              <p className="mt-4 text-sm text-zinc-600 italic">
+              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-zinc-600 italic leading-relaxed">
                 놀이처럼 배우고, 도전하며 성장하고, 창의와 사고를 여는 창의융합 프로그램<br />
                 미래를 살아갈 핵심 역량을 기르는 글로벌 키즈 러닝 랩
               </p>
             </div>
 
             {/* 4가지 핵심 교육 프로그램 */}
-            <div className="mb-6">
-              <h4 className="text-base sm:text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>핵심 교육 프로그램</h4>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+            <div className="mb-4 sm:mb-6">
+              <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 교육 프로그램</h4>
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
                   <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Creative Convergence Curriculum</h5>
                   <p className="text-xs sm:text-sm text-zinc-600 mb-1 leading-relaxed">융합형 커리큘럼</p>
                   <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">(한글, 수학, 영어, 창의, 예술 등)<br />주제를 다각도로 탐색하며 사고력 확장</p>
@@ -291,7 +291,7 @@ export default function ProgramsPage() {
 
             {/* 3가지 주요 특징 */}
             <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주요 특징</h4>
+              <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>주요 특징</h4>
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
                   <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Personalized Learning Data</h5>
@@ -313,7 +313,7 @@ export default function ProgramsPage() {
           </div>
 
           {/* Renzulli-AI Coding 상세 섹션 */}
-          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+          <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
             <div className="mb-6">
               <h3 className="text-xl sm:text-2xl font-bold mb-3" style={{ color: "var(--brand-navy)" }}>Renzulli-AI Coding</h3>
               <p className="text-base sm:text-lg font-semibold mb-4" style={{ color: "var(--brand-burgundy)" }}>AI Coding Experience Center & Specialized Education Center</p>
@@ -448,22 +448,22 @@ export default function ProgramsPage() {
           </div>
 
           {/* NADAUN ART 상세 섹션 */}
-          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <div className="mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3" style={{ color: "var(--brand-navy)" }}>NADAUN ART</h3>
-              <p className="text-base sm:text-lg font-semibold mb-4 text-zinc-800 italic leading-relaxed">
+          <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>NADAUN ART</h3>
+              <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-zinc-800 italic leading-relaxed">
                 "모든 아이는 이미 자기만의 세계를 그려 나간다"
               </p>
-              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
                 NADAUN은 아이 안의 빛과 그릇이 나답게 자라도록 옆에 선다.
               </p>
             </div>
 
             {/* 교육과정 레벨 */}
-            <div className="mb-6">
-              <h4 className="text-base sm:text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Curriculum Level (교육과정)</h4>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+            <div className="mb-4 sm:mb-6">
+              <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Curriculum Level (교육과정)</h4>
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
                   <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Da Vinci</h5>
                   <p className="text-sm text-zinc-600 mb-2">4-6세</p>
                   <p className="text-sm text-zinc-700">기초표현+탐색+재료 경험</p>

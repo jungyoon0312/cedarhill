@@ -12,7 +12,7 @@ export default function ContactPage() {
     <>
       <SubHero title="문의" breadcrumb="HOME > 소개 > 문의" />
       <section className="mx-auto max-w-6xl px-4 py-16 space-y-6">
-        <p className="text-zinc-700 leading-7">
+        <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
           입학 및 프로그램 관련 문의는 아래 연락처로 상담해 주시기 바랍니다.
         </p>
 
@@ -27,10 +27,10 @@ export default function ContactPage() {
             className="h-1 w-16 rounded-full mb-4"
             style={{ background: "var(--brand-burgundy)" }}
           />
-          <div className="text-sm text-zinc-600">입학 상담</div>
-          <div className="mt-2 text-lg font-semibold">032-875-8733~4</div>
+          <div className="text-xs sm:text-sm text-zinc-600">입학 상담</div>
+          <div className="mt-2 text-base sm:text-lg font-semibold">032-875-8733~4</div>
 
-          <p className="mt-2 text-sm text-zinc-600">
+          <p className="mt-2 text-sm leading-relaxed text-zinc-600">
             상담을 통해 과정/일정/세부 안내를 개별 제공해 드립니다.
           </p>
         </div>

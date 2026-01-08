@@ -29,8 +29,8 @@ export default function AboutPage() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24 sm:py-28 bg-white">
       {/* 타이틀 */}
-      <h1 className="font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>소개</h1>
-      <p className="mt-4 text-lg text-zinc-700 max-w-3xl">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
+      <p className="text-base sm:text-lg text-zinc-700 max-w-3xl leading-relaxed">
         CEDAR HILL Global Prep을 소개합니다.
       </p>
 
@@ -46,14 +46,14 @@ export default function AboutPage() {
               background: "linear-gradient(to bottom, rgba(30, 58, 95, 0.03), rgba(255, 255, 255, 0.95))"
             }}
           >
-            <div className="p-8">
+            <div className="p-6 sm:p-8">
               <h2 
-                className="font-bold group-hover:underline"
+                className="text-lg sm:text-xl font-bold mb-3 group-hover:underline"
                 style={{ color: "var(--brand-navy)" }}
               >
                 {card.title}
               </h2>
-              <p className="mt-4 text-base leading-7 text-zinc-600">
+              <p className="text-sm sm:text-base leading-relaxed text-zinc-600">
                 {card.desc}
               </p>
             </div>

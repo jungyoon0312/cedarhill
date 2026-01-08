@@ -13,7 +13,7 @@ export default function Footer() {
               alt="CEDAR HILL Global Prep"
               className="h-16 w-auto mb-6"
             />
-            <p className="text-sm leading-6 text-white/90">
+            <p className="text-sm leading-relaxed text-white/90">
               글로벌 기준의 유아 교육 프로그램을 운영하며,
               <br />
               학생의 잠재력과 균형 잡힌 성장을 지원합니다.

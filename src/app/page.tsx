@@ -105,8 +105,8 @@ export default function HomePage() {
       {/* 1) 핵심 강점 3카드 */}
       <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
         <div className="mb-12">
-          <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
-          <p className="mt-4 text-zinc-600 text-lg max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
           </p>
         </div>
@@ -131,8 +131,8 @@ export default function HomePage() {
       className="h-1 w-12 rounded-full"
       style={{ background: "var(--brand-burgundy)" }}
     />
-    <h3 className="mt-6 font-semibold" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
-    <p className="mt-4 text-base leading-7 text-zinc-700">{item.desc}</p>
+    <h3 className="mt-6 text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
+    <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{item.desc}</p>
   </div>
 ))}
 
@@ -143,8 +143,8 @@ export default function HomePage() {
       {/* 2) 대표 프로그램 3카드 */}
       <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
         <div className="mb-12">
-          <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
-          <p className="mt-4 text-zinc-600 text-lg max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
+          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
         </div>
@@ -159,10 +159,10 @@ export default function HomePage() {
               <div className="aspect-[16/9] w-full">
                 <img src={p.img} alt={`${p.title} 프로그램 이미지`} className="h-full w-full object-cover" />
               </div>
-              <div className="p-8">
-                <h3 className="font-semibold" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>
-                <p className="mt-4 text-base leading-7 text-zinc-700">{p.desc}</p>
-                <a href="/programs" className="mt-6 inline-block text-sm font-semibold hover:underline"
+              <div className="p-6 sm:p-8">
+                <h3 className="text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>
+                <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{p.desc}</p>
+                <a href="/programs" className="mt-5 inline-block text-sm font-semibold hover:underline"
                    style={{ color: "var(--brand-burgundy)" }}>
                   프로그램 보기 →
                 </a>
@@ -176,8 +176,8 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-28 sm:py-32 bg-white">
         <div className="mb-12 flex items-end justify-between gap-4">
           <div>
-            <h2 className="font-bold" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
-            <p className="mt-4 text-zinc-600 text-lg">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <p className="text-base sm:text-lg text-zinc-600 leading-relaxed">
               최신 소식과 안내를 확인하세요.
             </p>
           </div>
@@ -189,10 +189,10 @@ export default function HomePage() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {notices.slice(0, 3).map((n) => (
-            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="text-xs text-zinc-500">{n.date}</div>
-              <div className="mt-4 font-semibold" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
-              <p className="mt-4 text-base leading-7 text-zinc-700">{n.summary}</p>
+            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="text-xs text-zinc-500 mb-3">{n.date}</div>
+              <div className="text-base sm:text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
+              <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{n.summary}</p>
             </Link>
           ))}
         </div>

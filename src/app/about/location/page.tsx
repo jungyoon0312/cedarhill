@@ -9,8 +9,8 @@ export default function LocationPage() {
     return (
       <section className="mx-auto max-w-6xl px-4 py-16 space-y-8">
         <div>
-          <h1 className="font-bold" style={{ color: "var(--brand-navy)" }}>오시는 길</h1>
-          <p className="mt-4 text-zinc-700 text-lg">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>오시는 길</h1>
+          <p className="text-base sm:text-lg text-zinc-700 leading-relaxed">
             위치 및 교통 안내 페이지입니다.
           </p>
         </div>
@@ -30,15 +30,15 @@ export default function LocationPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border-2 p-6 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <h2 className="font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주소</h2>
-            <p className="text-base text-zinc-700">
+            <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주소</h2>
+            <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
               인천광역시 미추홀구 학익로 30
             </p>
           </div>
 
           <div className="rounded-2xl border-2 p-6 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <h2 className="font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>교통 안내</h2>
-            <p className="text-base text-zinc-700">
+            <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>교통 안내</h2>
+            <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
               자세한 교통 안내는 상담 시 안내해 드립니다.
             </p>
           </div>

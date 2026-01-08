@@ -19,9 +19,9 @@ export default function SubHero({ title, breadcrumb, bgImage }: SubHeroProps) {
         />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-12 text-white">
-        {breadcrumb ? <div className="text-xs text-white/75">{breadcrumb}</div> : null}
-        <h1 className="mt-3 text-3xl font-bold tracking-tight">{title}</h1>
+      <div className="relative mx-auto max-w-6xl px-4 py-10 sm:py-12 text-white">
+        {breadcrumb ? <div className="text-xs sm:text-sm text-white/75 leading-relaxed">{breadcrumb}</div> : null}
+        <h1 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">{title}</h1>
         <div
           className="mt-4 h-1 w-16 rounded-full"
           style={{ background: "var(--brand-burgundy)" }}

@@ -14,9 +14,9 @@ type ValueCardProps = {
 
 function ValueCard({ title, desc }: ValueCardProps) {
   return (
-    <div className="rounded-2xl border-2 bg-white p-6 shadow-sm" style={{ borderColor: "var(--brand-burgundy)" }}>
-      <h3 className="text-lg font-semibold">{title}</h3>
-      <p className="mt-2 text-sm leading-6 text-zinc-700">{desc}</p>
+    <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 shadow-sm" style={{ borderColor: "var(--brand-burgundy)" }}>
+      <h3 className="text-base sm:text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-sm leading-relaxed text-zinc-700">{desc}</p>
     </div>
   );
 }
@@ -56,12 +56,12 @@ export default function AboutVisionValuesPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 space-y-12">
         {/* 미션 */}
         <div>
-          <h2 className="text-xl font-bold">미션</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">미션</h2>
           <div className="mt-4 rounded-2xl border bg-white p-6 shadow-sm">
-            <p className="text-zinc-800 leading-7">
+            <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our mission is to cultivate each student's potential through meaningful learning experiences that integrate academic excellence, character education, and global awareness. We strive to guide students to become confident, compassionate, and innovative leaders who contribute positively to their communities and the world.
             </p>
-            <p className="mt-4 text-zinc-700 leading-7">
+            <p className="mt-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
               저희의 미션은 학문적 우수성, 인성 교육, 글로벌 인식을 통합하는 의미 있는 학습 경험을 통해 각 학생의 잠재력을 함양하는 것입니다. 우리는 학생들이 자신감 있고, 자비로우며, 혁신적인 리더로 성장하여 지역 사회와 세계에 긍정적으로 기여하도록 이끄는 데 힘씁니다.
             </p>
           </div>
@@ -69,12 +69,12 @@ export default function AboutVisionValuesPage() {
 
         {/* 비전 */}
         <div>
-          <h2 className="text-xl font-bold">비전</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">비전</h2>
           <div className="mt-4 rounded-2xl border bg-white p-6 shadow-sm">
-            <p className="text-zinc-800 leading-7">
+            <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our vision represents our commitment to discovering each student's unique potential and nurturing it as the foundation for growth into future leaders. By balancing academic excellence with character development, we empower well-rounded individuals to thrive in an interconnected world—not only adapting to the future, but shaping it with compassion, integrity, and innovative thinking.
             </p>
-            <p className="mt-4 text-zinc-700 leading-7">
+            <p className="mt-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
               우리 비전은 각 학생의 고유한 잠재력을 발견하고 미래 리더로 성장할 수 있는 기반을 마련하는 데 대한 우리의 약속을 나타냅니다. 학문적 우수성과 인성 개발의 균형을 통해 우리는 상호 연결된 세상에서 번성할 수 있는 균형 잡힌 개인을 양성합니다. 미래에 적응할 뿐만 아니라 연민, 성실성, 혁신적인 사고로 미래를 만들어가는 인재를 양성합니다.
             </p>
           </div>
@@ -82,8 +82,8 @@ export default function AboutVisionValuesPage() {
 
         {/* 핵심 가치 카드 */}
         <div>
-          <h2 className="text-xl font-bold">핵심 가치</h2>
-          <p className="mt-3 text-sm text-zinc-500">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">핵심 가치</h2>
+          <p className="mt-3 text-sm text-zinc-500 leading-relaxed">
             교육 운영 전반에서 아래 가치를 기준으로 학습 경험을 설계합니다.
           </p>
 

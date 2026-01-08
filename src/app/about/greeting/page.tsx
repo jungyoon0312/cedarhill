@@ -25,21 +25,21 @@ export default function GreetingPage() {
             className="h-1 w-16 rounded-full"
             style={{ background: "var(--brand-burgundy)" }}
           />
-          <p className="text-zinc-800 leading-7">
+          <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
             안녕하십니까. <strong>CEDAR HILL Global Prep</strong>에 방문해 주셔서
             감사합니다.
           </p>
-          <p className="text-zinc-700 leading-7">
+          <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
             본 기관은 유아기의 핵심 성장 시기에 필요한 교육 경험을 체계적으로
             제공하며, 학생 개개인의 가능성을 존중합니다.
           </p>
-          <p className="text-zinc-700 leading-7">
+          <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
             학습의 즐거움과 성취 경험을 통해 자신감 있는 의사소통과 균형 잡힌
             성장을 돕겠습니다.
           </p>
         </div>
 
-        <div className="text-sm text-zinc-500">
+        <div className="text-xs sm:text-sm text-zinc-500 leading-relaxed">
           * 자세한 상담은 032-875-8733~4로 문의해 주세요.
         </div>
       </section>

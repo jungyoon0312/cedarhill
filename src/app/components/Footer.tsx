@@ -36,7 +36,7 @@ export default function Footer() {
             <h3 className="mb-3 text-sm font-semibold">문의</h3>
             <ul className="space-y-2 text-sm text-white/90">
               <li>전화: 032-875-8733~4</li>
-              <li>이메일: byunever@gmail.com</li>
+              <li>이메일: fsalusone@gmail.com</li>
               <li>주소: 인천광역시 미추홀구 학익로 30 1층 1-16</li>
             </ul>
           </div>

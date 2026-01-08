@@ -85,3 +85,5 @@ PDF 파일이 필요하다면:
 - [ ] `generated_images` 폴더 제외
 - [ ] `failed_prompts` 폴더 제외
 
+
+

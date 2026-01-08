@@ -21,7 +21,7 @@ export default function CoCurricularActivitiesPage() {
         {/* Digital Wittiverse 상세 섹션 */}
         <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           <div className="mb-4 sm:mb-6">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>Digital Wittiverse</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white" style={{ background: "var(--brand-navy)" }}>Digital Wittiverse</h3>
             <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
             <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-zinc-800 leading-relaxed">
               창의력과 사고력을 키우는 AI 메타버스 학습공간
@@ -92,7 +92,7 @@ export default function CoCurricularActivitiesPage() {
         {/* Renzulli-AI Coding 상세 섹션 */}
         <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           <div className="mb-4 sm:mb-6">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>Renzulli-AI Coding</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white" style={{ background: "var(--brand-navy)" }}>Renzulli-AI Coding</h3>
             <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>AI Coding Experience Center & Specialized Education Center</p>
             <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
               다양한 AI 코딩 프로그램을 자유롭게 체험하고 놀이처럼 배울 수 있는 'AI Coding Experience Center'와, 다양한 AI 코딩 프로그램을 소그룹 수업으로 코딩 전문 강사와 함께 배우는 'AI Coding Specialized Education Center'를 운영합니다.
@@ -161,7 +161,7 @@ export default function CoCurricularActivitiesPage() {
         {/* Cedar Hill Power Place 상세 섹션 */}
         <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           <div className="mb-4 sm:mb-6">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>Cedar Hill Power Place</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white" style={{ background: "var(--brand-navy)" }}>Cedar Hill Power Place</h3>
             <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
               뉴스포츠, 놀이체육, 키즈성장 스포츠를 통한 전인적 신체 발달 프로그램입니다.
             </p>
@@ -227,7 +227,7 @@ export default function CoCurricularActivitiesPage() {
         {/* NADAUN ART 상세 섹션 */}
         <div className="mb-6 sm:mb-8 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           <div className="mb-4 sm:mb-6">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>NADAUN ART</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white" style={{ background: "var(--brand-navy)" }}>NADAUN ART</h3>
             <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-zinc-800 italic leading-relaxed">
               "모든 아이는 이미 자기만의 세계를 그려 나간다"
             </p>

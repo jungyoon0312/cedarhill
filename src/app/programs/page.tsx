@@ -97,16 +97,102 @@ export default function ProgramsPage() {
           </p>
         </div>
 
+        {/* 연령별 프로그램 */}
+        <div>
+          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>연령별 프로그램</h2>
+          <p className="mt-4 text-base text-zinc-600 mb-8">
+            각 연령대에 맞춘 체계적인 교육 프로그램을 제공합니다.
+          </p>
+
+          <div className="space-y-8">
+            {/* Pre-K Program */}
+            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
+              <h3 className="text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Pre-K Program (만 3세/한국나이 5세)</h3>
+              <p className="text-base text-zinc-700 mb-4">
+                <strong>Experience Early Learning Curriculum</strong>을 기반으로 한 테마 기반 커리큘럼입니다. 매달 새롭고 흥미로운 테마를 도입하여 아이들의 호기심을 자극하고 학습에 대한 흥미를 유지합니다. 각 월별 테마는 문해력, 수학, 과학, 사회, 창의 예술을 의미 있고 실제적인 경험을 통해 연결하도록 설계되었습니다.
+              </p>
+              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 특징:</p>
+                <ul className="text-sm text-zinc-700 space-y-1 list-disc pl-5">
+                  <li>월별 테마 기반 통합 학습 (Family & Pets, Down on the Farm, Community Helpers 등)</li>
+                  <li>문해력, 수학, 과학, 사회, 창의 예술의 통합적 접근</li>
+                  <li>감각 활동(Sensory) 및 블록 활동(Blocks)을 통한 체험 학습</li>
+                  <li>미국 사립학교에서 널리 인정받고 구현되는 커리큘럼</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Junior Kinder */}
+            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
+              <h3 className="text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Junior Kinder (만 4세/한국나이 6세)</h3>
+              <p className="text-base text-zinc-700 mb-4">
+                Experience Early Learning을 기반으로 한 테마/STEAM 기반 커리큘럼으로, 언어와 문해력 발달에 중점을 둡니다. 미국 학년도 Senior Kindergarten 준비 단계로서 읽기, 쓰기, 구두 의사소통의 기초 기술을 구축합니다.
+              </p>
+              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 학습 영역:</p>
+                <ul className="text-sm text-zinc-700 space-y-1 list-disc pl-5">
+                  <li>Numbers & Figures: 수학 및 계산 기초</li>
+                  <li>Theme/Science/Art/Social-Emotional: 테마 기반 통합 학습</li>
+                  <li>Language Art: SPECTRUM Phonics K</li>
+                  <li>Literacy: myView LITERACY K5</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Senior Kinder */}
+            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
+              <h3 className="text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Senior Kinder (만 5세/한국나이 7세)</h3>
+              <p className="text-base text-zinc-700 mb-4">
+                Advantages School International (ASI) 커리큘럼을 사용하여 제공되며, 미국 학년도 학생들과 동일한 학업 기준과 성취 기준을 충족하는 교육을 제공합니다. 이 단계에서는 핵심 학과목에 강한 초점을 두어 초등학교로의 성공적인 전환에 필요한 기초 지식과 기술을 개발합니다.
+              </p>
+              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 과목:</p>
+                <ul className="text-sm text-zinc-700 space-y-1 list-disc pl-5">
+                  <li>Language Art / Reading / Science: SPECTRUM Math, 다양한 수학 학습 도구</li>
+                  <li>Science-Additional: Inspire Science Living Things</li>
+                  <li>Social Study: IMPACT SOCIAL STUDIES Learning and Working Together</li>
+                  <li>Additional Reading Program: Renaissance Raz-Kids</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 프로그램 카드 */}
         <div>
-          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>프로그램 구성</h2>
+          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
           <p className="mt-4 text-base text-zinc-600">
-            주요 프로그램을 영역별로 정리하였습니다.
+            주요 교육 특징을 영역별로 정리하였습니다.
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {programBlocks.map((p) => (
               <ProgramCard key={p.title} title={p.title} bullets={p.bullets} />
+            ))}
+          </div>
+        </div>
+
+        {/* Co-Curricular Activities */}
+        <div>
+          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Co-Curricular Activities</h2>
+          <p className="mt-4 text-base text-zinc-600 mb-6">
+            정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Cheerleading", desc: "팀워크와 자신감을 기르는 치어리딩 활동" },
+              { title: "Gym", desc: "대형 낙하산 등 다양한 체육 활동을 통한 신체 발달" },
+              { title: "Wittiverse", desc: "자기주도 학습을 위한 인터랙티브 디지털 학습" },
+              { title: "Renzulli-AI Coding", desc: "로봇 조작을 통한 AI 코딩 프로그램" },
+              { title: "Art", desc: "다양한 미술 활동을 통한 창의성 발달" },
+            ].map((activity) => (
+              <div key={activity.title} className="rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+                <h3 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>{activity.title}</h3>
+                <p className="text-sm text-zinc-700">{activity.desc}</p>
+              </div>
             ))}
           </div>
         </div>

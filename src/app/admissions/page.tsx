@@ -83,6 +83,68 @@ export default function AdmissionsPage() {
           </div>
         </div>
 
+        {/* 입학 절차 */}
+        <div className="space-y-6">
+          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Admission Process</h2>
+          <p className="text-base text-zinc-600">
+            입학 절차는 다음과 같이 진행됩니다.
+          </p>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Inquiry & Information Session",
+                desc: "문의 및 정보 세션",
+              },
+              {
+                step: "2",
+                title: "Application & Teacher Recommendation",
+                desc: "지원서 및 교사 추천서",
+              },
+              {
+                step: "3",
+                title: "Student Assessment",
+                desc: "학생 평가 (준비도 평가)",
+              },
+              {
+                step: "4",
+                title: "Parent Interview",
+                desc: "학부모 면담",
+              },
+              {
+                step: "5",
+                title: "Review & Admissions Decision",
+                desc: "검토 및 입학 결정",
+              },
+              {
+                step: "6",
+                title: "Enrollment & Registration",
+                desc: "등록 및 접수",
+              },
+            ].map((process) => (
+              <div
+                key={process.step}
+                className="rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:shadow-md"
+                style={{ borderColor: "var(--brand-navy)" }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm"
+                    style={{ background: "var(--brand-navy)" }}
+                  >
+                    {process.step}
+                  </div>
+                  <h3 className="font-semibold text-sm" style={{ color: "var(--brand-navy)" }}>
+                    {process.title}
+                  </h3>
+                </div>
+                <p className="text-sm text-zinc-600">{process.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* 문의 */}
         <div className="rounded-2xl border-2 p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
           <div className="text-sm text-zinc-600">입학 상담</div>

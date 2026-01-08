@@ -388,16 +388,86 @@ export default function ProgramsPage() {
             </div>
           </div>
 
-          {/* 기타 Co-Curricular Activities */}
-          <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-1">
-            {[
-              { title: "Art", desc: "다양한 미술 활동을 통한 창의성 발달" },
-            ].map((activity) => (
-              <div key={activity.title} className="rounded-2xl border-2 bg-white p-6 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-                <h3 className="font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>{activity.title}</h3>
-                <p className="text-sm text-zinc-700">{activity.desc}</p>
+          {/* NADAUN ART 상세 섹션 */}
+          <div className="mb-8 rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--brand-navy)" }}>NADAUN ART</h3>
+              <p className="text-lg font-semibold mb-4 text-zinc-800 italic">
+                "모든 아이는 이미 자기만의 세계를 그려 나간다"
+              </p>
+              <p className="text-base text-zinc-700 leading-7 mb-4">
+                NADAUN은 아이 안의 빛과 그릇이 나답게 자라도록 옆에 선다.
+              </p>
+            </div>
+
+            {/* 교육과정 레벨 */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Curriculum Level (교육과정)</h4>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Da Vinci</h5>
+                  <p className="text-sm text-zinc-600 mb-2">4-6세</p>
+                  <p className="text-sm text-zinc-700">기초표현+탐색+재료 경험</p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Picasso</h5>
+                  <p className="text-sm text-zinc-600 mb-2">7-9세</p>
+                  <p className="text-sm text-zinc-700">개념이해+자신감+창의강화</p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Gogh</h5>
+                  <p className="text-sm text-zinc-600 mb-2">10-11세</p>
+                  <p className="text-sm text-zinc-700">개성적 표현력 심화</p>
+                </div>
+                <div className="p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Dali</h5>
+                  <p className="text-sm text-zinc-600 mb-2">12-13세</p>
+                  <p className="text-sm text-zinc-700">융합 창작+비평 능력+작품완성</p>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* 프로그램 구조 */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>프로그램 구조</h4>
+              <div className="flex flex-wrap gap-2 items-center">
+                <div className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
+                  정서, 창의 통합 예술 프로그램
+                </div>
+                <span className="text-zinc-400">→</span>
+                <div className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
+                  프로젝트 기반 창작 수업
+                </div>
+                <span className="text-zinc-400">→</span>
+                <div className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
+                  국제학교 방향성과 연계
+                </div>
+                <span className="text-zinc-400">→</span>
+                <div className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
+                  소그룹&1:1 맞춤형 심화 프로그램
+                </div>
+              </div>
+            </div>
+
+            {/* Book Art */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Book Art</h4>
+              <div className="p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                <p className="text-base text-zinc-800 mb-2">
+                  "우리 아이만의 영어책, 그 특별한 시작"
+                </p>
+                <div className="mt-4 p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                  <h5 className="font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Weekend Special</h5>
+                  <p className="text-sm text-zinc-700 mb-2">
+                    영어 원서 읽고 나만의 스크랩북 완성
+                  </p>
+                  <p className="text-sm text-zinc-600">
+                    6-7세, 초등학생<br />
+                    영어책 북아트 & 독후활동
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

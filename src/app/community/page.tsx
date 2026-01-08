@@ -76,6 +76,13 @@ function GalleryCard({ item }: { item: GalleryItem }) {
 export const notices: Notice[] = [
   {
     category: "공지",
+    title: "씨더힐 글로벌 프렙 유치부 입학설명회",
+    date: "2026-01-24",
+    summary:
+      "2026년 1월 24일 (토) 11시 입학설명회를 진행합니다. 장소: 인천시 미추홀구 학익동 30 씨더힐 글로벌 프렙. 입학상담: 032-875-8733-4",
+  },
+  {
+    category: "공지",
     title: "2026년 3월 신학기 입학 상담 안내",
     date: "2025-12-24",
     summary:

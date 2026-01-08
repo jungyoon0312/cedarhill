@@ -14,8 +14,8 @@ export default function Header() {
       <Link href="/programs" className="hover:underline" onClick={onClick}>
         프로그램
       </Link>
-      <Link href="/co-curricular-activities" className="hover:underline" onClick={onClick}>
-        Co-Curricular Activities
+      <Link href="/co-curricular-activities" className="hover:underline whitespace-nowrap" onClick={onClick}>
+        Co-Curricular
       </Link>
       <Link href="/admissions" className="hover:underline" onClick={onClick}>
         입학

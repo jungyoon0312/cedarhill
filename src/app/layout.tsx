@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Noto_Sans_KR, Cinzel } from "next/font/google";
 import Header from "./components/Header";
@@ -68,14 +69,79 @@ export const metadata: Metadata = {
   verification: {
     // Google Search Console 인증 후 추가
     // google: "your-google-verification-code",
-    // naver: "your-naver-verification-code",
+    // 네이버 서치어드바이저 인증은 layout.tsx의 <head> 섹션에 메타 태그로 추가
+    // <meta name="naver-site-verification" content="your-verification-code" />
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // 구조화된 데이터 (JSON-LD) - Organization 및 EducationalOrganization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "CEDAR HILL Global Prep",
+    "alternateName": "씨더힐 글로벌 프렙",
+    "url": "https://www.cedarhgp.org",
+    "logo": "https://www.cedarhgp.org/images/logo.png",
+    "description": "CEDAR HILL Global Prep은 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다. Cognia 인증 커리큘럼, STEAM 교육, 100% 영어 몰입 환경을 제공합니다.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "학익로 30",
+      "addressLocality": "미추홀구",
+      "addressRegion": "인천광역시",
+      "addressCountry": "KR"
+    },
+    "telephone": "032-875-8733",
+    "email": "info@cedarhgp.org",
+    "sameAs": [
+      // 소셜 미디어 링크가 있다면 추가
+    ],
+    "educationalCredentialAwarded": "Pre-K, Junior Kinder, Senior Kinder",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "교육 프로그램",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Pre-K Program",
+            "description": "만 3세/한국나이 5세 대상 프로그램"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Junior Kinder",
+            "description": "만 4세/한국나이 6세 대상 프로그램"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Senior Kinder",
+            "description": "만 5세/한국나이 7세 대상 프로그램"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <html lang="ko">
+      <head>
+        {/* 네이버 검색을 위한 메타 태그 - 인증 코드는 네이버 웹마스터 도구에서 받은 후 추가 */}
+        {/* <meta name="naver-site-verification" content="your-verification-code" /> */}
+      </head>
       <body className={`${kr.variable} ${cinzel.variable}`}>
+        {/* 구조화된 데이터 (JSON-LD) */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -1,13 +1,7 @@
 import SubHero from "../components/SubHero";
 import Link from "next/link";
 import { newsPosts } from "./news-data";
-
-export type Notice = {
-  title: string;
-  date: string;
-  category: "공지" | "안내" | "모집" | "행사";
-  summary: string;
-};
+import { noticePosts } from "./notices-data";
 
 type GalleryItem = {
   title: string;
@@ -16,10 +10,10 @@ type GalleryItem = {
   imageUrl?: string;
 };
 
-function Badge({ text }: { text: Notice["category"] }) {
+function Badge({ text }: { text: "공지" | "안내" | "모집" | "행사" }) {
   const base =
     "inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium";
-  const map: Record<Notice["category"], string> = {
+  const map: Record<"공지" | "안내" | "모집" | "행사", string> = {
     공지: "bg-zinc-50 text-zinc-700",
     안내: "bg-zinc-50 text-zinc-700",
     모집: "bg-zinc-50 text-zinc-700",
@@ -27,21 +21,6 @@ function Badge({ text }: { text: Notice["category"] }) {
   };
 
   return <span className={`${base} ${map[text]}`}>{text}</span>;
-}
-
-function NoticeCard({ n }: { n: Notice }) {
-  return (
-    <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow" style={{ borderColor: "var(--brand-navy)" }}>
-      <div className="flex items-start justify-between gap-4">
-        <div className="space-y-2.5">
-          <Badge text={n.category} />
-          <h3 className="text-base sm:text-lg font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>{n.title}</h3>
-        </div>
-        <div className="text-xs text-zinc-500 whitespace-nowrap">{n.date}</div>
-      </div>
-      <div className="mt-4 text-sm sm:text-base leading-relaxed text-zinc-700 whitespace-pre-line">{n.summary}</div>
-    </div>
-  );
 }
 
 function GalleryCard({ item }: { item: GalleryItem }) {
@@ -70,22 +49,6 @@ function GalleryCard({ item }: { item: GalleryItem }) {
   );
 }
 
-export const notices: Notice[] = [
-  {
-    category: "공지",
-    title: "씨더힐 글로벌 프렙 유치부 입학설명회",
-    date: "2026-01-24",
-    summary:
-      "날짜: 2026년 1월 24일 (토) 11시\n장소: 인천시 미추홀구 학익동 30 씨더힐 글로벌 프렙\n연락처: 032-875-8733~4",
-  },
-  {
-    category: "공지",
-    title: "2026년 3월 신학기 입학 상담 안내",
-    date: "2025-12-24",
-    summary:
-      "2026년 3월 개강을 앞두고 입학 상담을 진행합니다. 과정/일정/준비 사항은 상담을 통해 개별 안내드립니다.",
-  },
-];
 
 export default function CommunityPage() {
 
@@ -124,16 +87,37 @@ export default function CommunityPage() {
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
-            <button className="text-xs sm:text-sm font-medium hover:underline" style={{ color: "var(--brand-burgundy)" }}>
-              전체 보기
-            </button>
           </div>
 
-          <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
-            {notices.map((n) => (
-              <NoticeCard key={`${n.date}-${n.title}`} n={n} />
-            ))}
-          </div>
+          {noticePosts.length === 0 ? (
+            <div className="rounded-2xl border-2 bg-white p-8 sm:p-12 text-center" style={{ borderColor: "var(--brand-navy)" }}>
+              <p className="text-sm sm:text-base text-zinc-500">등록된 공지사항이 없습니다.</p>
+            </div>
+          ) : (
+            <div className="space-y-3 sm:space-y-4">
+              {noticePosts.map((post) => (
+                <Link
+                  key={post.id}
+                  href={`/community/notices/${post.id}`}
+                  className="block rounded-2xl border-2 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all hover:scale-[1.01]"
+                  style={{ borderColor: "var(--brand-navy)" }}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 space-y-2">
+                      <div className="flex items-center gap-3">
+                        <Badge text={post.category} />
+                        <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+                          {post.title}
+                        </h3>
+                      </div>
+                      <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
+                    </div>
+                    <div className="text-zinc-400 text-lg sm:text-xl">→</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* 학교소식 */}

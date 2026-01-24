@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { notices } from "./community/page";
+import { noticePosts } from "./community/notices-data";
 
 export default function HomePage() {
   const images = [
@@ -188,11 +188,11 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
-          {notices.slice(0, 3).map((n) => (
-            <Link key={n.title} href="/community" className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="text-xs text-zinc-500 mb-2 sm:mb-3">{n.date}</div>
-              <div className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{n.title}</div>
-              <div className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 whitespace-pre-line">{n.summary}</div>
+          {noticePosts.slice(0, 3).map((post) => (
+            <Link key={post.id} href={`/community/notices/${post.id}`} className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+              <div className="text-xs text-zinc-500 mb-2 sm:mb-3">{post.date}</div>
+              <div className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{post.title}</div>
+              <div className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 whitespace-pre-line line-clamp-3">{post.content}</div>
             </Link>
           ))}
         </div>

@@ -53,7 +53,46 @@ export default async function NoticeDetailPage({ params }: Props) {
           {/* 본문 내용 */}
           <div className="prose prose-sm sm:prose-base max-w-none">
             <div className="text-sm sm:text-base md:text-lg leading-relaxed text-zinc-700 whitespace-pre-line">
-              {post.content}
+              {post.content.split('\n').map((line, lineIndex) => {
+                // 마크다운 링크 형식 [텍스트](URL) 파싱
+                const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+                const parts: (string | React.ReactElement)[] = [];
+                let lastIndex = 0;
+                let match;
+                let keyCounter = 0;
+                
+                while ((match = linkRegex.exec(line)) !== null) {
+                  // 링크 앞의 텍스트
+                  if (match.index > lastIndex) {
+                    parts.push(line.substring(lastIndex, match.index));
+                  }
+                  // 링크
+                  parts.push(
+                    <a
+                      key={`link-${lineIndex}-${keyCounter++}`}
+                      href={match[2]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      {match[1]}
+                    </a>
+                  );
+                  lastIndex = match.index + match[0].length;
+                }
+                // 남은 텍스트
+                if (lastIndex < line.length) {
+                  parts.push(line.substring(lastIndex));
+                }
+                
+                return (
+                  <div key={lineIndex}>
+                    {parts.length === 0 ? line : parts.map((part, partIndex) => 
+                      typeof part === 'string' ? <span key={partIndex}>{part}</span> : part
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

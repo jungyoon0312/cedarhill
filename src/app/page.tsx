@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { notices } from "./community/page";
-import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -13,30 +12,6 @@ export default function HomePage() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showPopup, setShowPopup] = useState(false);
-
-  // 팝업 이미지 경로
-  const popupImages = [
-    "/images/popup-admission-briefing.png", // 입학설명회 포스터
-    "/images/popup-admission-inquiry.png",  // 입학상담문의 포스터
-  ];
-
-  useEffect(() => {
-    // 쿠키 확인하여 팝업 표시 여부 결정
-    const checkPopupCookie = () => {
-      const cookies = document.cookie.split(";");
-      const popupClosed = cookies.find((cookie) => cookie.trim().startsWith("popupClosed="));
-      
-      if (!popupClosed) {
-        // 쿠키가 없으면 팝업 표시 (약간의 딜레이를 주어 페이지 로드 후 표시)
-        setTimeout(() => {
-          setShowPopup(true);
-        }, 1000);
-      }
-    };
-
-    checkPopupCookie();
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,13 +23,6 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* 팝업 모달 */}
-      {showPopup && (
-        <PopupModal
-          images={popupImages}
-          onClose={() => setShowPopup(false)}
-        />
-      )}
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

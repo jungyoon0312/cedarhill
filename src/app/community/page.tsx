@@ -1,4 +1,6 @@
 import SubHero from "../components/SubHero";
+import Link from "next/link";
+import { newsPosts } from "./news-data";
 
 export type Notice = {
   title: string;
@@ -132,6 +134,40 @@ export default function CommunityPage() {
               <NoticeCard key={`${n.date}-${n.title}`} n={n} />
             ))}
           </div>
+        </div>
+
+        {/* 학교소식 */}
+        <div className="space-y-4 sm:space-y-6">
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>학교소식</h2>
+          </div>
+
+          {newsPosts.length === 0 ? (
+            <div className="rounded-2xl border-2 bg-white p-8 sm:p-12 text-center" style={{ borderColor: "var(--brand-navy)" }}>
+              <p className="text-sm sm:text-base text-zinc-500">등록된 소식이 없습니다.</p>
+            </div>
+          ) : (
+            <div className="space-y-3 sm:space-y-4">
+              {newsPosts.map((post) => (
+                <Link
+                  key={post.id}
+                  href={`/community/news/${post.id}`}
+                  className="block rounded-2xl border-2 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all hover:scale-[1.01]"
+                  style={{ borderColor: "var(--brand-navy)" }}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 space-y-2">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+                        {post.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
+                    </div>
+                    <div className="text-zinc-400 text-lg sm:text-xl">→</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* 갤러리 */}

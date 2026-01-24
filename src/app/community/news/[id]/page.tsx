@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import SubHero from "../../../components/SubHero";
 import { newsPosts } from "../../news-data";
 
@@ -61,12 +62,14 @@ export default async function NewsDetailPage({ params }: Props) {
           {post.images && post.images.length > 0 && (
             <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
               {post.images.map((imageUrl, index) => (
-                <div key={index} className="rounded-lg overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                <div key={index} className="relative w-full rounded-lg overflow-hidden" style={{ minHeight: "300px" }}>
+                  <Image
                     src={imageUrl}
                     alt={`${post.title} 이미지 ${index + 1}`}
-                    className="w-full h-auto object-cover"
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto object-contain"
+                    unoptimized
                   />
                 </div>
               ))}

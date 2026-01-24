@@ -4,10 +4,13 @@ import SubHero from "../../../components/SubHero";
 import { newsPosts } from "../../news-data";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
+
+// 동적 파라미터 허용
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return newsPosts.map((post) => ({
@@ -15,8 +18,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function NewsDetailPage({ params }: Props) {
-  const post = newsPosts.find((p) => p.id === params.id);
+export default async function NewsDetailPage({ params }: Props) {
+  const { id } = await params;
+  const post = newsPosts.find((p) => p.id === id);
 
   if (!post) {
     notFound();

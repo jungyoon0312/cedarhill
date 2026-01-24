@@ -18,19 +18,6 @@ export async function generateStaticParams() {
   }));
 }
 
-function Badge({ text }: { text: "공지" | "안내" | "모집" | "행사" }) {
-  const base =
-    "inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium";
-  const map: Record<"공지" | "안내" | "모집" | "행사", string> = {
-    공지: "bg-zinc-50 text-zinc-700",
-    안내: "bg-zinc-50 text-zinc-700",
-    모집: "bg-zinc-50 text-zinc-700",
-    행사: "bg-zinc-50 text-zinc-700",
-  };
-
-  return <span className={`${base} ${map[text]}`}>{text}</span>;
-}
-
 export default async function NoticeDetailPage({ params }: Props) {
   const { id } = await params;
   const post = noticePosts.find((p) => p.id === id);
@@ -57,9 +44,6 @@ export default async function NoticeDetailPage({ params }: Props) {
         <article className="rounded-2xl border-2 bg-white p-6 sm:p-8 md:p-10 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           {/* 제목 및 날짜 */}
           <div className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b" style={{ borderColor: "var(--brand-slate)" }}>
-            <div className="flex items-center gap-3 mb-3 sm:mb-4">
-              <Badge text={post.category} />
-            </div>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight" style={{ color: "var(--brand-navy)" }}>
               {post.title}
             </h1>

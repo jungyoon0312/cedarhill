@@ -10,19 +10,6 @@ type GalleryItem = {
   imageUrl?: string;
 };
 
-function Badge({ text }: { text: "공지" | "안내" | "모집" | "행사" }) {
-  const base =
-    "inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium";
-  const map: Record<"공지" | "안내" | "모집" | "행사", string> = {
-    공지: "bg-zinc-50 text-zinc-700",
-    안내: "bg-zinc-50 text-zinc-700",
-    모집: "bg-zinc-50 text-zinc-700",
-    행사: "bg-zinc-50 text-zinc-700",
-  };
-
-  return <span className={`${base} ${map[text]}`}>{text}</span>;
-}
-
 function GalleryCard({ item }: { item: GalleryItem }) {
   return (
     <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow" style={{ borderColor: "var(--brand-navy)" }}>
@@ -104,12 +91,9 @@ export default function CommunityPage() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 space-y-2">
-                      <div className="flex items-center gap-3">
-                        <Badge text={post.category} />
-                        <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
-                          {post.title}
-                        </h3>
-                      </div>
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+                        {post.title}
+                      </h3>
                       <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
                     </div>
                     <div className="text-zinc-400 text-lg sm:text-xl">→</div>

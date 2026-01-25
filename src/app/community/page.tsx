@@ -83,22 +83,40 @@ export default function CommunityPage() {
           ) : (
             <div className="space-y-3 sm:space-y-4">
               {noticePosts.map((post) => (
-                <Link
+                <div
                   key={post.id}
-                  href={`/community/notices/${post.id}`}
-                  className="block rounded-2xl border-2 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all hover:scale-[1.01]"
+                  className="rounded-2xl border-2 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all"
                   style={{ borderColor: "var(--brand-navy)" }}
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1 space-y-2">
-                      <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
-                        {post.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
+                  <Link
+                    href={`/community/notices/${post.id}`}
+                    className="block"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1 space-y-2">
+                        <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug hover:underline" style={{ color: "var(--brand-navy)" }}>
+                          {post.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
+                      </div>
+                      <div className="text-zinc-400 text-lg sm:text-xl">→</div>
                     </div>
-                    <div className="text-zinc-400 text-lg sm:text-xl">→</div>
-                  </div>
-                </Link>
+                  </Link>
+                  {/* 3차 입학설명회 신청 버튼 */}
+                  {post.id === "admission-briefing-academy-2026-02-07" && (
+                    <div className="mt-4 pt-4 border-t" style={{ borderColor: "var(--brand-slate)" }}>
+                      <a
+                        href="https://yoo-jenny.notion.site/2f34597a850c8063b052f9b686a7f461"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg"
+                        style={{ backgroundColor: "var(--brand-burgundy)" }}
+                      >
+                        3회 입학설명회 및 체험수업 신청하기
+                      </a>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           )}

@@ -1,113 +1,92 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
-type PopupModalProps = {
-  images: string[];
-  onClose: () => void;
-};
+interface PopupModalProps {
+  imageSrc: string;
+  alt: string;
+  storageKey?: string;
+}
 
-export default function PopupModal({ images, onClose }: PopupModalProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+export default function PopupModal({ 
+  imageSrc, 
+  alt, 
+  storageKey = "popup-closed" 
+}: PopupModalProps) {
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // ESC 키로 닫기
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
+    // 로컬 스토리지에서 팝업 닫힘 상태 확인
+    const isClosed = localStorage.getItem(storageKey);
+    if (!isClosed) {
+      // 페이지 로드 후 약간의 딜레이를 두고 팝업 표시
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [storageKey]);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  const handleCloseToday = () => {
+    setIsOpen(false);
+    // 오늘 날짜를 키로 저장
+    const today = new Date().toDateString();
+    localStorage.setItem(storageKey, today);
   };
+
+  if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4" onClick={onClose}>
-      <div className="relative max-w-2xl w-full max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
+      <div className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden">
         {/* 닫기 버튼 */}
         <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
-          aria-label="닫기"
+          onClick={handleClose}
+          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-all hover:scale-110"
+          aria-label="팝업 닫기"
         >
-          <span className="text-2xl text-zinc-700">×</span>
+          <span className="text-2xl text-gray-700">×</span>
         </button>
 
-        {/* 이미지 슬라이더 */}
-        {images.length > 0 && (
-          <div className="relative">
-            <div className="relative w-full" style={{ aspectRatio: "9/16" }}>
-              <Image
-                src={images[currentImageIndex]}
-                alt={`팝업 이미지 ${currentImageIndex + 1}`}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+        {/* 이미지 */}
+        <div className="relative w-full h-auto">
+          <img
+            src={imageSrc}
+            alt={alt}
+            className="w-full h-auto object-contain"
+          />
+        </div>
 
-            {/* 이전/다음 버튼 (이미지가 2개 이상일 때만) */}
-            {images.length > 1 && (
-              <>
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
-                  aria-label="이전 이미지"
-                >
-                  <span className="text-xl text-zinc-700">‹</span>
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
-                  aria-label="다음 이미지"
-                >
-                  <span className="text-xl text-zinc-700">›</span>
-                </button>
-
-                {/* 이미지 인디케이터 */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentImageIndex ? "bg-white w-6" : "bg-white/50"
-                      }`}
-                      aria-label={`이미지 ${index + 1}로 이동`}
-                    />
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-        )}
-
-        {/* 하루동안 보지 않기 버튼 */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-          <button
-            onClick={() => {
-              const expires = new Date();
-              expires.setDate(expires.getDate() + 1);
-              document.cookie = `popupClosed=true; expires=${expires.toUTCString()}; path=/`;
-              onClose();
-            }}
-            className="px-4 py-2 text-sm text-white bg-zinc-700 hover:bg-zinc-800 rounded-lg transition-colors"
+        {/* 하단 버튼 */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-2 items-center">
+          <a
+            href="https://yoo-jenny.notion.site/2f34597a850c8063b052f9b686a7f461"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 text-sm sm:text-base font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
+            style={{ backgroundColor: "var(--brand-burgundy)" }}
           >
-            하루동안 보지 않기
+            3회 입학설명회 및 체험수업 신청하기
+          </a>
+          <button
+            onClick={handleCloseToday}
+            className="px-4 py-2 text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105"
+            style={{ backgroundColor: "var(--brand-navy)" }}
+          >
+            오늘 하루 보지 않기
+          </button>
+          <button
+            onClick={handleClose}
+            className="px-4 py-2 text-sm font-semibold bg-gray-600 text-white rounded-lg shadow-lg transition-all hover:scale-105 hover:bg-gray-700"
+          >
+            닫기
           </button>
         </div>
       </div>
     </div>
   );
 }
-
-

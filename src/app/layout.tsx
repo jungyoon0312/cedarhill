@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CEDAR HILL Global Prep | 글로벌 기준의 유아 교육",
-    description: "CEDAR HILL Global Prep은 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
+  title: "CEDAR HILL Global Prep | 글로벌 기준의 유아 교육",
+  description: "CEDAR HILL Global Prep은 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
     images: ["/images/logo.png"],
   },
   robots: {

@@ -41,17 +41,14 @@ export default function PopupModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
-      <div className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden">
-        {/* 닫기 버튼 */}
-        <button
-          onClick={handleClose}
-          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-all hover:scale-110"
-          aria-label="팝업 닫기"
-        >
-          <span className="text-2xl text-gray-700">×</span>
-        </button>
-
+    <div 
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4"
+      onClick={handleClose}
+    >
+      <div 
+        className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* 이미지 */}
         <div className="relative w-full h-auto">
           <img
@@ -59,32 +56,6 @@ export default function PopupModal({
             alt={alt}
             className="w-full h-auto object-contain"
           />
-        </div>
-
-        {/* 하단 버튼 */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-2 items-center">
-          <a
-            href="https://yoo-jenny.notion.site/2f34597a850c8063b052f9b686a7f461"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 text-sm sm:text-base font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
-            style={{ backgroundColor: "var(--brand-burgundy)" }}
-          >
-            3회 입학설명회 및 체험수업 신청하기
-          </a>
-          <button
-            onClick={handleCloseToday}
-            className="px-4 py-2 text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105"
-            style={{ backgroundColor: "var(--brand-navy)" }}
-          >
-            오늘 하루 보지 않기
-          </button>
-          <button
-            onClick={handleClose}
-            className="px-4 py-2 text-sm font-semibold bg-gray-600 text-white rounded-lg shadow-lg transition-all hover:scale-105 hover:bg-gray-700"
-          >
-            닫기
-          </button>
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { noticePosts } from "./community/notices-data";
-import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -24,13 +23,6 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* 팝업 모달 */}
-      <PopupModal 
-        imageSrc="/images/3rd showcase.png"
-        alt="씨더힐 글로벌 프렙 3차 입학설명회 및 아카데미 체험수업"
-        storageKey="popup-3rd-showcase"
-      />
-      
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

@@ -9,11 +9,15 @@ export default function CoCurricularActivitiesPage() {
     renzulliAI: boolean;
     powerPlace: boolean;
     nadaunArt: boolean;
+    englishLab: boolean;
+    futurum: boolean;
   }>({
     digitalWittiverse: false,
     renzulliAI: false,
     powerPlace: false,
     nadaunArt: false,
+    englishLab: false,
+    futurum: false,
   });
 
   const toggleSection = (section: keyof typeof openSections) => {
@@ -374,6 +378,180 @@ export default function CoCurricularActivitiesPage() {
                     <p className="text-xs sm:text-sm text-zinc-600">
                       6-7세, 초등학생<br />
                       영어책 북아트 & 독후활동
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* English Lab 아코디언 */}
+        <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
+          <button
+            onClick={() => toggleSection("englishLab")}
+            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+          >
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+              English Lab
+            </h3>
+            <span className="ml-3 text-zinc-500 text-sm">
+              {openSections.englishLab ? "▼" : "▶"}
+            </span>
+          </button>
+          
+          {openSections.englishLab && (
+            <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
+              <div className="mb-4 sm:mb-6">
+                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>ENGLISH PROGRAM</p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
+                  씨더힐 글로벌 프렙 졸업 후 한국 학교 진학을 희망하는 학생, 국제학교 준비생, 국제학교 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
+                </p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
+                  미국 Common Core 기준의 체계적인 커리큘럼을 통해 글로벌 학습 환경에서 경쟁력을 갖출 수 있도록 지원합니다.
+                </p>
+              </div>
+
+              {/* Cedar Hill English Lab Curriculum */}
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Cedar Hill English Lab Curriculum</h4>
+                <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
+                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>World of English</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      언어의 필수 5가지 영역을 학습할 수 있는 디지털 영어 프로그램
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Iowa Brain Learning</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      AR레벨별 원서를 기반으로 한 논리·사고력 영어글쓰기
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Renaissance</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      북퀴즈 체계적인 관리 가능한 리딩 프로그램
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Special Activities */}
+              <div>
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Special Activities</h4>
+                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>MENSA Logic & Reasoning</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      멘사 기반의 창의 사고력 프로세스 영어로 사고하고 논리로 증명하는 Reasoning 훈련
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Role Box Career</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      글로벌 직업 현장 그대로의 몰입감 놀이 중심 사고력 프로그램
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* FUTURUM 아코디언 */}
+        <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
+          <button
+            onClick={() => toggleSection("futurum")}
+            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+          >
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+              FUTURUM Global Gifted Center
+            </h3>
+            <span className="ml-3 text-zinc-500 text-sm">
+              {openSections.futurum ? "▼" : "▶"}
+            </span>
+          </button>
+          
+          {openSections.futurum && (
+            <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
+              <div className="mb-4 sm:mb-6">
+                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>
+                  Cedar Hill Global Prep X FUTURUM이 함께하는 수·과학 기반 창의 융합 교육센터
+                </p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
+                  아이들의 잠재력을 키우고, 수·과학 기반 사고력을 통해 문제 해결 능력을 기르는 전문 영재 교육 기관입니다.
+                </p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
+                  초등 이음 시스템을 통해 놀이 기반 학습을 초등 교육으로 자연스럽게 연결하며, STEAM을 통해 독립적인 사고와 문제 해결 능력을 기르고 이를 학교 과목에 적용할 수 있도록 지원합니다.
+                </p>
+              </div>
+
+              {/* Odyssey of the Mind */}
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>
+                  Odyssey of the Mind 창의융합프로그램: Integrated Creative Thinking Program
+                </h4>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
+                  글로벌 STEAM 사고를 대표하는 FUTURUM의 핵심 창의 융합 문제 해결 프로그램
+                </p>
+                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-navy)" }}>
+                        01
+                      </div>
+                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>세계창의력올림피아드 공식 지정</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      세계창의력올림피아드 공식 지정 글로벌 창의 교육 프로그램<br />
+                      NASA가 개발 및 후원하는 창의교육 프로그램
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-navy)" }}>
+                        02
+                      </div>
+                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>주제 기반 프로젝트 미션</h5>
+                    </div>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      주제 기반 프로젝트 미션으로 사고력과 협업 역량 강화<br />
+                      역할 분담과 공동 문제 해결을 통해 비판적 사고, 의사소통, 협업 능력을 기릅니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* FUTURUM Core Program */}
+              <div>
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>FUTURUM Core Program</h4>
+                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>에반이즈 EVANIS</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      스토리 기반 창의 수학 프로그램<br />
+                      언어와 사고를 연결하는 프로그램
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>매시언스 (Mathience)</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      수학과 과학을 융합하여 아이들의 사고의 폭을 넓히는 미래형 학습 프로그램
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>원리셈·수학실험실</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      개념 중심 초등 수학 수해력 프로그램<br />
+                      십진법, 자릿값, 수 개념의 원리를 이해하여 수학적 사고를 구조화합니다.
+                    </p>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
+                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>마음아라 (Mind-Ara)</h5>
+                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
+                      그림책 이야기 코칭 프로그램<br />
+                      나만의 그림책 만들기
                     </p>
                   </div>
                 </div>

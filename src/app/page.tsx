@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { noticePosts } from "./community/notices-data";
+import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
-    "/images/home3.png",
-    "/images/gym2.jpg",
-    "/images/ART-2.jpg",
+    "/images/library1.jpg",
+    "/images/OUTSIDE1.jpg",
+    "/images/lounge1.jpg",
+    "/images/RENZULI4.jpg",
+    "/images/meeting room.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,6 +26,15 @@ export default function HomePage() {
 
   return (
     <main>
+      {/* 팝업 모달 */}
+      <PopupModal 
+        imageSrc="/images/AI exhibition.jpg"
+        alt="AI Exhibition"
+        storageKey="popup-ai-exhibition"
+        applicationUrl="https://www.notion.so/yoo-jenny/3074597a850c81dfb8cded33f4b6bfcb?pvs=106"
+        applicationButtonText="신청하기"
+      />
+      
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -30,7 +42,7 @@ export default function HomePage() {
             <img
               key={img}
               src={img}
-              alt={`CEDAR HILL Global Prep ${index === 0 ? '홈 이미지' : index === 1 ? '체육관' : '예술 활동'}`}
+              alt={`CEDAR HILL Global Prep ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : index === 3 ? 'RENZULI AI Coding Center' : '회의실'}`}
               className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
@@ -152,7 +164,7 @@ export default function HomePage() {
         <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
           {[
             { title: "Early Literacy", desc: "읽기·말하기 기반의 언어 발달 프로그램", img: "/images/library1.jpg" },
-            { title: "STEAM Activity", desc: "탐구·실험 중심의 창의 융합 활동", img: "/images/AI-classroom-2.jpg" },
+            { title: "STEAM Activity", desc: "탐구·실험 중심의 창의 융합 활동", img: "/images/english prep1.jpg" },
             { title: "Social & Emotional", desc: "사회성·정서 발달을 돕는 활동", img: "/images/gym2.jpg" },
           ].map((p) => (
             <div key={p.title} className="overflow-hidden rounded-2xl border-2 bg-white shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>

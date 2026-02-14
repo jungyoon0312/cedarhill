@@ -2,51 +2,42 @@ import SubHero from "../components/SubHero";
 import Link from "next/link";
 import { newsPosts } from "./news-data";
 import { noticePosts } from "./notices-data";
+import { galleryCategories } from "./gallery-data";
 
-type GalleryItem = {
-  title: string;
-  date: string;
-  // 나중에 실제 이미지로 교체: /public/images/... 형태
-  imageUrl?: string;
-};
-
-function GalleryCard({ item }: { item: GalleryItem }) {
+function GalleryCard({ category }: { category: typeof galleryCategories[0] }) {
   return (
-    <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow" style={{ borderColor: "var(--brand-navy)" }}>
-      {/* 이미지 영역: 이미지 없으면 플레이스홀더 */}
-      <div className="aspect-[16/10] bg-zinc-100 flex items-center justify-center">
-        {item.imageUrl ? (
-          // 이미지 파일을 public/images에 넣고 쓰면 됨
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={item.imageUrl}
-            alt={`${item.title} 갤러리 이미지`}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="text-xs text-zinc-500">Image Placeholder</div>
+    <Link
+      href={`/community/gallery/${category.id}`}
+      className="block rounded-2xl border-2 bg-white shadow-sm overflow-hidden hover:shadow-md transition-all hover:scale-[1.02]"
+      style={{ borderColor: "var(--brand-navy)" }}
+    >
+      {/* 이미지 영역 */}
+      <div className="aspect-[16/10] bg-zinc-100 flex items-center justify-center relative">
+        <img
+          src={category.thumbnail}
+          alt={`${category.title} 갤러리 이미지`}
+          className="h-full w-full object-cover"
+        />
+        {/* 이미지 개수 표시 */}
+        {category.images.length > 1 && (
+          <div className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
+            {category.images.length}장
+          </div>
         )}
       </div>
 
       <div className="p-5">
-        <div className="text-xs text-zinc-500">{item.date}</div>
-        <div className="mt-1 font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>{item.title}</div>
+        <div className="text-xs text-zinc-500">{category.date}</div>
+        <div className="mt-1 font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+          {category.title}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 
 export default function CommunityPage() {
-
-  const gallery: GalleryItem[] = [
-    { title: "entrace", date: "2025-12-18","imageUrl":"/images/entrance2.jpg" },
-    { title: "book art hall", date: "2025-12-12","imageUrl":"/images/bookarthall1.jpg" },
-    { title: "classroom", date: "2025-12-05","imageUrl":"/images/classroom1.jpg" },
-    { title: "digital library", date: "2025-11-28","imageUrl":"/images/library2.jpg"},
-    { title: "cafeteria", date: "2025-11-20","imageUrl":"/images/cafeteria1.jpg" },
-    { title: "terrace", date: "2025-11-10","imageUrl":"/images/terrace1.jpg" },
-  ];
 
   return (
     <>
@@ -162,11 +153,17 @@ export default function CommunityPage() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: "var(--brand-navy)" }}>갤러리</h2>
           </div>
 
-          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((item) => (
-              <GalleryCard key={`${item.date}-${item.title}`} item={item} />
-            ))}
-          </div>
+          {galleryCategories.length === 0 ? (
+            <div className="rounded-2xl border-2 bg-white p-8 sm:p-12 text-center" style={{ borderColor: "var(--brand-navy)" }}>
+              <p className="text-sm sm:text-base text-zinc-500">등록된 갤러리가 없습니다.</p>
+            </div>
+          ) : (
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {galleryCategories.map((category) => (
+                <GalleryCard key={category.id} category={category} />
+              ))}
+            </div>
+          )}
 
 
         </div>

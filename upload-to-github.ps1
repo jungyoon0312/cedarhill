@@ -30,3 +30,5 @@ Write-Host "GitHub에서 확인: https://github.com/$GITHUB_USERNAME/$REPO_NAME"
 
 
 
+
+

@@ -151,7 +151,7 @@ export default function HomePage() {
 
         <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
           {[
-            { title: "Early Literacy", desc: "읽기·말하기 기반의 언어 발달 프로그램", img: "/images/programs-hero.jpg" },
+            { title: "Early Literacy", desc: "읽기·말하기 기반의 언어 발달 프로그램", img: "/images/library1.jpg" },
             { title: "STEAM Activity", desc: "탐구·실험 중심의 창의 융합 활동", img: "/images/AI-classroom-2.jpg" },
             { title: "Social & Emotional", desc: "사회성·정서 발달을 돕는 활동", img: "/images/gym2.jpg" },
           ].map((p) => (

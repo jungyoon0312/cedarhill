@@ -17,7 +17,11 @@ const cards = [
     desc: "원장 인사말과 기관의 교육 방향을 전합니다.",
     href: "/about/greeting",
   },
-
+  {
+    title: "오시는 길",
+    desc: "위치 및 교통 안내를 확인하세요.",
+    href: "/about/location",
+  },
   {
     title: "문의",
     desc: "입학 및 프로그램 관련 상담을 안내합니다.",

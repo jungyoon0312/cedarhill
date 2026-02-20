@@ -8,7 +8,7 @@ type Tab = {
 const tabs: Tab[] = [
   { label: "비전과 가치", href: "/about/vision-values" },
   { label: "인사말", href: "/about/greeting" },
-  { label: "시설소개", href: "/about/facilities" },
+  { label: "오시는 길", href: "/about/location" },
   { label: "문의", href: "/about/contact" },
 ];
 

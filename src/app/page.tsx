@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
 import PopupModal from "./components/PopupModal";
 
@@ -39,11 +40,15 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           {images.map((img, index) => (
-            <img
+            <Image
               key={img}
               src={img}
               alt={`CEDAR HILL Global Prep ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : index === 3 ? 'RENZULI AI Coding Center' : '회의실'}`}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+              fill
+              priority={index === 0}
+              quality={85}
+              sizes="100vw"
+              className={`object-cover transition-opacity duration-1000 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
             />
@@ -127,15 +132,30 @@ export default function HomePage() {
         {[
   {
     title: "Accredited Global Curriculum",
-    desc: "미국 학력 인증기관 Cognia 인증을 기반으로, 전 세계에서 활용되는 ASI(Advantages School International) 정규 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 운영합니다. ASI Korea 인증 기관으로서 졸업장과 성적표는 전 세계 대학 및 고용주에게 인정받습니다.",
+    desc: "미국 학력 인증기관 Cognia 인증을 기반으로, 전 세계에서 활용되는 ASI(Advantages School International) 정규 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 운영합니다.",
+    details: [
+      "ASI Korea 인증 기관으로서 졸업장과 성적표는 전 세계 대학 및 고용주에게 인정받습니다",
+      "국제 표준 교육 과정을 통한 글로벌 경쟁력 강화",
+      "체계적인 학습 평가 및 성장 추적 시스템"
+    ]
   },
   {
     title: "Cooperative Learning & Theme-Based STEAM",
-    desc: "협동 학습을 통해 다양한 수준의 학생들이 동등하게 참여하며 사회적 기술과 학습 효과를 향상시킵니다. STEAM 교육에 감각·정서·체육 활동을 융합한 테마 기반 수업으로, 놀이와 학습을 자연스럽게 연결합니다.",
+    desc: "협동 학습을 통해 다양한 수준의 학생들이 동등하게 참여하며 사회적 기술과 학습 효과를 향상시킵니다.",
+    details: [
+      "STEAM 교육에 감각·정서·체육 활동을 융합한 테마 기반 수업",
+      "놀이와 학습을 자연스럽게 연결하는 통합 교육",
+      "프로젝트 기반 학습을 통한 실전 문제 해결 능력 향상"
+    ]
   },
   {
     title: "100% English Immersion + Individualized Tracking",
-    desc: "검증된 교사진과 100% 영어 몰입 환경에서 배움의 즐거움과 성취를 높입니다. Brightwheel과 ClassDojo 기반의 체계적인 관리로 학생 개별 학습과 전반적 성장을 지속적으로 지원하며, 학부모와의 정기적인 소통을 통해 교육 경험을 확장합니다.",
+    desc: "검증된 교사진과 100% 영어 몰입 환경에서 배움의 즐거움과 성취를 높입니다.",
+    details: [
+      "Brightwheel과 ClassDojo 기반의 체계적인 관리 시스템",
+      "학생 개별 학습과 전반적 성장을 지속적으로 지원",
+      "학부모와의 정기적인 소통을 통해 교육 경험 확장"
+    ]
   },
 ].map((item) => (
   <div key={item.title} className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
@@ -144,7 +164,14 @@ export default function HomePage() {
       style={{ background: "var(--brand-burgundy)" }}
     />
     <h3 className="mt-4 sm:mt-6 text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
-    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">{item.desc}</p>
+    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 mb-3">{item.desc}</p>
+    {item.details && (
+      <ul className="text-xs sm:text-sm text-zinc-600 space-y-1.5 list-disc pl-4 sm:pl-5 leading-relaxed">
+        {item.details.map((detail, idx) => (
+          <li key={idx}>{detail}</li>
+        ))}
+      </ul>
+    )}
   </div>
 ))}
 
@@ -168,8 +195,15 @@ export default function HomePage() {
             { title: "Social & Emotional", desc: "사회성·정서 발달을 돕는 활동", img: "/images/gym2.jpg" },
           ].map((p) => (
             <div key={p.title} className="overflow-hidden rounded-2xl border-2 bg-white shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="aspect-[16/9] w-full">
-                <img src={p.img} alt={`${p.title} 프로그램 이미지`} className="h-full w-full object-cover" />
+              <div className="aspect-[16/9] w-full relative">
+                <Image 
+                  src={p.img} 
+                  alt={`${p.title} 프로그램 이미지`} 
+                  fill
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
               </div>
               <div className="p-6 sm:p-8">
                 <h3 className="text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>

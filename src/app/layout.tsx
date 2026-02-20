@@ -9,12 +9,16 @@ const kr = Noto_Sans_KR({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-kr",
+  display: "swap", // 폰트 로딩 최적화
+  preload: true,
 });
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-cinzel",
+  display: "swap", // 폰트 로딩 최적화
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
     description: "CEDAR HILL Global Prep은 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "https://www.cedarhgp.org/images/logo.png",
         width: 1200,
         height: 630,
         alt: "CEDAR HILL Global Prep",
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   title: "CEDAR HILL Global Prep | 글로벌 기준의 유아 교육",
   description: "CEDAR HILL Global Prep은 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
-    images: ["/images/logo.png"],
+    images: ["https://www.cedarhgp.org/images/logo.png"],
   },
   robots: {
     index: true,
@@ -89,6 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "streetAddress": "학익로 30",
       "addressLocality": "미추홀구",
       "addressRegion": "인천광역시",
+      "postalCode": "22381",
       "addressCountry": "KR"
     },
     "telephone": "032-875-8733",
@@ -97,6 +102,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       // 소셜 미디어 링크가 있다면 추가
     ],
     "educationalCredentialAwarded": "Pre-K, Junior Kinder, Senior Kinder",
+    "areaServed": {
+      "@type": "City",
+      "name": "인천광역시"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "교육 프로그램",
@@ -106,7 +115,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "itemOffered": {
             "@type": "Course",
             "name": "Pre-K Program",
-            "description": "만 3세/한국나이 5세 대상 프로그램"
+            "description": "만 3세/한국나이 5세 대상 프로그램",
+            "educationalLevel": "Preschool"
           }
         },
         {
@@ -114,7 +124,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "itemOffered": {
             "@type": "Course",
             "name": "Junior Kinder",
-            "description": "만 4세/한국나이 6세 대상 프로그램"
+            "description": "만 4세/한국나이 6세 대상 프로그램",
+            "educationalLevel": "Preschool"
           }
         },
         {
@@ -122,7 +133,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "itemOffered": {
             "@type": "Course",
             "name": "Senior Kinder",
-            "description": "만 5세/한국나이 7세 대상 프로그램"
+            "description": "만 5세/한국나이 7세 대상 프로그램",
+            "educationalLevel": "Preschool"
           }
         }
       ]
@@ -134,12 +146,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* 네이버 검색을 위한 메타 태그 - 인증 코드는 네이버 웹마스터 도구에서 받은 후 추가 */}
         {/* <meta name="naver-site-verification" content="your-verification-code" /> */}
+        {/* LCP 이미지 preload - 첫 번째 히어로 이미지 */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/library1.jpg"
+          fetchPriority="high"
+        />
       </head>
       <body className={`${kr.variable} ${cinzel.variable}`}>
-        {/* 구조화된 데이터 (JSON-LD) */}
+        {/* 구조화된 데이터 (JSON-LD) - 비동기 로딩 */}
         <Script
           id="organization-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <Header />

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type SubHeroProps = {
   title: string;
   breadcrumb?: string;
@@ -9,7 +11,7 @@ export default function SubHero({ title, breadcrumb, bgImage }: SubHeroProps) {
     <section className="relative overflow-hidden border-b">
       <div className="absolute inset-0">
         {bgImage ? (
-          <img src={bgImage} alt="" className="h-full w-full object-cover" />
+          <Image src={bgImage} alt="" fill className="object-cover" quality={80} priority={false} />
         ) : (
           <div className="h-full w-full" style={{ background: "var(--brand-navy)" }} />
         )}

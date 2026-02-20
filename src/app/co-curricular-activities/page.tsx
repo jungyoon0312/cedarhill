@@ -225,8 +225,14 @@ export default function CoCurricularActivitiesPage() {
           {openSections.powerPlace && (
             <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
               <div className="mb-4 sm:mb-6">
+                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>
+                  전인적 신체 발달을 위한 체육 프로그램
+                </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
                   뉴스포츠, 놀이체육, 키즈성장 스포츠를 통한 전인적 신체 발달 프로그램입니다.
+                </p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
+                  연령별 발육 발달에 맞춘 체계적인 체육 교육을 통해 신체 능력뿐만 아니라 협동심, 리더십, 도전 정신을 기릅니다.
                 </p>
               </div>
 
@@ -253,9 +259,14 @@ export default function CoCurricularActivitiesPage() {
               <div className="mb-4 sm:mb-6">
                 <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>운동발달검사 (Motor Development Test)</h4>
                 <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                  <p className="text-xs sm:text-sm text-zinc-700">
+                  <p className="text-xs sm:text-sm text-zinc-700 mb-2">
                     우리 아이의 성장 발달 수준을 측정할 수 있는 전문검사 PST를 제공합니다.
                   </p>
+                  <ul className="text-xs sm:text-sm text-zinc-700 space-y-1 list-disc pl-4 sm:pl-5 leading-relaxed">
+                    <li>정기적인 발달 검사를 통한 개인별 성장 추적</li>
+                    <li>검사 결과를 바탕으로 한 맞춤형 체육 프로그램 제공</li>
+                    <li>학부모와의 정기적인 상담을 통한 발달 상황 공유</li>
+                  </ul>
                 </div>
               </div>
 

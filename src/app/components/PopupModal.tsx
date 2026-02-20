@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface PopupModalProps {
   imageSrc: string;
@@ -63,11 +64,17 @@ export default function PopupModal({
         </button>
 
         {/* 이미지 */}
-        <div className="relative w-full h-auto">
-          <img
+        <div className="relative w-full h-auto min-h-[200px]">
+          <Image
             src={imageSrc}
             alt={alt}
+            width={1200}
+            height={1600}
+            quality={85}
+            sizes="(max-width: 768px) 100vw, 1200px"
             className="w-full h-auto object-contain"
+            priority={false}
+            unoptimized={false}
           />
         </div>
 

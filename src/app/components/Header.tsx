@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,9 +35,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 h-20">
         {/* 로고만 */}
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img
+          <Image
             src="/images/header-logo.png"
             alt="CEDAR HILL Global Prep"
+            width={200}
+            height={56}
+            priority
+            quality={90}
             className="h-14 w-auto"
           />
         </Link>
@@ -61,7 +66,7 @@ export default function Header() {
 
       {/* 모바일 드롭다운 메뉴 */}
       {open && (
-        <div className="md:hidden border-t bg-white" style={{ borderColor: "var(--brand-navy)" }}>
+        <div className="md:hidden border-t bg-white shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
           <nav className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-4 text-sm" style={{ color: "var(--brand-navy)" }}>
             <NavLinks onClick={() => setOpen(false)} />
           </nav>

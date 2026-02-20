@@ -3,7 +3,13 @@ import SubHero from "../components/SubHero";
 
 export const metadata: Metadata = {
   title: "입학 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
+  description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정. 인천 영어유치원 입학 상담 및 일정 안내.",
+  openGraph: {
+    title: "입학 | CEDAR HILL Global Prep",
+    description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
+    url: "https://www.cedarhgp.org/admissions",
+    type: "website",
+  },
 };
 
 type ScheduleRow = {
@@ -47,7 +53,9 @@ export default function AdmissionsPage() {
             </div>
             <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="text-xs sm:text-sm text-zinc-500">입학 상담</div>
-              <div className="mt-3 font-semibold text-base sm:text-lg" style={{ color: "var(--brand-navy)" }}>032-875-8733~4</div>
+              <div className="mt-3 font-semibold text-base sm:text-lg" style={{ color: "var(--brand-navy)" }}>
+                <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +156,9 @@ export default function AdmissionsPage() {
         {/* 문의 */}
         <div className="rounded-2xl border-2 p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
           <div className="text-xs sm:text-sm text-zinc-600">입학 상담</div>
-          <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>032-875-8733~4</div>
+          <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
+            <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
+          </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-700">
             상담을 통해 과정/일정/세부 안내를 개별 제공해 드립니다.
           </p>

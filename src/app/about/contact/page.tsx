@@ -4,7 +4,13 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "문의 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다.",
+  description: "CEDAR HILL Global Prep 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다. 인천 영어유치원 입학 상담을 받으세요.",
+  openGraph: {
+    title: "문의 | CEDAR HILL Global Prep",
+    description: "CEDAR HILL Global Prep 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다.",
+    url: "https://www.cedarhgp.org/about/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
@@ -28,7 +34,9 @@ export default function ContactPage() {
             style={{ background: "var(--brand-burgundy)" }}
           />
           <div className="text-xs sm:text-sm text-zinc-600">입학 상담</div>
-          <div className="mt-2 text-base sm:text-lg font-semibold">032-875-8733~4</div>
+          <div className="mt-2 text-base sm:text-lg font-semibold">
+            <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
+          </div>
 
           <p className="mt-2 text-sm leading-relaxed text-zinc-600">
             상담을 통해 과정/일정/세부 안내를 개별 제공해 드립니다.

@@ -1,5 +1,6 @@
 import SubHero from "../components/SubHero";
 import Link from "next/link";
+import Image from "next/image";
 import { newsPosts } from "./news-data";
 import { noticePosts } from "./notices-data";
 import { galleryCategories } from "./gallery-data";
@@ -13,10 +14,13 @@ function GalleryCard({ category }: { category: typeof galleryCategories[0] }) {
     >
       {/* 이미지 영역 */}
       <div className="aspect-[16/10] bg-zinc-100 flex items-center justify-center relative">
-        <img
+        <Image
           src={category.thumbnail}
           alt={`${category.title} 갤러리 이미지`}
-          className="h-full w-full object-cover"
+          fill
+          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
         />
         {/* 이미지 개수 표시 */}
         {category.images.length > 1 && (
@@ -54,7 +58,9 @@ export default function CommunityPage() {
 
           <div className="rounded-2xl border-2 p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
             <div className="text-xs sm:text-sm text-zinc-600">문의</div>
-            <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>032-875-8733~4</div>
+            <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
+              <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
+            </div>
             <p className="mt-2 text-sm leading-relaxed text-zinc-700">
               상담을 통해 과정/일정/세부 안내를 개별 제공해 드립니다.
             </p>

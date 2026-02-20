@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import SubHero from "../../../components/SubHero";
 import { galleryCategories } from "../../gallery-data";
 
@@ -56,12 +57,14 @@ export default async function GalleryDetailPage({ params }: Props) {
               className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow"
               style={{ borderColor: "var(--brand-navy)" }}
             >
-              <div className="aspect-[16/10] bg-zinc-100 flex items-center justify-center">
-                <img
+              <div className="aspect-[16/10] bg-zinc-100 flex items-center justify-center relative">
+                <Image
                   src={imageUrl}
                   alt={`${galleryCategory.title} 이미지 ${index + 1}`}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
+                  fill
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -82,4 +85,5 @@ export default async function GalleryDetailPage({ params }: Props) {
     </>
   );
 }
+
 

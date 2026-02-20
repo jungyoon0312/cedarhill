@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
-import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -27,15 +26,6 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* 팝업 모달 */}
-      <PopupModal 
-        imageSrc="/images/AI exhibition.jpg"
-        alt="AI Exhibition"
-        storageKey="popup-ai-exhibition"
-        applicationUrl="https://www.notion.so/yoo-jenny/3074597a850c81dfb8cded33f4b6bfcb?pvs=106"
-        applicationButtonText="신청하기"
-      />
-      
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

@@ -30,6 +30,9 @@ body {
   font-family: var(--font-kr), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background-color: var(--background);
   color: var(--foreground);
+  /* 모바일: 어색한 단어 중간 줄바꿈 방지 (한글·영문 단어 단위로 줄바꿈) */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* 제목용 유틸 클래스(영문 타이틀용) */

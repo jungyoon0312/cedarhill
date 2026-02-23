@@ -109,10 +109,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 시설 소개 동영상 - 모바일에서 먼저 노출 */}
+      <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-20 bg-white">
+        <div className="mb-6 sm:mb-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+            CEDAR HILL Global Prep의 전체 시설을 영상으로 만나보세요.
+          </p>
+        </div>
+        <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
+          <video
+            src="/images/cedarhill.mp4"
+            controls
+            playsInline
+            className="w-full aspect-video object-cover"
+            poster="/images/library1.jpg"
+          >
+            브라우저가 비디오를 지원하지 않습니다.
+          </video>
+        </div>
+      </section>
+
       {/* 1) 핵심 강점 3카드 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
-        <div className="mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+      <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-28 bg-white">
+        <div className="mb-6 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             인천 영어유치원 CEDAR HILL Global Prep은 인천국제학교로서 글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
           </p>
@@ -148,15 +169,15 @@ export default function HomePage() {
     ]
   },
 ].map((item) => (
-  <div key={item.title} className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+  <div key={item.title} className="rounded-2xl border-2 bg-white p-4 sm:p-5 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
     <div
-      className="h-1 w-12 rounded-full"
+      className="h-1 w-10 sm:w-12 rounded-full"
       style={{ background: "var(--brand-burgundy)" }}
     />
-    <h3 className="mt-4 sm:mt-6 text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
-    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 mb-3">{item.desc}</p>
+    <h3 className="mt-3 sm:mt-6 text-sm sm:text-lg font-semibold mb-1.5 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
+    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 mb-0 sm:mb-3 line-clamp-3 sm:line-clamp-none">{item.desc}</p>
     {item.details && (
-      <ul className="text-xs sm:text-sm text-zinc-600 space-y-1.5 list-disc pl-4 sm:pl-5 leading-relaxed">
+      <ul className="hidden md:block text-xs sm:text-sm text-zinc-600 space-y-1.5 list-disc pl-4 sm:pl-5 leading-relaxed mt-2 sm:mt-0">
         {item.details.map((detail, idx) => (
           <li key={idx}>{detail}</li>
         ))}
@@ -166,27 +187,6 @@ export default function HomePage() {
 ))}
 
         
-        </div>
-      </section>
-
-      {/* 시설 소개 동영상 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
-        <div className="mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            CEDAR HILL Global Prep의 전체 시설을 영상으로 만나보세요.
-          </p>
-        </div>
-        <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
-          <video
-            src="/images/cedarhill.mp4"
-            controls
-            playsInline
-            className="w-full aspect-video object-cover"
-            poster="/images/library1.jpg"
-          >
-            브라우저가 비디오를 지원하지 않습니다.
-          </video>
         </div>
       </section>
 
@@ -206,7 +206,7 @@ export default function HomePage() {
             { title: "Social & Emotional", desc: "사회성·정서 발달을 돕는 활동", img: "/images/gym2.jpg" },
           ].map((p) => (
             <div key={p.title} className="overflow-hidden rounded-2xl border-2 bg-white shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="aspect-[16/9] w-full relative">
+              <div className="hidden sm:block aspect-[16/9] w-full relative">
                 <Image 
                   src={p.img} 
                   alt={`${p.title} 프로그램 이미지`} 

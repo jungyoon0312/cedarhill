@@ -65,7 +65,7 @@ export default function PopupModal({
 
         {/* 이미지 */}
         <div className="relative w-full h-auto min-h-[200px]">
-          <Image
+              <Image
             src={imageSrc}
             alt={alt}
             width={1200}
@@ -75,8 +75,8 @@ export default function PopupModal({
             className="w-full h-auto object-contain"
             priority={false}
             unoptimized={false}
-          />
-        </div>
+              />
+            </div>
 
         {/* 하단 버튼 */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-2 items-center">

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치(잠재력과 성장, 학업적 우수성, 협력, 창의성, 배려, 소통)를 확인하세요.",
   openGraph: {
     title: "비전과 가치 | CEDAR HILL Global Prep",
-    description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치를 확인하세요.",
+  description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치를 확인하세요.",
     url: "https://www.cedarhgp.org/about/vision-values",
     type: "website",
   },

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정. 인천 영어유치원 입학 상담 및 일정 안내.",
   openGraph: {
     title: "입학 | CEDAR HILL Global Prep",
-    description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
+  description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
     url: "https://www.cedarhgp.org/admissions",
     type: "website",
   },

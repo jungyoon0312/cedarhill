@@ -169,6 +169,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 시설 소개 동영상 */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+            CEDAR HILL Global Prep의 전체 시설을 영상으로 만나보세요.
+          </p>
+        </div>
+        <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
+          <video
+            src="/images/cedarhill.mp4"
+            controls
+            playsInline
+            className="w-full aspect-video object-cover"
+            poster="/images/library1.jpg"
+          >
+            브라우저가 비디오를 지원하지 않습니다.
+          </video>
+        </div>
+      </section>
+
       {/* 2) 대표 프로그램 3카드 */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
         <div className="mb-8 sm:mb-12">

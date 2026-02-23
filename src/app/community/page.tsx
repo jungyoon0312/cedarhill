@@ -21,7 +21,7 @@ function GalleryCard({ category }: { category: typeof galleryCategories[0] }) {
           quality={75}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
-        />
+          />
         {/* 이미지 개수 표시 */}
         {category.images.length > 1 && (
           <div className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
@@ -88,17 +88,17 @@ export default function CommunityPage() {
                   <Link
                     href={`/community/notices/${post.id}`}
                     className="block"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1 space-y-2">
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 space-y-2">
                         <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug hover:underline" style={{ color: "var(--brand-navy)" }}>
-                          {post.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
-                      </div>
-                      <div className="text-zinc-400 text-lg sm:text-xl">→</div>
+                        {post.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
                     </div>
-                  </Link>
+                    <div className="text-zinc-400 text-lg sm:text-xl">→</div>
+                  </div>
+                </Link>
                   {/* 3차 입학설명회 신청 버튼 */}
                   {post.id === "admission-briefing-academy-2026-02-07" && (
                     <div className="mt-4 pt-4 border-t" style={{ borderColor: "var(--brand-slate)" }}>
@@ -164,11 +164,11 @@ export default function CommunityPage() {
               <p className="text-sm sm:text-base text-zinc-500">등록된 갤러리가 없습니다.</p>
             </div>
           ) : (
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {galleryCategories.map((category) => (
                 <GalleryCard key={category.id} category={category} />
-              ))}
-            </div>
+            ))}
+          </div>
           )}
 
 

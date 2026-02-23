@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: "오시는 길 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요. 인천 학익동 영어유치원 위치 정보를 제공합니다.",
   openGraph: {
-    title: "오시는 길 | CEDAR HILL Global Prep",
-    description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",
+  title: "오시는 길 | CEDAR HILL Global Prep",
+  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",
     url: "https://www.cedarhgp.org/about/location",
     type: "website",
   },
@@ -18,7 +18,7 @@ export default function LocationPage() {
       <>
         <SubHero title="오시는 길" breadcrumb="HOME > 소개 > 오시는 길" />
         <AboutTabs currentPath="/about/location" />
-        <section className="mx-auto max-w-6xl px-4 py-16 space-y-8">
+      <section className="mx-auto max-w-6xl px-4 py-16 space-y-8">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>오시는 길</h1>
           <p className="text-base sm:text-lg text-zinc-700 leading-relaxed">

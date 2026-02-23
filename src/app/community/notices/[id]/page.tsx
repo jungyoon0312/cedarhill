@@ -130,6 +130,21 @@ export default async function NoticeDetailPage({ params }: Props) {
               </a>
             </div>
           )}
+
+          {/* English Lab 레벨테스트 신청 버튼 */}
+          {post.id === "english-lab-after-school-2026-02" && (
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <a
+                href="https://yoo-jenny.notion.site/3014597a850c80abbbecc71a26798512?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "var(--brand-burgundy)" }}
+              >
+                레벨테스트 신청
+              </a>
+            </div>
+          )}
         </article>
 
         {/* 하단 네비게이션 */}

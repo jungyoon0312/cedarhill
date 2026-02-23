@@ -244,12 +244,11 @@ export default function HomePage() {
           </a>
         </div>
 
-        <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {noticePosts.slice(0, 3).map((post) => (
-            <Link key={post.id} href={`/community/notices/${post.id}`} className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
+            <Link key={post.id} href={`/community/notices/${post.id}`} className="block min-w-0 rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="text-xs sm:text-sm text-zinc-500 mb-2 sm:mb-3">{post.date}</div>
-              <div className="text-sm sm:text-base font-medium sm:font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{post.title}</div>
-              <div className="text-sm sm:text-base leading-relaxed text-zinc-700 whitespace-pre-line line-clamp-3">{post.content}</div>
+              <div className="text-sm sm:text-base font-medium sm:font-semibold line-clamp-2 break-words" style={{ color: "var(--brand-navy)" }}>{post.title}</div>
             </Link>
           ))}
         </div>

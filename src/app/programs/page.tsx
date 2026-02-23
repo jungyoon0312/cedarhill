@@ -221,7 +221,7 @@ export default function ProgramsPage() {
         {/* 교육 특징 탭 */}
         {activeTab === "features" && (
         <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
           <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed mb-4 sm:mb-6">
             주요 교육 특징을 영역별로 정리하였습니다.
           </p>
@@ -238,7 +238,7 @@ export default function ProgramsPage() {
         {activeTab === "asi" && (
         <div className="space-y-6 sm:space-y-8">
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Advantages School International (ASI)</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Advantages School International (ASI)</h2>
             <p className="text-sm sm:text-base md:text-lg text-zinc-700 leading-relaxed">
               <strong>THINK. LEARN. REALIZE.</strong>
             </p>

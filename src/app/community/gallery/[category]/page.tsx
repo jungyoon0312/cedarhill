@@ -43,7 +43,7 @@ export default async function GalleryDetailPage({ params }: Props) {
 
         {/* 갤러리 제목 */}
         <div className="mb-8 sm:mb-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>
             {galleryCategory.title}
           </h1>
           <p className="text-sm sm:text-base text-zinc-500">{galleryCategory.date}</p>

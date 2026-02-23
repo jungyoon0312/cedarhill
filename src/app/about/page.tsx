@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 bg-white">
       {/* 타이틀 */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
       <p className="text-sm sm:text-base md:text-lg text-zinc-700 max-w-3xl leading-relaxed">
         인천 영어유치원 CEDAR HILL Global Prep은 인천 학익동에 위치한 인천국제학교로서 글로벌 기준의 유아 교육을 제공합니다.
       </p>

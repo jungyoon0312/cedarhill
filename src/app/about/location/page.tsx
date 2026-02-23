@@ -20,7 +20,7 @@ export default function LocationPage() {
         <AboutTabs currentPath="/about/location" />
       <section className="mx-auto max-w-6xl px-4 py-16 space-y-8">
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: "var(--brand-navy)" }}>오시는 길</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold mb-4" style={{ color: "var(--brand-navy)" }}>오시는 길</h1>
           <p className="text-base sm:text-lg text-zinc-700 leading-relaxed">
             위치 및 교통 안내 페이지입니다.
           </p>

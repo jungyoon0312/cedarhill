@@ -62,7 +62,7 @@ export default function AdmissionsPage() {
 
         {/* 일과표 */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Daily Schedule</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Daily Schedule</h2>
           <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed">
             일과표는 기관 운영에 따라 일부 조정될 수 있습니다.
           </p>
@@ -93,7 +93,7 @@ export default function AdmissionsPage() {
 
         {/* 입학 절차 */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Admission Process</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Admission Process</h2>
           <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed">
             입학 절차는 다음과 같이 진행됩니다.
           </p>

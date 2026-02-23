@@ -31,8 +31,8 @@ function GalleryCard({ category }: { category: typeof galleryCategories[0] }) {
       </div>
 
       <div className="p-5">
-        <div className="text-xs text-zinc-500">{category.date}</div>
-        <div className="mt-1 font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+        <div className="text-xs sm:text-sm text-zinc-500">{category.date}</div>
+        <div className="mt-1 font-medium sm:font-semibold leading-snug text-sm sm:text-base" style={{ color: "var(--brand-navy)" }}>
           {category.title}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function CommunityPage() {
         {/* 공지사항 */}
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
           </div>
 
           {noticePosts.length === 0 ? (
@@ -91,7 +91,7 @@ export default function CommunityPage() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 space-y-2">
-                        <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug hover:underline" style={{ color: "var(--brand-navy)" }}>
+                        <h3 className="text-base sm:text-lg font-medium sm:font-semibold leading-snug hover:underline" style={{ color: "var(--brand-navy)" }}>
                         {post.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
@@ -122,7 +122,7 @@ export default function CommunityPage() {
         {/* 학교소식 */}
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>학교소식</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight" style={{ color: "var(--brand-navy)" }}>학교소식</h2>
           </div>
 
           {newsPosts.length === 0 ? (
@@ -140,7 +140,7 @@ export default function CommunityPage() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 space-y-2">
-                      <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
+                      <h3 className="text-base sm:text-lg font-medium sm:font-semibold leading-snug" style={{ color: "var(--brand-navy)" }}>
                         {post.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
@@ -156,7 +156,7 @@ export default function CommunityPage() {
         {/* 갤러리 */}
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: "var(--brand-navy)" }}>갤러리</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold" style={{ color: "var(--brand-navy)" }}>갤러리</h2>
           </div>
 
           {galleryCategories.length === 0 ? (

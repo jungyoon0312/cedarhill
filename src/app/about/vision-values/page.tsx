@@ -62,7 +62,7 @@ export default function AboutVisionValuesPage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16 space-y-8 sm:space-y-12">
         {/* 미션 */}
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">미션</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">미션</h2>
           <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our mission is to cultivate each student's potential through meaningful learning experiences that integrate academic excellence, character education, and global awareness. We strive to guide students to become confident, compassionate, and innovative leaders who contribute positively to their communities and the world.
@@ -75,7 +75,7 @@ export default function AboutVisionValuesPage() {
 
         {/* 비전 */}
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">비전</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">비전</h2>
           <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
               Our vision represents our commitment to discovering each student's unique potential and nurturing it as the foundation for growth into future leaders. By balancing academic excellence with character development, we empower well-rounded individuals to thrive in an interconnected world—not only adapting to the future, but shaping it with compassion, integrity, and innovative thinking.
@@ -88,7 +88,7 @@ export default function AboutVisionValuesPage() {
 
         {/* 핵심 가치 카드 */}
         <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">핵심 가치</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">핵심 가치</h2>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-zinc-500 leading-relaxed">
             교육 운영 전반에서 아래 가치를 기준으로 학습 경험을 설계합니다.
           </p>

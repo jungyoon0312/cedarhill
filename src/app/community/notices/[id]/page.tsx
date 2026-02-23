@@ -45,7 +45,7 @@ export default async function NoticeDetailPage({ params }: Props) {
         <article className="rounded-2xl border-2 bg-white p-6 sm:p-8 md:p-10 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
           {/* 제목 및 날짜 */}
           <div className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b" style={{ borderColor: "var(--brand-slate)" }}>
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight" style={{ color: "var(--brand-navy)" }}>
+            <h1 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4 leading-tight" style={{ color: "var(--brand-navy)" }}>
               {post.title}
             </h1>
             <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>

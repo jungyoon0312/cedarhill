@@ -44,7 +44,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("digitalWittiverse")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               Digital Wittiverse
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
@@ -130,7 +130,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("renzulliAI")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               Renzulli-AI Coding
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
@@ -214,7 +214,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("powerPlace")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               Cedar Hill Power Place
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
@@ -306,7 +306,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("nadaunArt")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               NADAUN ART
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
@@ -403,7 +403,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("englishLab")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               English Lab
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
@@ -476,7 +476,7 @@ export default function CoCurricularActivitiesPage() {
             onClick={() => toggleSection("futurum")}
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               FUTURUM Global Gifted Center
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">

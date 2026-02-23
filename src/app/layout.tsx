@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 const kr = Noto_Sans_KR({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
   variable: "--font-kr",
   display: "swap", // 폰트 로딩 최적화
   preload: true,

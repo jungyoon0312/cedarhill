@@ -63,7 +63,7 @@ export default function HomePage() {
               GLOBAL PREP
             </h1>
             <p 
-              className="text-lg sm:text-xl text-white drop-shadow-lg max-w-2xl mb-8"
+              className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg max-w-2xl mb-8"
               style={{
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)"
               }}
@@ -77,14 +77,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <a
                 href="tel:032-875-8733"
-                className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium sm:font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
                 style={{ backgroundColor: "var(--brand-burgundy)" }}
               >
                 📞 입학 상담 신청하기
               </a>
               <a
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl border-2 border-white/90 bg-white/10 backdrop-blur-sm"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium sm:font-semibold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl border-2 border-white/90 bg-white/10 backdrop-blur-sm"
               >
                 더 알아보기
               </a>
@@ -112,7 +112,7 @@ export default function HomePage() {
       {/* 시설 소개 동영상 - 모바일에서 먼저 노출 */}
       <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-20 bg-white">
         <div className="mb-6 sm:mb-10">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             CEDAR HILL Global Prep의 전체 시설을 영상으로 만나보세요.
           </p>
@@ -133,7 +133,7 @@ export default function HomePage() {
       {/* 1) 핵심 강점 3카드 */}
       <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-28 bg-white">
         <div className="mb-6 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             인천 영어유치원 CEDAR HILL Global Prep은 인천국제학교로서 글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
           </p>
@@ -174,8 +174,8 @@ export default function HomePage() {
       className="h-1 w-10 sm:w-12 rounded-full"
       style={{ background: "var(--brand-burgundy)" }}
     />
-    <h3 className="mt-3 sm:mt-6 text-sm sm:text-lg font-semibold mb-1.5 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
-    <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 mb-0 sm:mb-3 line-clamp-3 sm:line-clamp-none">{item.desc}</p>
+    <h3 className="mt-3 sm:mt-6 text-sm sm:text-lg font-medium sm:font-semibold mb-1.5 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
+    <p className="text-sm sm:text-base leading-relaxed text-zinc-700 mb-0 sm:mb-3 line-clamp-3 sm:line-clamp-none">{item.desc}</p>
     {item.details && (
       <ul className="hidden md:block text-xs sm:text-sm text-zinc-600 space-y-1.5 list-disc pl-4 sm:pl-5 leading-relaxed mt-2 sm:mt-0">
         {item.details.map((detail, idx) => (
@@ -193,7 +193,7 @@ export default function HomePage() {
       {/* 2) 대표 프로그램 3카드 */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
         <div className="mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
             인천 영어유치원에서 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
@@ -217,7 +217,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6 sm:p-8">
-                <h3 className="text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>
+                <h3 className="text-base sm:text-lg font-medium sm:font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{p.title}</h3>
                 <p className="text-sm sm:text-base leading-relaxed text-zinc-700">{p.desc}</p>
                 <a href="/programs" className="mt-5 inline-block text-sm font-semibold hover:underline"
                    style={{ color: "var(--brand-burgundy)" }}>
@@ -233,7 +233,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
         <div className="mb-8 sm:mb-12 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
             <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
               최신 소식과 안내를 확인하세요.
             </p>
@@ -247,9 +247,9 @@ export default function HomePage() {
         <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
           {noticePosts.slice(0, 3).map((post) => (
             <Link key={post.id} href={`/community/notices/${post.id}`} className="block rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="text-xs text-zinc-500 mb-2 sm:mb-3">{post.date}</div>
-              <div className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{post.title}</div>
-              <div className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700 whitespace-pre-line line-clamp-3">{post.content}</div>
+              <div className="text-xs sm:text-sm text-zinc-500 mb-2 sm:mb-3">{post.date}</div>
+              <div className="text-sm sm:text-base font-medium sm:font-semibold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>{post.title}</div>
+              <div className="text-sm sm:text-base leading-relaxed text-zinc-700 whitespace-pre-line line-clamp-3">{post.content}</div>
             </Link>
           ))}
         </div>

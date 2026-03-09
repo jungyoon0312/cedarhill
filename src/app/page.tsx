@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
+import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -26,6 +27,15 @@ export default function HomePage() {
 
   return (
     <main>
+      {/* 오픈하우스 팝업 */}
+      <PopupModal
+        imageSrc="/images/oh_poster_01.png"
+        alt="오픈하우스 및 입학설명회"
+        storageKey="open-house-popup-closed"
+        applicationUrl="https://yoo-jenny.notion.site/c114597a850c829ab2dc01460ebcb9df?pvs=105"
+        applicationButtonText="지금 신청하기"
+      />
+
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

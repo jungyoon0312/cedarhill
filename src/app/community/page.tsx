@@ -99,6 +99,20 @@ export default function CommunityPage() {
                     <div className="text-zinc-400 text-lg sm:text-xl">→</div>
                   </div>
                 </Link>
+                  {/* 오픈하우스 신청 버튼 */}
+                  {post.id === "open-house-2026-03" && (
+                    <div className="mt-4 pt-4 border-t" style={{ borderColor: "var(--brand-slate)" }}>
+                      <a
+                        href="https://yoo-jenny.notion.site/c114597a850c829ab2dc01460ebcb9df?pvs=105"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg"
+                        style={{ backgroundColor: "var(--brand-burgundy)" }}
+                      >
+                        지금 신청하기
+                      </a>
+                    </div>
+                  )}
                   {/* 3차 입학설명회 신청 버튼 */}
                   {post.id === "admission-briefing-academy-2026-02-07" && (
                     <div className="mt-4 pt-4 border-t" style={{ borderColor: "var(--brand-slate)" }}>

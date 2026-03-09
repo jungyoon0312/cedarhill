@@ -116,6 +116,21 @@ export default async function NoticeDetailPage({ params }: Props) {
             </div>
           )}
 
+          {/* 오픈하우스 신청 버튼 */}
+          {post.id === "open-house-2026-03" && (
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <a
+                href="https://yoo-jenny.notion.site/c114597a850c829ab2dc01460ebcb9df?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "var(--brand-burgundy)" }}
+              >
+                지금 신청하기
+              </a>
+            </div>
+          )}
+
           {/* 3차 입학설명회 신청 버튼 */}
           {post.id === "admission-briefing-academy-2026-02-07" && (
             <div className="mt-6 sm:mt-8 flex justify-center">

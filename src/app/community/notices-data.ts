@@ -9,6 +9,13 @@ export type NoticePost = {
 
 export const noticePosts: NoticePost[] = [
   {
+    id: "open-house-2026-03",
+    title: "오픈하우스 및 입학설명회 안내",
+    date: "2026-03-09",
+    category: "행사",
+    content: "CEDAR HILL Global Prep 오픈하우스에 여러분을 초대합니다.\n\n【행사 일정】\n• 3월 21일 (토) 10:30~12:00\n• 3월 28일 (토) 10:30~12:00\n\n※ 위 두 날짜 중 하루를 선택하여 참석하시면 됩니다.\n\n【모집 대상】\n5세, 6세, 7세\n\n【학부모 대상】\n입학 설명회가 진행됩니다. 교육 과정, 입학 절차, 교과 과정 등에 대해 자세히 안내해 드립니다.\n\n【문의】\n032-875-8733~4",
+  },
+  {
     id: "nadaun-art-free-trial-2026-02",
     title: "나다운아트 미술 아카데미 1회 무료 수업 안내",
     date: "2026-02-23",

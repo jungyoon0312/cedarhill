@@ -65,7 +65,7 @@ export default function PopupModal({
 
         {/* 이미지 */}
         <div className="relative w-full h-auto min-h-[200px]">
-              <Image
+          <Image
             src={imageSrc}
             alt={alt}
             width={1200}
@@ -75,11 +75,18 @@ export default function PopupModal({
             className="w-full h-auto object-contain"
             priority={false}
             unoptimized={false}
-              />
-            </div>
+          />
+        </div>
 
-        {/* 하단 버튼 */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-2 items-center">
+        {/* 하단 버튼 - 이미지 밖에 배치하여 글자 가리지 않음 */}
+        <div className="flex flex-row justify-between items-center gap-4 p-4 bg-white border-t" style={{ borderColor: "var(--brand-slate)" }}>
+          <button
+            onClick={handleCloseToday}
+            className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
+            style={{ backgroundColor: "var(--brand-navy)" }}
+          >
+            오늘 하루 보지 않기
+          </button>
           {applicationUrl && (
             <a
               href={applicationUrl}
@@ -91,13 +98,6 @@ export default function PopupModal({
               {applicationButtonText}
             </a>
           )}
-          <button
-            onClick={handleCloseToday}
-            className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
-            style={{ backgroundColor: "var(--brand-navy)" }}
-          >
-            오늘 하루 보지 않기
-          </button>
         </div>
       </div>
     </div>

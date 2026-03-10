@@ -4,7 +4,7 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "오시는 길 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요. 인천 학익동 영어유치원 위치 정보를 제공합니다.",
+  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요. 인천 학익동 영어유치부 위치 정보를 제공합니다.",
   openGraph: {
   title: "오시는 길 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",

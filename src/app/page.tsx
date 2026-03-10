@@ -80,7 +80,7 @@ export default function HomePage() {
             >
               인천 학익동의 글로벌 기준 유아 교육,
               <br />
-              인천 영어유치원에서 아이의 성장을 함께 설계합니다
+              인천 영어유치부에서 아이의 성장을 함께 설계합니다
             </p>
             
             {/* CTA 버튼 그룹 */}
@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="mb-6 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            인천 영어유치원 CEDAR HILL Global Prep은 인천국제학교로서 글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
+            인천 영어유치부 CEDAR HILL Global Prep은 인천국제학교로서 글로벌 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
           </p>
         </div>
 
@@ -205,7 +205,7 @@ export default function HomePage() {
         <div className="mb-8 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            인천 영어유치원에서 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
+            인천 영어유치부에서 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
         </div>
 

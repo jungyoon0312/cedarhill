@@ -47,11 +47,11 @@ export default function PopupModal({
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2 sm:p-4"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2"
       onClick={handleClose}
     >
       <div 
-        className="relative w-[95vw] max-w-4xl sm:max-w-5xl lg:max-w-6xl xl:max-w-7xl max-h-[95vh] flex flex-col bg-white rounded-lg shadow-2xl overflow-hidden"
+        className="relative w-[96vw] h-[96vh] max-w-[1600px] flex flex-col bg-white rounded-lg shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 닫기 버튼 */}
@@ -63,15 +63,15 @@ export default function PopupModal({
           <span className="text-2xl text-gray-700">×</span>
         </button>
 
-        {/* 이미지 - 비율 유지하며 한 화면에 전체 표시, 모니터에서 크게 노출 */}
-        <div className="flex-1 min-h-0 flex items-center justify-center p-4 sm:p-6">
-          <div className="relative w-full h-full min-h-[200px]">
+        {/* 이미지 - 화면 대부분을 차지하도록 정상 사이즈로 표시 */}
+        <div className="flex-1 min-h-0 flex items-center justify-center p-3">
+          <div className="relative w-full h-full">
             <Image
               src={imageSrc}
               alt={alt}
               fill
-              quality={85}
-              sizes="(max-width: 640px) 95vw, (max-width: 1024px) 1024px, (max-width: 1280px) 1152px, 1280px"
+              quality={90}
+              sizes="100vw"
               className="object-contain"
               priority={false}
               unoptimized={false}

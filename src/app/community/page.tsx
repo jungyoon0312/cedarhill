@@ -103,7 +103,7 @@ export default function CommunityPage() {
                   {post.id === "open-house-2026-03" && (
                     <div className="mt-4 pt-4 border-t" style={{ borderColor: "var(--brand-slate)" }}>
                       <a
-                        href="https://forms.gle/1vxEhfeyEAmFeett6"
+                        href="https://forms.gle/oMuqN9dGtGnZJ2pZ9"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-lg px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg"

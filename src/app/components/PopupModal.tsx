@@ -51,7 +51,7 @@ export default function PopupModal({
       onClick={handleClose}
     >
       <div 
-        className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+        className="relative max-w-4xl w-full max-h-[90vh] flex flex-col bg-white rounded-lg shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 닫기 버튼 */}
@@ -63,8 +63,8 @@ export default function PopupModal({
           <span className="text-2xl text-gray-700">×</span>
         </button>
 
-        {/* 이미지 */}
-        <div className="relative w-full h-auto min-h-[200px]">
+        {/* 이미지 - 스크롤 가능하여 QR코드까지 전체 표시 */}
+        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
           <Image
             src={imageSrc}
             alt={alt}
@@ -78,8 +78,8 @@ export default function PopupModal({
           />
         </div>
 
-        {/* 하단 버튼 - 이미지 밖에 배치하여 글자 가리지 않음 */}
-        <div className="flex flex-row justify-between items-center gap-4 p-4 bg-white border-t" style={{ borderColor: "var(--brand-slate)" }}>
+        {/* 하단 버튼 - 고정 영역, 이미지 밖에 배치하여 글자 가리지 않음 */}
+        <div className="flex-shrink-0 flex flex-row justify-between items-center gap-4 p-4 bg-white border-t" style={{ borderColor: "var(--brand-slate)" }}>
           <button
             onClick={handleCloseToday}
             className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"

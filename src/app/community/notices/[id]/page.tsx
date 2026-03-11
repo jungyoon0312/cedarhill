@@ -120,7 +120,7 @@ export default async function NoticeDetailPage({ params }: Props) {
           {post.id === "open-house-2026-03" && (
             <div className="mt-6 sm:mt-8 flex justify-center">
               <a
-                href="https://yoo-jenny.notion.site/c114597a850c829ab2dc01460ebcb9df?pvs=105"
+                href="https://forms.gle/1vxEhfeyEAmFeett6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"

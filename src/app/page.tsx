@@ -32,7 +32,7 @@ export default function HomePage() {
         imageSrc="/images/OPEN%20HOUSE.png"
         alt="오픈하우스 및 입학설명회"
         storageKey="open-house-popup-closed"
-        applicationUrl="https://yoo-jenny.notion.site/c114597a850c829ab2dc01460ebcb9df?pvs=105"
+        applicationUrl="https://forms.gle/1vxEhfeyEAmFeett6"
         applicationButtonText="지금 신청하기"
       />
 

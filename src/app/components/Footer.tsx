@@ -46,7 +46,7 @@ export default function Footer() {
                 전화: <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
               </li>
               <li>
-                이메일: <a href="mailto:fsalusone@gmail.com" className="hover:underline">fsalusone@gmail.com</a>
+                이메일: <a href="mailto:cedarhill@cedarhillglobalprep.com" className="hover:underline">cedarhill@cedarhillglobalprep.com</a>
               </li>
               <li>주소: 인천광역시 미추홀구 학익로 30 1층 1-16</li>
             </ul>

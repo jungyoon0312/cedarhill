@@ -63,19 +63,20 @@ export default function PopupModal({
           <span className="text-2xl text-gray-700">×</span>
         </button>
 
-        {/* 이미지 - 스크롤 가능하여 QR코드까지 전체 표시 */}
-        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
-          <Image
-            src={imageSrc}
-            alt={alt}
-            width={1200}
-            height={1600}
-            quality={85}
-            sizes="(max-width: 768px) 100vw, 1200px"
-            className="w-full h-auto object-contain"
-            priority={false}
-            unoptimized={false}
-          />
+        {/* 이미지 - 비율 유지하며 한 화면에 전체 표시 (스크롤 없음) */}
+        <div className="flex-1 min-h-0 flex items-center justify-center p-2">
+          <div className="relative w-full h-full min-h-[200px]">
+            <Image
+              src={imageSrc}
+              alt={alt}
+              fill
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-contain"
+              priority={false}
+              unoptimized={false}
+            />
+          </div>
         </div>
 
         {/* 하단 버튼 - 고정 영역, 이미지 밖에 배치하여 글자 가리지 않음 */}

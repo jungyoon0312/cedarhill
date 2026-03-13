@@ -365,7 +365,7 @@ export default function CoCurricularActivitiesPage() {
                   </div>
                   <span className="text-zinc-400">→</span>
                   <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-white text-xs sm:text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
-                    국제학교 방향성과 연계
+                    글로벌 교육 방향성과 연계
                   </div>
                   <span className="text-zinc-400">→</span>
                   <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-white text-xs sm:text-sm font-semibold" style={{ background: "var(--brand-burgundy)" }}>
@@ -416,7 +416,7 @@ export default function CoCurricularActivitiesPage() {
               <div className="mb-4 sm:mb-6">
                 <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>ENGLISH PROGRAM</p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  씨더힐 글로벌 프렙 졸업 후 한국 학교 진학을 희망하는 학생, 국제학교 준비생, 국제학교 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
+                  씨더힐 글로벌 프렙 졸업 후 한국 학교 진학을 희망하는 학생, 글로벌 교육 준비생 및 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
                   미국 Common Core 기준의 체계적인 커리큘럼을 통해 글로벌 학습 환경에서 경쟁력을 갖출 수 있도록 지원합니다.

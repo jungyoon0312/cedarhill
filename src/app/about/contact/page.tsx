@@ -4,7 +4,7 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "문의 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다. 인천 영어유치부 입학 상담을 받으세요.",
+  description: "CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원) 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다.",
   openGraph: {
     title: "문의 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 입학 및 프로그램 관련 문의. 전화: 032-875-8733~4. 상담을 통해 개별 안내를 제공합니다.",

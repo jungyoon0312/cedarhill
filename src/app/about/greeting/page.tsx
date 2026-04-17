@@ -4,7 +4,7 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "인사말 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 원장 인사말과 기관의 교육 방향을 확인하세요. 글로벌 기준의 유아 교육 프로그램을 운영하며, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
+  description: "CEDAR HILL Global Prep 원장 인사말과 기관의 교육 방향을 확인하세요. 국제화 교육 방향의 프로그램을 운영하며 학생의 성장을 지원합니다.",
   openGraph: {
     title: "인사말 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 원장 인사말과 기관의 교육 방향을 확인하세요.",

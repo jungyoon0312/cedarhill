@@ -35,7 +35,7 @@ export default function AboutPage() {
       {/* 타이틀 */}
       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
       <p className="text-sm sm:text-base md:text-lg text-zinc-700 max-w-3xl leading-relaxed">
-        인천 영어유치부 CEDAR HILL Global Prep은 인천 학익동에 위치한 글로벌 교육기관으로, 글로벌 기준의 유아 교육을 제공합니다.
+        CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원)은 인천 미추홀구 학익동에 위치한 학교교과교습학원으로, 실용외국어 등 국제화 교육 방향의 프로그램을 안내합니다.
       </p>
 
       {/* 카드 그리드 */}

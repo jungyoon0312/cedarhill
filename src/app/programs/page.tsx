@@ -35,7 +35,7 @@ export default function ProgramsPage() {
       bullets: [
         "유아 발달 단계에 맞춘 기초 학습 및 언어 활동 중심",
         "놀이 기반 학습을 통해 학습 흥미 및 습관 형성 지원",
-        "영어 몰입 환경에서 자연스러운 언어 사용 경험 제공",
+        "영어를 주요 교수언어로 활용하는 수업 경험 제공",
       ],
     },
     {
@@ -71,9 +71,9 @@ export default function ProgramsPage() {
       ],
     },
     {
-      title: "English Immersion(영어 몰입)",
+      title: "English Immersion(영어 중심 수업)",
       bullets: [
-        "일상 소통부터 수업까지 영어 사용 환경 제공",
+        "일상 소통과 수업에서 영어를 적극 활용하는 환경 제공",
         "발화 기회를 충분히 제공하여 자신감 있는 표현 지원",
         "기초 언어 능력과 사고 언어의 자연스러운 연결",
       ],
@@ -88,9 +88,9 @@ export default function ProgramsPage() {
         {/* 프로그램 소개 */}
         <div className="space-y-3 sm:space-y-5 max-w-3xl">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
-            CEDAR HILL Global Prep은 유아기의 핵심 발달 영역을 고려한
+            CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원)은 유아기의 핵심 발달 영역을 고려한
             통합형 커리큘럼을 기반으로 교육 프로그램을 운영합니다.
-            모든 과정은 영어 몰입 환경에서 진행되며, 학생의 성장 단계에 맞춘
+            주요 수업에서 영어를 활용하는 환경에서 학생의 성장 단계에 맞춘
             학습 경험을 제공합니다.
           </p>
           <p className="text-zinc-700 text-xs sm:text-sm md:text-base leading-relaxed">
@@ -173,7 +173,7 @@ export default function ProgramsPage() {
                   <li>월별 테마 기반 통합 학습 (Family & Pets, Down on the Farm, Community Helpers 등)</li>
                   <li>문해력, 수학, 과학, 사회, 창의 예술의 통합적 접근</li>
                   <li>감각 활동(Sensory) 및 블록 활동(Blocks)을 통한 체험 학습</li>
-                  <li>미국 사립학교에서 널리 인정받고 구현되는 커리큘럼</li>
+                  <li>해외 사립학교 교육 현장에서도 활용되는 유형의 커리큘럼</li>
                 </ul>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function ProgramsPage() {
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Junior Kinder (만 4세/한국나이 6세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                Experience Early Learning을 기반으로 한 테마/STEAM 기반 커리큘럼으로, 언어와 문해력 발달에 중점을 둡니다. 미국 학년도 Senior Kindergarten 준비 단계로서 읽기, 쓰기, 구두 의사소통의 기초 기술을 구축합니다.
+                Experience Early Learning을 기반으로 한 테마/STEAM 기반 커리큘럼으로, 언어와 문해력 발달에 중점을 둡니다. 미국 학년도 Senior Kindergarten에 맞춘 수준의 읽기, 쓰기, 구두 의사소통 기초를 다룹니다.
               </p>
               <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
                 <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 학습 영역:</p>
@@ -201,7 +201,7 @@ export default function ProgramsPage() {
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Senior Kinder (만 5세/한국나이 7세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                Advantages School International (ASI) 커리큘럼을 사용하여 제공되며, 미국 학년도 학생들과 동일한 학업 기준과 성취 기준을 충족하는 교육을 제공합니다. 이 단계에서는 핵심 학과목에 강한 초점을 두어 초등학교로의 성공적인 전환에 필요한 기초 지식과 기술을 개발합니다.
+                Advantages School International (ASI) 커리큘럼을 사용하여 제공하며, 미국 학년도에 맞춘 학업·성취 기준을 참고한 수업을 구성합니다. 이 단계에서는 핵심 학과목에 초점을 두어 초등학교 생활에 필요한 기초 지식과 기술을 갖출 수 있도록 지원합니다.
               </p>
               <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
                 <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 과목:</p>
@@ -243,8 +243,8 @@ export default function ProgramsPage() {
               <strong>THINK. LEARN. REALIZE.</strong>
             </p>
             <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-              Advantages School International (ASI)는 완전히 인증된 학교로서, CEDAR HILL Global Prep의 교육 프로그램을 지원하는 핵심 파트너입니다. 
-              ASI는 60년 이상의 온라인 학습 경험을 바탕으로 개인화된 교육 솔루션을 제공하며, 모든 학생이 언제 어디서나 K-12 교육을 받을 수 있도록 지원합니다.
+              Advantages School International (ASI)는 해외 학력 인증 절차를 갖춘 온라인·혼합형 교육 프로그램을 제공하는 기관으로, CEDAR HILL Global Prep의 교육 프로그램과 협력합니다.
+              ASI는 오랜 온라인 학습 운영 경험을 바탕으로 개인화된 교육 솔루션을 제공합니다(제공 범위는 과정·연령에 따라 다를 수 있음).
             </p>
           </div>
 
@@ -253,7 +253,7 @@ export default function ProgramsPage() {
             <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
             <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>인증 기관</h3>
             <p className="text-xs sm:text-sm md:text-base text-zinc-700 mb-4 leading-relaxed">
-              Advantages School International은 다음 기관들로부터 완전한 인증을 받았습니다:
+              Advantages School International은 아래와 같은 인증·평가 기관과 연계되어 있습니다(세부는 ASI 공시 자료 기준):
             </p>
             <ul className="text-xs sm:text-sm md:text-base text-zinc-700 space-y-2 list-disc pl-5 leading-relaxed">
               <li><strong>NCAA</strong> (National Collegiate Athletic Association)</li>

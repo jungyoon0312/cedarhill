@@ -20,9 +20,9 @@ export default function Footer() {
               priority={false}
             />
             <p className="text-sm leading-relaxed text-white/90">
-              글로벌 기준의 유아 교육 프로그램을 운영하며,
+              국제화 교육 방향의 교습 과정을 바탕으로 유아·학령기 프로그램을 운영하며,
               <br />
-              학생의 잠재력과 균형 잡힌 성장을 지원합니다.
+              학생의 성장을 지원합니다.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 이메일: <a href="mailto:cedarhill@cedarhillglobalprep.com" className="hover:underline">cedarhill@cedarhillglobalprep.com</a>
               </li>
-              <li>주소: 인천광역시 미추홀구 학익로 30 1층 1-16</li>
+              <li>주소: 인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1</li>
             </ul>
             
             {/* 소셜 미디어 */}
@@ -85,8 +85,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/20 pt-6 text-xs text-white/70">
-          © {new Date().getFullYear()} CEDAR HILL Global Prep. All rights reserved.
+        <div className="mt-10 border-t border-white/20 pt-6 space-y-4 text-xs text-white/80 leading-relaxed">
+          <div>
+            <p className="font-semibold text-white/95 mb-1">광고·안내 필수 표시</p>
+            <p>
+              등록(신고)명칭: 씨더힐글로벌어학원 (표시명: CEDAR HILL Global Prep) ·
+              인천광역시남부교육지원청 제3866호 · 교습과목(과정): 실용외국어 ·
+              교습비 등: 상담 시 개별 안내
+            </p>
+          </div>
+          <p className="text-white/70">
+            © {new Date().getFullYear()} CEDAR HILL Global Prep. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

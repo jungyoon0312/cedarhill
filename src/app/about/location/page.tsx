@@ -4,7 +4,7 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "오시는 길 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요. 인천 학익동 영어유치부 위치 정보를 제공합니다.",
+  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1. 지도와 교통 안내를 확인하세요.",
   openGraph: {
   title: "오시는 길 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",
@@ -43,7 +43,7 @@ export default function LocationPage() {
           <div className="rounded-2xl border-2 p-6 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
             <h2 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주소</h2>
             <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
-              인천광역시 미추홀구 학익로 30
+              인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1
             </p>
           </div>
 

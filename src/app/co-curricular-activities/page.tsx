@@ -419,7 +419,7 @@ export default function CoCurricularActivitiesPage() {
                   씨더힐 글로벌 프렙 졸업 후 한국 학교 진학을 희망하는 학생, 글로벌 교육 준비생 및 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-                  미국 Common Core 기준의 체계적인 커리큘럼을 통해 글로벌 학습 환경에서 경쟁력을 갖출 수 있도록 지원합니다.
+                  미국 Common Core를 참고한 커리큘럼 구성으로, 영어 학습 역량을 단계적으로 다룰 수 있도록 지원합니다.
                 </p>
               </div>
 
@@ -477,7 +477,7 @@ export default function CoCurricularActivitiesPage() {
             className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
           >
             <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
-              FUTURUM Global Gifted Center
+              FUTURUM STEAM · 창의융합 프로그램
             </h3>
             <span className="ml-3 text-zinc-500 text-sm">
               {openSections.futurum ? "▼" : "▶"}
@@ -491,10 +491,10 @@ export default function CoCurricularActivitiesPage() {
                   Cedar Hill Global Prep X FUTURUM이 함께하는 수·과학 기반 창의 융합 교육센터
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  아이들의 잠재력을 키우고, 수·과학 기반 사고력을 통해 문제 해결 능력을 기르는 전문 영재 교육 기관입니다.
+                  수·과학 기반의 탐구·창의 활동을 통해 문제 해결 과정을 경험하도록 돕는 협력 프로그램입니다.
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-                  초등 이음 시스템을 통해 놀이 기반 학습을 초등 교육으로 자연스럽게 연결하며, STEAM을 통해 독립적인 사고와 문제 해결 능력을 기르고 이를 학교 과목에 적용할 수 있도록 지원합니다.
+                  놀이·체험 중심 활동을 학령기 학습과 자연스럽게 연결할 수 있도록 구성하며, STEAM 활동을 통해 스스로 생각하고 협력하는 태도를 기를 수 있도록 지원합니다(연령·학년에 맞는 범위에서 운영).
                 </p>
               </div>
 
@@ -504,7 +504,7 @@ export default function CoCurricularActivitiesPage() {
                   Odyssey of the Mind 창의융합프로그램: Integrated Creative Thinking Program
                 </h4>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  글로벌 STEAM 사고를 대표하는 FUTURUM의 핵심 창의 융합 문제 해결 프로그램
+                  STEAM 사고를 다루는 FUTURUM의 창의 융합 문제 해결 활동
                 </p>
                 <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
                   <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
@@ -512,11 +512,11 @@ export default function CoCurricularActivitiesPage() {
                       <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-navy)" }}>
                         01
                       </div>
-                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>세계창의력올림피아드 공식 지정</h5>
+                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>창의력 문제해결 활동</h5>
                     </div>
                     <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      세계창의력올림피아드 공식 지정 글로벌 창의 교육 프로그램<br />
-                      NASA가 개발 및 후원하는 창의교육 프로그램
+                      Odyssey of the Mind 등 해외에서 널리 알려진 창의력 교육 방식을 참고한 주제 기반 활동을 일부 모듈로 운영합니다.<br />
+                      공식 지정·후원 관계 등 세부 사항은 주최 측 공지를 확인해 주세요.
                     </p>
                   </div>
                   <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
@@ -554,8 +554,8 @@ export default function CoCurricularActivitiesPage() {
                   <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
                     <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>원리셈·수학실험실</h5>
                     <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      개념 중심 초등 수학 수해력 프로그램<br />
-                      십진법, 자릿값, 수 개념의 원리를 이해하여 수학적 사고를 구조화합니다.
+                      연령에 맞는 수 개념·원리를 이해하도록 돕는 활동<br />
+                      십진법, 자릿값 등 기초 개념을 차근차근 다룹니다.
                     </p>
                   </div>
                   <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>

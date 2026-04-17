@@ -24,11 +24,24 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.cedarhgp.org'),
   title: {
-    default: "인천 영어유치부 | CEDAR HILL Global Prep | 글로벌 교육기관",
-    template: "%s | 인천 영어유치부 | CEDAR HILL Global Prep",
+    default: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
+    template: "%s | CEDAR HILL Global Prep",
   },
-  description: "인천 영어유치부 CEDAR HILL Global Prep은 인천 학익동에 위치한 글로벌 교육기관으로, Cognia 인증 커리큘럼, STEAM 교육, 100% 영어 몰입 환경의 유아 교육 프로그램을 운영합니다.",
-  keywords: ["인천영어유치부", "인천교육기관", "인천 영어유치부", "인천 유치원", "영어유치부", "글로벌 교육", "유아교육", "영어 몰입 교육", "Cognia 인증", "STEAM 교육", "Pre-K", "인천 학익동", "미추홀구 유치원"],
+  description:
+    "등록명 씨더힐글로벌어학원(인천광역시남부교육지원청 제3866호) 소속 CEDAR HILL Global Prep. 인천 미추홀구 학익동에서 실용외국어·국제화 교육 방향의 프로그램을 안내합니다.",
+  keywords: [
+    "씨더힐글로벌어학원",
+    "CEDAR HILL Global Prep",
+    "인천 미추홀구",
+    "학익동",
+    "실용외국어",
+    "학교교과교습학원",
+    "국제화교육",
+    "유아 교습",
+    "영어 교육",
+    "STEAM",
+    "Pre-K",
+  ],
   authors: [{ name: "CEDAR HILL Global Prep" }],
   creator: "CEDAR HILL Global Prep",
   publisher: "CEDAR HILL Global Prep",
@@ -42,8 +55,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: "https://www.cedarhgp.org",
     siteName: "CEDAR HILL Global Prep",
-    title: "인천 영어유치부 | CEDAR HILL Global Prep | 글로벌 교육기관",
-    description: "인천 영어유치부 CEDAR HILL Global Prep은 인천 학익동에 위치한 글로벌 교육기관으로, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
+    title: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
+    description:
+      "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
     images: [
       {
         url: "https://www.cedarhgp.org/images/logo.png",
@@ -55,8 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-  title: "인천 영어유치부 | CEDAR HILL Global Prep | 글로벌 교육기관",
-  description: "인천 영어유치부 CEDAR HILL Global Prep은 인천 학익동에 위치한 글로벌 교육기관으로, 학생의 잠재력과 균형 잡힌 성장을 지원합니다.",
+  title: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
+  description:
+    "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
     images: ["https://www.cedarhgp.org/images/logo.png"],
   },
   robots: {
@@ -83,14 +98,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "CEDAR HILL Global Prep",
-    "alternateName": "씨더힐 글로벌 프렙",
+    "name": "씨더힐글로벌어학원",
+    "alternateName": ["CEDAR HILL Global Prep", "씨더힐 글로벌 프렙"],
     "url": "https://www.cedarhgp.org",
     "logo": "https://www.cedarhgp.org/images/logo.png",
-    "description": "인천 영어유치부 CEDAR HILL Global Prep은 인천 학익동에 위치한 글로벌 교육기관으로, Cognia 인증 커리큘럼, STEAM 교육, 100% 영어 몰입 환경의 유아 교육 프로그램을 운영합니다.",
+    "description":
+      "인천광역시 미추홀구 소재 학교교과교습학원. 교습과정: 실용외국어. 국제화 교육 목적의 프로그램을 운영합니다.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "학익로 30",
+      "streetAddress": "학익로 30, 450동 상가 1층 1-1",
       "addressLocality": "미추홀구",
       "addressRegion": "인천광역시",
       "postalCode": "22381",
@@ -146,15 +162,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.cedarhgp.org/#organization",
-    "name": "CEDAR HILL Global Prep",
-    "alternateName": ["씨더힐 글로벌 프렙", "인천 영어유치부", "글로벌 교육기관"],
+    "name": "씨더힐글로벌어학원",
+    "alternateName": ["CEDAR HILL Global Prep", "씨더힐 글로벌 프렙"],
     "image": "https://www.cedarhgp.org/images/logo.png",
     "url": "https://www.cedarhgp.org",
     "telephone": "032-875-8733",
     "email": "info@cedarhgp.org",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "학익로 30",
+      "streetAddress": "학익로 30, 450동 상가 1층 1-1",
       "addressLocality": "미추홀구",
       "addressRegion": "인천광역시",
       "postalCode": "22381",

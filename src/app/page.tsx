@@ -68,9 +68,9 @@ export default function HomePage() {
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)"
               }}
             >
-              인천 학익동의 글로벌 기준 유아 교육,
+              인천 학익동에서 국제화 교육 방향의 교습 프로그램을 운영하며,
               <br />
-              인천 영어유치부에서 아이의 성장을 함께 설계합니다
+              아이의 성장을 함께 설계합니다
             </p>
             
             {/* CTA 버튼 그룹 */}
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="mb-6 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            인천 영어유치부 CEDAR HILL Global Prep은 글로벌 교육기관으로서 세계 수준의 교육 기준에 맞춘 차별화된 교육 프로그램을 제공합니다.
+            CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원)은 교육 운영 기준에 맞춘 프로그램을 제공합니다.
           </p>
         </div>
 
@@ -143,11 +143,11 @@ export default function HomePage() {
         {[
   {
     title: "Accredited Global Curriculum",
-    desc: "미국 학력 인증기관 Cognia 인증을 기반으로, 전 세계에서 활용되는 ASI(Advantages School International) 정규 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 운영합니다.",
+    desc: "Cognia 인증 절차를 갖춘 교육 운영과 연계하여, ASI(Advantages School International) 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 활용합니다.",
     details: [
-      "ASI Korea 인증 기관으로서 졸업장과 성적표는 전 세계 대학 및 고용주에게 인정받습니다",
-      "국제 표준 교육 과정을 통한 글로벌 경쟁력 강화",
-      "체계적인 학습 평가 및 성장 추적 시스템"
+      "학력 증빙·이수 절차는 해당 인증 기관의 기준에 따릅니다(개별 기관·국가 요건은 상이할 수 있음)",
+      "국제적으로 널리 쓰이는 교과 구성을 참고한 수업 운영",
+      "학습 과정을 관찰·기록하는 체계를 갖추고 있습니다"
     ]
   },
   {
@@ -160,8 +160,8 @@ export default function HomePage() {
     ]
   },
   {
-    title: "100% English Immersion + Individualized Tracking",
-    desc: "검증된 교사진과 100% 영어 몰입 환경에서 배움의 즐거움과 성취를 높입니다.",
+    title: "English Immersion & Individualized Tracking",
+    desc: "주요 수업·일상 소통에 영어를 활용하는 환경에서 배움의 즐거움과 성취를 높입니다.",
     details: [
       "Brightwheel과 ClassDojo 기반의 체계적인 관리 시스템",
       "학생 개별 학습과 전반적 성장을 지속적으로 지원",
@@ -195,7 +195,7 @@ export default function HomePage() {
         <div className="mb-8 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            인천 영어유치부에서 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
+            유아·학령기 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
         </div>
 

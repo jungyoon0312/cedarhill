@@ -39,7 +39,7 @@ export const noticePosts: NoticePost[] = [
   },
   {
     id: "admission-briefing-2026-01-24",
-    title: "씨더힐 글로벌 프렙 유치부 입학설명회",
+    title: "씨더힐 글로벌 프렙 입학설명회",
     date: "2026-01-24",
     category: "공지",
     content: "날짜: 2026년 1월 24일 (토) 11시\n\n장소: 인천시 미추홀구 학익동 30 씨더힐 글로벌 프렙\n\n연락처: 032-875-8733~4",

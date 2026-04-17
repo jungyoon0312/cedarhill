@@ -4,7 +4,7 @@ import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
   title: "비전과 가치 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치(잠재력과 성장, 학업적 우수성, 협력, 창의성, 배려, 소통)를 확인하세요.",
+  description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치(잠재력과 성장, 성실한 학습, 협력, 창의성, 배려, 소통)를 확인하세요.",
   openGraph: {
     title: "비전과 가치 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치를 확인하세요.",
@@ -34,8 +34,8 @@ export default function AboutVisionValuesPage() {
       desc: "학생 개개인의 잠재력을 존중하며, 발달 단계에 맞는 목표 설정과 성장을 체계적으로 지원합니다.",
     },
     {
-      title: "학업적 우수성 (Academic Excellence)",
-      desc: "검증된 커리큘럼과 수업 운영 기준을 바탕으로 기초 학습 역량과 사고력을 균형 있게 강화합니다.",
+      title: "성실한 학습과 기초 역량 (Engaged Learning)",
+      desc: "정해진 커리큘럼과 수업 운영 기준을 바탕으로 기초 학습 습관과 사고력을 균형 있게 다룹니다.",
     },
     {
       title: "협력 (Collaboration)",
@@ -51,7 +51,7 @@ export default function AboutVisionValuesPage() {
     },
     {
       title: "소통 (Communication)",
-      desc: "영어 몰입 환경 속에서 자신감 있는 의사 표현과 경청 태도를 기르도록 지도합니다.",
+      desc: "영어를 주요 교수언어로 활용하는 수업 속에서 자신감 있는 의사 표현과 경청 태도를 기르도록 지도합니다.",
     },
   ];
 
@@ -65,10 +65,10 @@ export default function AboutVisionValuesPage() {
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">미션</h2>
           <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
-              Our mission is to cultivate each student's potential through meaningful learning experiences that integrate academic excellence, character education, and global awareness. We strive to guide students to become confident, compassionate, and innovative leaders who contribute positively to their communities and the world.
+              Our mission is to cultivate each student's potential through meaningful learning experiences that integrate rigorous habits of learning, character education, and global awareness. We strive to guide students to become confident, compassionate, and responsible participants in their communities and the world.
             </p>
             <p className="mt-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
-              저희의 미션은 학문적 우수성, 인성 교육, 글로벌 인식을 통합하는 의미 있는 학습 경험을 통해 각 학생의 잠재력을 함양하는 것입니다. 우리는 학생들이 자신감 있고, 자비로우며, 혁신적인 리더로 성장하여 지역 사회와 세계에 긍정적으로 기여하도록 이끄는 데 힘씁니다.
+              저희의 미션은 성실한 학습 태도, 인성 교육, 글로벌 인식을 통합하는 의미 있는 학습 경험을 통해 각 학생의 잠재력을 함양하는 것입니다. 우리는 학생들이 자신감 있고 배려하며 책임감 있게 성장하도록 돕습니다.
             </p>
           </div>
         </div>
@@ -78,10 +78,10 @@ export default function AboutVisionValuesPage() {
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">비전</h2>
           <div className="mt-3 sm:mt-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm">
             <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
-              Our vision represents our commitment to discovering each student's unique potential and nurturing it as the foundation for growth into future leaders. By balancing academic excellence with character development, we empower well-rounded individuals to thrive in an interconnected world—not only adapting to the future, but shaping it with compassion, integrity, and innovative thinking.
+              Our vision represents our commitment to discovering each student's unique potential and nurturing it as a foundation for growth. By balancing focused learning with character development, we support well-rounded individuals to thrive in an interconnected world—with compassion, integrity, and thoughtful inquiry.
             </p>
             <p className="mt-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
-              우리 비전은 각 학생의 고유한 잠재력을 발견하고 미래 리더로 성장할 수 있는 기반을 마련하는 데 대한 우리의 약속을 나타냅니다. 학문적 우수성과 인성 개발의 균형을 통해 우리는 상호 연결된 세상에서 번성할 수 있는 균형 잡힌 개인을 양성합니다. 미래에 적응할 뿐만 아니라 연민, 성실성, 혁신적인 사고로 미래를 만들어가는 인재를 양성합니다.
+              우리 비전은 각 학생의 고유한 잠재력을 발견하고 성장의 기반을 마련하는 데 대한 약속을 나타냅니다. 성실한 학습과 인성 발달의 균형을 통해 서로 연결된 세상에서 균형 잡힌 사람으로 성장하도록 돕습니다.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import SubHero from "../components/SubHero";
 
 export const metadata: Metadata = {
   title: "입학 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정. 인천 영어유치부 입학 상담 및 일정 안내.",
+  description: "CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원) 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
   openGraph: {
     title: "입학 | CEDAR HILL Global Prep",
   description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",

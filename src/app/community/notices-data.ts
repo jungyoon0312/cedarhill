@@ -9,6 +9,14 @@ export type NoticePost = {
 
 export const noticePosts: NoticePost[] = [
   {
+    id: "global-prep-opening-2026-04",
+    title: "글로벌프렙 개강",
+    date: "2026-04-23",
+    category: "공지",
+    content: "글로벌 프렙이 봄학기 입학식을 진행하였습니다. 1회 입학생 여러분을 진심으로 환영합니다!\n\n-입학상담 가능-",
+    images: ["/images/opening.jpg", "/images/opening2.jpg", "/images/opening3.jpg"],
+  },
+  {
     id: "open-house-2026-03",
     title: "오픈하우스 및 입학설명회 안내",
     date: "2026-03-09",

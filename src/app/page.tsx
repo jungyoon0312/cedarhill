@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
+import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -26,6 +27,14 @@ export default function HomePage() {
 
   return (
     <main>
+      <PopupModal
+        imageSrc="/images/cityo.png"
+        alt="씨티오씨엘 입주민 할인안내"
+        storageKey="cityo-resident-discount-popup-closed"
+        applicationUrl="tel:032-875-8733"
+        applicationButtonText="문의하기"
+      />
+
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

@@ -9,6 +9,14 @@ export type NoticePost = {
 
 export const noticePosts: NoticePost[] = [
   {
+    id: "cityo-resident-discount-2026-04",
+    title: "씨티오씨엘 입주민 할인안내",
+    date: "2026-04-23",
+    category: "공지",
+    content: "자세한 문의사항은 상담창구로 연락주십시오",
+    images: ["/images/cityo.png"],
+  },
+  {
     id: "global-prep-opening-2026-04",
     title: "글로벌프렙 개강",
     date: "2026-04-23",

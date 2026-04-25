@@ -51,51 +51,53 @@ export default async function NoticeDetailPage({ params }: Props) {
             <p className="text-xs sm:text-sm text-zinc-500">{post.date}</p>
           </div>
 
-          {/* 본문 내용 */}
-          <div className="prose prose-sm sm:prose-base max-w-none">
-            <div className="text-sm sm:text-base md:text-lg leading-relaxed text-zinc-700 whitespace-pre-line">
-              {post.content.split('\n').map((line, lineIndex) => {
-                // 마크다운 링크 형식 [텍스트](URL) 파싱
-                const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-                const parts: (string | React.ReactElement)[] = [];
-                let lastIndex = 0;
-                let match;
-                let keyCounter = 0;
-                
-                while ((match = linkRegex.exec(line)) !== null) {
-                  // 링크 앞의 텍스트
-                  if (match.index > lastIndex) {
-                    parts.push(line.substring(lastIndex, match.index));
+          {/* 본문 내용 (일반 공지) */}
+          {post.id !== "cityo-resident-discount-2026-04" && (
+            <div className="prose prose-sm sm:prose-base max-w-none">
+              <div className="text-sm sm:text-base md:text-lg leading-relaxed text-zinc-700 whitespace-pre-line">
+                {post.content.split('\n').map((line, lineIndex) => {
+                  // 마크다운 링크 형식 [텍스트](URL) 파싱
+                  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+                  const parts: (string | React.ReactElement)[] = [];
+                  let lastIndex = 0;
+                  let match;
+                  let keyCounter = 0;
+                  
+                  while ((match = linkRegex.exec(line)) !== null) {
+                    // 링크 앞의 텍스트
+                    if (match.index > lastIndex) {
+                      parts.push(line.substring(lastIndex, match.index));
+                    }
+                    // 링크
+                    parts.push(
+                      <a
+                        key={`link-${lineIndex}-${keyCounter++}`}
+                        href={match[2]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                      >
+                        {match[1]}
+                      </a>
+                    );
+                    lastIndex = match.index + match[0].length;
                   }
-                  // 링크
-                  parts.push(
-                    <a
-                      key={`link-${lineIndex}-${keyCounter++}`}
-                      href={match[2]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
-                      {match[1]}
-                    </a>
+                  // 남은 텍스트
+                  if (lastIndex < line.length) {
+                    parts.push(line.substring(lastIndex));
+                  }
+                  
+                  return (
+                    <div key={lineIndex}>
+                      {parts.length === 0 ? line : parts.map((part, partIndex) => 
+                        typeof part === 'string' ? <span key={partIndex}>{part}</span> : part
+                      )}
+                    </div>
                   );
-                  lastIndex = match.index + match[0].length;
-                }
-                // 남은 텍스트
-                if (lastIndex < line.length) {
-                  parts.push(line.substring(lastIndex));
-                }
-                
-                return (
-                  <div key={lineIndex}>
-                    {parts.length === 0 ? line : parts.map((part, partIndex) => 
-                      typeof part === 'string' ? <span key={partIndex}>{part}</span> : part
-                    )}
-                  </div>
-                );
-              })}
+                })}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* 이미지가 있는 경우 */}
           {post.images && post.images.length > 0 && (
@@ -113,6 +115,15 @@ export default async function NoticeDetailPage({ params }: Props) {
                   />
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* 본문 내용 (씨티오씨엘 공지: 이미지 아래 배치) */}
+          {post.id === "cityo-resident-discount-2026-04" && (
+            <div className="prose prose-sm sm:prose-base max-w-none mt-6 sm:mt-8">
+              <div className="text-sm sm:text-base md:text-lg leading-relaxed text-zinc-700 whitespace-pre-line">
+                {post.content}
+              </div>
             </div>
           )}
 
@@ -157,6 +168,19 @@ export default async function NoticeDetailPage({ params }: Props) {
                 style={{ backgroundColor: "var(--brand-burgundy)" }}
               >
                 레벨테스트 신청
+              </a>
+            </div>
+          )}
+
+          {/* 씨티오씨엘 입주민 할인 문의 버튼 */}
+          {post.id === "cityo-resident-discount-2026-04" && (
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <a
+                href="tel:032-875-8733"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "var(--brand-burgundy)" }}
+              >
+                문의하기
               </a>
             </div>
           )}

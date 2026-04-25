@@ -19,6 +19,9 @@ export default function PopupModal({
   applicationButtonText = "신청하기"
 }: PopupModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const isExternalLink =
+    typeof applicationUrl === "string" &&
+    (applicationUrl.startsWith("http://") || applicationUrl.startsWith("https://"));
 
   useEffect(() => {
     // 로컬 스토리지에서 팝업 닫힘 상태 확인
@@ -47,11 +50,11 @@ export default function PopupModal({
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2 sm:p-3"
       onClick={handleClose}
     >
       <div 
-        className="relative w-[96vw] h-[96vh] max-w-[1600px] flex flex-col bg-white rounded-lg shadow-2xl overflow-hidden"
+        className="relative w-[96vw] h-[90vh] max-w-[980px] sm:h-[92vh] md:h-[94vh] flex flex-col bg-white rounded-lg shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 닫기 버튼 */}
@@ -80,10 +83,10 @@ export default function PopupModal({
         </div>
 
         {/* 하단 버튼 - 고정 영역, 이미지 밖에 배치하여 글자 가리지 않음 */}
-        <div className="flex-shrink-0 flex flex-row justify-between items-center gap-4 p-4 bg-white border-t" style={{ borderColor: "var(--brand-slate)" }}>
+        <div className="flex-shrink-0 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-4 p-3 sm:p-4 bg-white border-t" style={{ borderColor: "var(--brand-slate)" }}>
           <button
             onClick={handleCloseToday}
-            className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
+            className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white rounded-lg shadow-lg transition-all hover:scale-105 whitespace-nowrap"
             style={{ backgroundColor: "var(--brand-navy)" }}
           >
             오늘 하루 보지 않기
@@ -91,9 +94,9 @@ export default function PopupModal({
           {applicationUrl && (
             <a
               href={applicationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl whitespace-nowrap"
+              target={isExternalLink ? "_blank" : undefined}
+              rel={isExternalLink ? "noopener noreferrer" : undefined}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-2.5 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl whitespace-nowrap"
               style={{ backgroundColor: "var(--brand-burgundy)" }}
             >
               {applicationButtonText}

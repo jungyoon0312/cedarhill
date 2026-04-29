@@ -9,6 +9,14 @@ export type NoticePost = {
 
 export const noticePosts: NoticePost[] = [
   {
+    id: "childrens-day-event-2026-05",
+    title: "어린이날 행사 안내",
+    date: "2026-04-25",
+    category: "공지",
+    content: "",
+    images: ["/images/cday.png"],
+  },
+  {
     id: "cityo-resident-discount-2026-04",
     title: "씨티오씨엘 입주민 할인안내",
     date: "2026-04-23",

@@ -416,7 +416,7 @@ export default function CoCurricularActivitiesPage() {
               <div className="mb-4 sm:mb-6">
                 <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>ENGLISH PROGRAM</p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  씨더힐 글로벌 프렙 졸업 후 한국 학교 진학을 희망하는 학생, 글로벌 교육 준비생 및 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
+                  씨더힐 글로벌 어학원 졸업 후 한국 학교 진학을 희망하는 학생, 글로벌 교육 준비생 및 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
                   미국 Common Core를 참고한 커리큘럼 구성으로, 영어 학습 역량을 단계적으로 다룰 수 있도록 지원합니다.
@@ -488,7 +488,7 @@ export default function CoCurricularActivitiesPage() {
             <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
               <div className="mb-4 sm:mb-6">
                 <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>
-                  Cedar Hill Global Prep X FUTURUM이 함께하는 수·과학 기반 창의 융합 교육센터
+                  Cedar Hill Global 어학원 X FUTURUM이 함께하는 수·과학 기반 창의 융합 교육센터
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
                   수·과학 기반의 탐구·창의 활동을 통해 문제 해결 과정을 경험하도록 돕는 협력 프로그램입니다.

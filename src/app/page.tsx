@@ -48,7 +48,7 @@ export default function HomePage() {
             <Image
               key={img}
               src={img}
-              alt={`CEDAR HILL Global Prep ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : index === 3 ? 'RENZULI AI Coding Center' : '회의실'}`}
+              alt={`CEDAR HILL Global 어학원 ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : index === 3 ? 'RENZULI AI Coding Center' : '회의실'}`}
               fill
               priority={index === 0}
               quality={85}
@@ -75,7 +75,7 @@ export default function HomePage() {
             >
               CEDAR HILL
               <br />
-              GLOBAL PREP
+              GLOBAL 어학원
             </h1>
             <p 
               className="text-base sm:text-lg md:text-xl text-white drop-shadow-lg max-w-2xl mb-8"
@@ -129,7 +129,7 @@ export default function HomePage() {
         <div className="mb-6 sm:mb-10">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            CEDAR HILL Global Prep의 전체 시설을 영상으로 만나보세요.
+            CEDAR HILL Global 어학원의 전체 시설을 영상으로 만나보세요.
           </p>
         </div>
         <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
@@ -150,7 +150,7 @@ export default function HomePage() {
         <div className="mb-6 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
           <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원)은 교육 운영 기준에 맞춘 프로그램을 제공합니다.
+            CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 교육 운영 기준에 맞춘 프로그램을 제공합니다.
           </p>
         </div>
 

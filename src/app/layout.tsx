@@ -24,14 +24,14 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.cedarhgp.org'),
   title: {
-    default: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
-    template: "%s | CEDAR HILL Global Prep",
+    default: "CEDAR HILL Global 어학원 | 씨더힐글로벌어학원",
+    template: "%s | CEDAR HILL Global 어학원",
   },
   description:
-    "등록명 씨더힐글로벌어학원(인천광역시남부교육지원청 제3866호) 소속 CEDAR HILL Global Prep. 인천 미추홀구 학익동에서 실용외국어·국제화 교육 방향의 프로그램을 안내합니다.",
+    "등록명 씨더힐글로벌어학원(인천광역시남부교육지원청 제3866호) 소속 CEDAR HILL Global 어학원. 인천 미추홀구 학익동에서 실용외국어·국제화 교육 방향의 프로그램을 안내합니다.",
   keywords: [
     "씨더힐글로벌어학원",
-    "CEDAR HILL Global Prep",
+    "CEDAR HILL Global 어학원",
     "인천 미추홀구",
     "학익동",
     "실용외국어",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     "STEAM",
     "Pre-K",
   ],
-  authors: [{ name: "CEDAR HILL Global Prep" }],
-  creator: "CEDAR HILL Global Prep",
-  publisher: "CEDAR HILL Global Prep",
+  authors: [{ name: "CEDAR HILL Global 어학원" }],
+  creator: "CEDAR HILL Global 어학원",
+  publisher: "CEDAR HILL Global 어학원",
   formatDetection: {
     email: false,
     address: false,
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: "https://www.cedarhgp.org",
-    siteName: "CEDAR HILL Global Prep",
-    title: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
+    siteName: "CEDAR HILL Global 어학원",
+    title: "CEDAR HILL Global 어학원 | 씨더힐글로벌어학원",
     description:
       "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
     images: [
@@ -63,13 +63,13 @@ export const metadata: Metadata = {
         url: "https://www.cedarhgp.org/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "CEDAR HILL Global Prep",
+        alt: "CEDAR HILL Global 어학원",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-  title: "CEDAR HILL Global Prep | 씨더힐글로벌어학원",
+  title: "CEDAR HILL Global 어학원 | 씨더힐글로벌어학원",
   description:
     "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
     images: ["https://www.cedarhgp.org/images/logo.png"],
@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "씨더힐글로벌어학원",
-    "alternateName": ["CEDAR HILL Global Prep", "씨더힐 글로벌 프렙"],
+    "alternateName": ["CEDAR HILL Global 어학원", "씨더힐 글로벌 어학원"],
     "url": "https://www.cedarhgp.org",
     "logo": "https://www.cedarhgp.org/images/logo.png",
     "description":
@@ -163,7 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "LocalBusiness",
     "@id": "https://www.cedarhgp.org/#organization",
     "name": "씨더힐글로벌어학원",
-    "alternateName": ["CEDAR HILL Global Prep", "씨더힐 글로벌 프렙"],
+    "alternateName": ["CEDAR HILL Global 어학원", "씨더힐 글로벌 어학원"],
     "image": "https://www.cedarhgp.org/images/logo.png",
     "url": "https://www.cedarhgp.org",
     "telephone": "032-875-8733",

@@ -51,7 +51,7 @@ export default function CommunityPage() {
         {/* 안내 요약 */}
         <div className="space-y-4 sm:space-y-6 max-w-3xl">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
-            커뮤니티에서는 CEDAR HILL Global Prep의 공지사항과 주요 소식,
+            커뮤니티에서는 CEDAR HILL Global 어학원의 공지사항과 주요 소식,
             활동 안내를 확인하실 수 있습니다. 학부모와의 원활한 소통을 위해
             정기적으로 정보를 업데이트합니다.
           </p>

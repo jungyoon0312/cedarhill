@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import SubHero from "../components/SubHero";
 
 export const metadata: Metadata = {
-  title: "입학 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원) 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
+  title: "입학 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원) 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
   openGraph: {
-    title: "입학 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
+    title: "입학 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원 입학 안내. 일과표, 입학 상담 정보를 확인하세요. 2026년 3월 개강 예정.",
     url: "https://www.cedarhgp.org/admissions",
     type: "website",
   },
@@ -38,7 +38,7 @@ export default function AdmissionsPage() {
         {/* 안내 요약 */}
         <div className="space-y-4 sm:space-y-6 max-w-3xl">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
-            CEDAR HILL Global Prep의 입학은 사전 상담을 통해 진행되며,
+            CEDAR HILL Global 어학원의 입학은 사전 상담을 통해 진행되며,
             학생의 연령 및 발달 단계에 따라 적합한 과정이 안내됩니다.
           </p>
 

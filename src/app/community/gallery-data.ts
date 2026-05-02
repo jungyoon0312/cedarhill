@@ -39,8 +39,8 @@ export const galleryCategories: GalleryCategory[] = [
     ],
   },
   {
-    id: "english-prep",
-    title: "English Prep",
+    id: "english-learning",
+    title: "English 어학원",
     date: "2026-02",
     thumbnail: "/images/english prep1.jpg",
     images: [

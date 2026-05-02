@@ -37,7 +37,7 @@ export default function Header() {
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
             src="/images/header-logo.png"
-            alt="CEDAR HILL Global Prep"
+            alt="CEDAR HILL Global 어학원"
             width={200}
             height={56}
             priority

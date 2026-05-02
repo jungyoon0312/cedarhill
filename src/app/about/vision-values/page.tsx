@@ -3,11 +3,11 @@ import SubHero from "../../components/SubHero";
 import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
-  title: "비전과 가치 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치(잠재력과 성장, 성실한 학습, 협력, 창의성, 배려, 소통)를 확인하세요.",
+  title: "비전과 가치 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치(잠재력과 성장, 성실한 학습, 협력, 창의성, 배려, 소통)를 확인하세요.",
   openGraph: {
-    title: "비전과 가치 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치를 확인하세요.",
+    title: "비전과 가치 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원의 교육 철학과 핵심 가치를 소개합니다. 미션, 비전, 핵심 가치를 확인하세요.",
     url: "https://www.cedarhgp.org/about/vision-values",
     type: "website",
   },

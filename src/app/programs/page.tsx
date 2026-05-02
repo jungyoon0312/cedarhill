@@ -88,7 +88,7 @@ export default function ProgramsPage() {
         {/* 프로그램 소개 */}
         <div className="space-y-3 sm:space-y-5 max-w-3xl">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
-            CEDAR HILL Global Prep(등록명: 씨더힐글로벌어학원)은 유아기의 핵심 발달 영역을 고려한
+            CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 유아기의 핵심 발달 영역을 고려한
             통합형 커리큘럼을 기반으로 교육 프로그램을 운영합니다.
             주요 수업에서 영어를 활용하는 환경에서 학생의 성장 단계에 맞춘
             학습 경험을 제공합니다.
@@ -243,7 +243,7 @@ export default function ProgramsPage() {
               <strong>THINK. LEARN. REALIZE.</strong>
             </p>
             <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-              Advantages School International (ASI)는 해외 학력 인증 절차를 갖춘 온라인·혼합형 교육 프로그램을 제공하는 기관으로, CEDAR HILL Global Prep의 교육 프로그램과 협력합니다.
+              Advantages School International (ASI)는 해외 학력 인증 절차를 갖춘 온라인·혼합형 교육 프로그램을 제공하는 기관으로, CEDAR HILL Global 어학원의 교육 프로그램과 협력합니다.
               ASI는 오랜 온라인 학습 운영 경험을 바탕으로 개인화된 교육 솔루션을 제공합니다(제공 범위는 과정·연령에 따라 다를 수 있음).
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function ProgramsPage() {
                 <li>Integrated Content Solutions</li>
               </ul>
               <ul className="text-xs sm:text-sm md:text-base text-zinc-700 space-y-2 list-disc pl-5 leading-relaxed">
-                <li>SAT/ACT Test Prep</li>
+                <li>SAT/ACT 시험 대비</li>
                 <li>Credit Recovery</li>
                 <li>Adaptive Learning Tutorials</li>
                 <li>Asynchronous Learning Options</li>

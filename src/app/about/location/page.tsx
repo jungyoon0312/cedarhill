@@ -3,11 +3,11 @@ import SubHero from "../../components/SubHero";
 import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
-  title: "오시는 길 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1. 지도와 교통 안내를 확인하세요.",
+  title: "오시는 길 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원 위치 안내. 인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1. 지도와 교통 안내를 확인하세요.",
   openGraph: {
-  title: "오시는 길 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",
+  title: "오시는 길 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원 위치 안내. 인천광역시 미추홀구 학익로 30. 지도와 교통 안내를 확인하세요.",
     url: "https://www.cedarhgp.org/about/location",
     type: "website",
   },
@@ -35,7 +35,7 @@ export default function LocationPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="CEDAR HILL Global Prep 위치"
+            title="CEDAR HILL Global 어학원 위치"
           />
         </div>
 

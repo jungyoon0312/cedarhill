@@ -3,11 +3,11 @@ import SubHero from "../../components/SubHero";
 import AboutTabs from "../AboutTabs";
 
 export const metadata: Metadata = {
-  title: "인사말 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 원장 인사말과 기관의 교육 방향을 확인하세요. 국제화 교육 방향의 프로그램을 운영하며 학생의 성장을 지원합니다.",
+  title: "인사말 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원 원장 인사말과 기관의 교육 방향을 확인하세요. 국제화 교육 방향의 프로그램을 운영하며 학생의 성장을 지원합니다.",
   openGraph: {
-    title: "인사말 | CEDAR HILL Global Prep",
-  description: "CEDAR HILL Global Prep 원장 인사말과 기관의 교육 방향을 확인하세요.",
+    title: "인사말 | CEDAR HILL Global 어학원",
+  description: "CEDAR HILL Global 어학원 원장 인사말과 기관의 교육 방향을 확인하세요.",
     url: "https://www.cedarhgp.org/about/greeting",
     type: "website",
   },
@@ -32,7 +32,7 @@ export default function GreetingPage() {
             style={{ background: "var(--brand-burgundy)" }}
           />
           <p className="text-sm sm:text-base text-zinc-800 leading-relaxed">
-            안녕하십니까. <strong>CEDAR HILL Global Prep</strong>에 방문해 주셔서
+            안녕하십니까. <strong>CEDAR HILL Global 어학원</strong>에 방문해 주셔서
             감사합니다.
           </p>
           <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">

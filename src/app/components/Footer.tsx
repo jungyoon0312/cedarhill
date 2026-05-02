@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <Image
               src="/images/logo-white.png"
-              alt="CEDAR HILL Global Prep"
+              alt="CEDAR HILL Global 어학원"
               width={200}
               height={64}
               quality={90}
@@ -89,13 +89,13 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-white/95 mb-1">광고·안내 필수 표시</p>
             <p>
-              등록(신고)명칭: 씨더힐글로벌어학원 (표시명: CEDAR HILL Global Prep) ·
+              등록(신고)명칭: 씨더힐글로벌어학원 (표시명: CEDAR HILL Global 어학원) ·
               인천광역시남부교육지원청 제3866호 · 교습과목(과정): 실용외국어 ·
               교습비 등: 상담 시 개별 안내
             </p>
           </div>
           <p className="text-white/70">
-            © {new Date().getFullYear()} CEDAR HILL Global Prep. All rights reserved.
+            © {new Date().getFullYear()} CEDAR HILL Global 어학원. All rights reserved.
           </p>
         </div>
       </div>

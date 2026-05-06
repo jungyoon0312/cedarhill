@@ -27,7 +27,7 @@ function ProgramCard({ title, bullets }: ProgramCardProps) {
 }
 
 export default function ProgramsPage() {
-  const [activeTab, setActiveTab] = useState<"age" | "features" | "asi">("age");
+  const [activeTab, setActiveTab] = useState<"age" | "features">("age");
 
   const programBlocks: ProgramCardProps[] = [
     {
@@ -132,21 +132,6 @@ export default function ProgramsPage() {
             >
               교육 특징
             </button>
-            <button
-              onClick={() => setActiveTab("asi")}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all ${
-                activeTab === "asi"
-                  ? "text-white border-b-4"
-                  : "text-zinc-600 hover:text-zinc-800"
-              }`}
-              style={
-                activeTab === "asi"
-                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
-                  : {}
-              }
-            >
-              ASI 인증
-            </button>
           </div>
         </div>
 
@@ -201,7 +186,8 @@ export default function ProgramsPage() {
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Senior Kinder (만 5세/한국나이 7세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                Advantages School International (ASI) 커리큘럼을 사용하여 제공하며, 미국 학년도에 맞춘 학업·성취 기준을 참고한 수업을 구성합니다. 이 단계에서는 핵심 학과목에 초점을 두어 초등학교 생활에 필요한 기초 지식과 기술을 갖출 수 있도록 지원합니다.
+                연령에 맞춘 심화 학습 활동을 중심으로 읽기, 쓰기, 수학, 과학, 사회 영역을 균형 있게 다룹니다.
+                이 단계에서는 핵심 학과목에 초점을 두어 초등학교 생활에 필요한 기초 지식과 기술을 갖출 수 있도록 지원합니다.
               </p>
               <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
                 <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 과목:</p>
@@ -230,81 +216,6 @@ export default function ProgramsPage() {
             {programBlocks.map((p) => (
               <ProgramCard key={p.title} title={p.title} bullets={p.bullets} />
             ))}
-          </div>
-        </div>
-        )}
-
-        {/* ASI 인증 탭 */}
-        {activeTab === "asi" && (
-        <div className="space-y-6 sm:space-y-8">
-          <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>Advantages School International (ASI)</h2>
-            <p className="text-sm sm:text-base md:text-lg text-zinc-700 leading-relaxed">
-              <strong>THINK. LEARN. REALIZE.</strong>
-            </p>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-              Advantages School International (ASI)는 해외 학력 인증 절차를 갖춘 온라인·혼합형 교육 프로그램을 제공하는 기관으로, CEDAR HILL Global 어학원의 교육 프로그램과 협력합니다.
-              ASI는 오랜 온라인 학습 운영 경험을 바탕으로 개인화된 교육 솔루션을 제공합니다(제공 범위는 과정·연령에 따라 다를 수 있음).
-            </p>
-          </div>
-
-          {/* 인증 기관 */}
-          <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>인증 기관</h3>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 mb-4 leading-relaxed">
-              Advantages School International은 아래와 같은 인증·평가 기관과 연계되어 있습니다(세부는 ASI 공시 자료 기준):
-            </p>
-            <ul className="text-xs sm:text-sm md:text-base text-zinc-700 space-y-2 list-disc pl-5 leading-relaxed">
-              <li><strong>NCAA</strong> (National Collegiate Athletic Association)</li>
-              <li><strong>CASI / SACS CASI</strong> (Council on Accreditation and School Improvement / Southern Association of Colleges and Schools)</li>
-              <li><strong>Northwest Accreditation Commission</strong></li>
-            </ul>
-          </div>
-
-          {/* 주요 프로그램 및 특징 */}
-          <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>주요 프로그램 및 특징</h3>
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-              <ul className="text-xs sm:text-sm md:text-base text-zinc-700 space-y-2 list-disc pl-5 leading-relaxed">
-                <li>Online/Hybrid Learning Solutions</li>
-                <li>Individualized Student Learning Plans</li>
-                <li>Online Charter/School Development</li>
-                <li>Accredited Solutions (ASI)</li>
-                <li>Credentialed Staff Available</li>
-                <li>White Labeled Platform</li>
-                <li>Mobile App</li>
-                <li>Integrated Content Solutions</li>
-              </ul>
-              <ul className="text-xs sm:text-sm md:text-base text-zinc-700 space-y-2 list-disc pl-5 leading-relaxed">
-                <li>SAT/ACT 시험 대비</li>
-                <li>Credit Recovery</li>
-                <li>Adaptive Learning Tutorials</li>
-                <li>Asynchronous Learning Options</li>
-                <li>Completion Certificate</li>
-                <li>English Language Learning</li>
-                <li>American University Pathway</li>
-                <li>Adult School Program</li>
-                <li>Tutoring Services</li>
-                <li>US Diploma Programs</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* 교육 철학 */}
-          <div className="rounded-2xl border-2 bg-white p-6 sm:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
-            <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>교육 철학</h3>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 mb-4 leading-relaxed">
-              <strong>Personalized Instruction for Every Learner</strong>
-            </p>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-              ASI는 교사들이 교사를 위해 만든 교육 솔루션을 제공합니다. 우리는 교육 리더들과 협력하여 
-              교사와 직원들에게 부담을 주지 않으면서도 유연한 학교 운영을 위한 디지털 리소스를 구현합니다. 
-              모든 학교 및 학생 관리와 디지털 콘텐츠 제공을 단일 웹 기반 환경에서 처리할 수 있으며, 
-              어떤 기기에서든 접근 가능합니다.
-            </p>
           </div>
         </div>
         )}

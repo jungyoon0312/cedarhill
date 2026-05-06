@@ -158,10 +158,10 @@ export default function HomePage() {
         {[
   {
     title: "Accredited Global Curriculum",
-    desc: "Cognia 인증 절차를 갖춘 교육 운영과 연계하여, ASI(Advantages School International) 커리큘럼과 Pre-K 단계의 Experience Early Learning 교재를 활용합니다.",
+    desc: "연령별 발달 특성과 학습 목표에 맞춰 Early Learning 기반 교재와 활동 중심 수업을 운영합니다.",
     details: [
-      "학력 증빙·이수 절차는 해당 인증 기관의 기준에 따릅니다(개별 기관·국가 요건은 상이할 수 있음)",
-      "국제적으로 널리 쓰이는 교과 구성을 참고한 수업 운영",
+      "문해력, 수학, 과학, 사회, 예술을 연결한 통합형 수업 구성",
+      "놀이와 탐구 중심의 활동으로 학습 참여도 향상",
       "학습 과정을 관찰·기록하는 체계를 갖추고 있습니다"
     ]
   },

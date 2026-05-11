@@ -39,6 +39,7 @@ export default function HomePage() {
         imageSrc="/images/cday.png"
         alt="어린이날 행사 안내"
         storageKey="childrens-day-popup-closed"
+        overlayAlign="lower"
       />
 
       {/* HERO */}

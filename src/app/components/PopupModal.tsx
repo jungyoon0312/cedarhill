@@ -9,6 +9,8 @@ interface PopupModalProps {
   storageKey?: string;
   applicationUrl?: string;
   applicationButtonText?: string;
+  /** 팝업 패널을 화면 아래쪽에 더 가깝게 둘 때 사용 */
+  overlayAlign?: "center" | "lower";
 }
 
 export default function PopupModal({ 
@@ -16,7 +18,8 @@ export default function PopupModal({
   alt, 
   storageKey = "popup-closed",
   applicationUrl,
-  applicationButtonText = "신청하기"
+  applicationButtonText = "신청하기",
+  overlayAlign = "center",
 }: PopupModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const isExternalLink =
@@ -48,9 +51,14 @@ export default function PopupModal({
 
   if (!isOpen) return null;
 
+  const overlayClassName =
+    overlayAlign === "lower"
+      ? "fixed inset-0 z-[9999] flex items-end justify-center bg-black/70 p-2 sm:p-3 pb-6 sm:pb-10 md:pb-14"
+      : "fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2 sm:p-3";
+
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-2 sm:p-3"
+      className={overlayClassName}
       onClick={handleClose}
     >
       <div 

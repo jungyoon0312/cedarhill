@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <footer
@@ -8,17 +6,14 @@ export default function Footer() {
     >
       <div className="mx-auto max-w-6xl px-4 py-12 text-white">
         <div className="grid gap-8 md:grid-cols-3">
-          {/* 기관 소개 + 로고 */}
+          {/* 기관 소개 */}
           <div>
-            <Image
-              src="/images/logo-white.png"
-              alt="CEDAR HILL Global 어학원"
-              width={200}
-              height={64}
-              quality={90}
-              className="h-16 w-auto mb-6"
-              priority={false}
-            />
+            <p
+              className="text-lg font-semibold mb-4 tracking-tight"
+              style={{ fontFamily: "var(--font-cinzel), serif" }}
+            >
+              CEDAR HILL Global 어학원
+            </p>
             <p className="text-sm leading-relaxed text-white/90">
               국제화 교육 방향의 교습 과정을 바탕으로 유아·학령기 프로그램을 운영하며,
               <br />

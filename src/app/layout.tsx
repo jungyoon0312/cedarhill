@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
     images: [
       {
-        url: "https://www.cedarhgp.org/images/logo.png",
+        url: "https://www.cedarhgp.org/images/library1.jpg",
         width: 1200,
         height: 630,
         alt: "CEDAR HILL Global 어학원",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   title: "CEDAR HILL Global 어학원 | 씨더힐글로벌어학원",
   description:
     "인천 미추홀구 학익동의 학교교과교습학원(실용외국어). 교육 프로그램 및 상담 안내.",
-    images: ["https://www.cedarhgp.org/images/logo.png"],
+    images: ["https://www.cedarhgp.org/images/library1.jpg"],
   },
   robots: {
     index: true,
@@ -101,7 +101,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "name": "씨더힐글로벌어학원",
     "alternateName": ["CEDAR HILL Global 어학원", "씨더힐 글로벌 어학원"],
     "url": "https://www.cedarhgp.org",
-    "logo": "https://www.cedarhgp.org/images/logo.png",
     "description":
       "인천광역시 미추홀구 소재 학교교과교습학원. 교습과정: 실용외국어. 국제화 교육 목적의 프로그램을 운영합니다.",
     "address": {
@@ -164,7 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@id": "https://www.cedarhgp.org/#organization",
     "name": "씨더힐글로벌어학원",
     "alternateName": ["CEDAR HILL Global 어학원", "씨더힐 글로벌 어학원"],
-    "image": "https://www.cedarhgp.org/images/logo.png",
+    "image": "https://www.cedarhgp.org/images/library1.jpg",
     "url": "https://www.cedarhgp.org",
     "telephone": "032-875-8733",
     "email": "info@cedarhgp.org",

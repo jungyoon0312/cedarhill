@@ -35,13 +35,6 @@ export default function HomePage() {
         applicationButtonText="문의하기"
       />
 
-      <PopupModal
-        imageSrc="/images/cday.png"
-        alt="어린이날 행사 안내"
-        storageKey="childrens-day-popup-closed"
-        overlayAlign="lower"
-      />
-
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

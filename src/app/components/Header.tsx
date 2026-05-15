@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -32,16 +33,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b bg-white shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 h-20">
-        <Link
-          href="/"
-          className="text-base sm:text-lg font-semibold tracking-tight leading-tight"
-          style={{ color: "var(--brand-navy)", fontFamily: "var(--font-cinzel), serif" }}
-          onClick={() => setOpen(false)}
-        >
-          CEDAR HILL
-          <span className="block text-xs sm:text-sm font-normal" style={{ fontFamily: "var(--font-kr), sans-serif" }}>
-            Global 어학원
-          </span>
+        <Link href="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
+          <Image
+            src="/images/cedarhillglobal.png"
+            alt="CEDAR HILL Global 어학원"
+            width={220}
+            height={56}
+            priority
+            quality={90}
+            className="h-12 sm:h-14 w-auto max-w-[200px] sm:max-w-[220px] object-contain object-left"
+          />
         </Link>
 
         {/* PC 메뉴 */}

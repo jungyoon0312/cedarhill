@@ -9,6 +9,15 @@ export type NoticePost = {
 
 export const noticePosts: NoticePost[] = [
   {
+    id: "parent-meeting-2026-05",
+    title: "학부모 간담회 안내",
+    date: "2026-05-26",
+    category: "행사",
+    content:
+      "CEDAR HILL Global 어학원 학부모 간담회에 여러분을 초대합니다.\n\n【일시】\n2026년 5월 29일 (금) 저녁 7시\n\n【프로그램】\n• 타니 선생님과 함께 씨더힐 영어수업 방식 소개\n• 진단테스트 시연 (학생 참여)\n\n【참여 대상】\n재원생 학부모 · 외부 학부모 모두 참여 가능\n\n【문의 및 참여 신청】\n032-875-8734",
+    images: ["/images/showcase.png"],
+  },
+  {
     id: "childrens-day-event-2026-05",
     title: "어린이날 행사 안내",
     date: "2026-04-25",

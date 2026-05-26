@@ -28,11 +28,11 @@ export default function HomePage() {
   return (
     <main>
       <PopupModal
-        imageSrc="/images/cityo.png"
-        alt="씨티오씨엘 입주민 할인안내"
-        storageKey="cityo-resident-discount-popup-closed"
-        applicationUrl="tel:032-875-8733"
-        applicationButtonText="문의하기"
+        imageSrc="/images/showcase.png"
+        alt="학부모 간담회 안내"
+        storageKey="parent-meeting-showcase-popup-closed"
+        applicationUrl="tel:032-875-8734"
+        applicationButtonText="참여 신청·문의"
       />
 
       {/* HERO */}

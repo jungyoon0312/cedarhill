@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
-import PopupModal from "./components/PopupModal";
 
 export default function HomePage() {
   const images = [
@@ -27,14 +26,6 @@ export default function HomePage() {
 
   return (
     <main>
-      <PopupModal
-        imageSrc="/images/showcase.png"
-        alt="학부모 간담회 안내"
-        storageKey="parent-meeting-showcase-popup-closed"
-        applicationUrl="tel:032-875-8734"
-        applicationButtonText="참여 신청·문의"
-      />
-
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

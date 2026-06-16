@@ -5,15 +5,11 @@ import SubHero from "../components/SubHero";
 
 export default function CoCurricularActivitiesPage() {
   const [openSections, setOpenSections] = useState<{
-    digitalWittiverse: boolean;
-    renzulliAI: boolean;
     powerPlace: boolean;
     nadaunArt: boolean;
     englishLab: boolean;
     futurum: boolean;
   }>({
-    digitalWittiverse: false,
-    renzulliAI: false,
     powerPlace: false,
     nadaunArt: false,
     englishLab: false,
@@ -31,193 +27,21 @@ export default function CoCurricularActivitiesPage() {
     <>
       <SubHero title="Co-Curricular Activities" breadcrumb="HOME > Co-Curricular Activities" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-4 sm:space-y-6 bg-white">
-        <div className="space-y-4 sm:space-y-6 max-w-3xl">
-          <p className="text-sm sm:text-base md:text-lg text-zinc-600 mb-4 sm:mb-6 leading-relaxed">
-            정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
-          </p>
-        </div>
+      <section className="page-section space-y-6 sm:space-y-8 bg-white">
+        <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
+          정규 수업 외 다양한 과외 활동을 통해 학생의 전인적 성장을 지원합니다.
+        </p>
 
-        {/* Digital Wittiverse 아코디언 */}
-        <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
-          <button
-            onClick={() => toggleSection("digitalWittiverse")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
-          >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
-              Digital Wittiverse
-            </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
-              {openSections.digitalWittiverse ? "▼" : "▶"}
-            </span>
-          </button>
-          
-          {openSections.digitalWittiverse && (
-            <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
-              <div className="mb-4 sm:mb-6">
-                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>SPARK ON</p>
-                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-zinc-800 leading-relaxed">
-                  창의력과 사고력을 키우는 AI 메타버스 학습공간
-                </p>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  즐거운 학습과 디지털 체험을 통해<br />
-                  성장하는 아이들을 위한 교육 플랫폼
-                </p>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-                  위티버스는 미래 교육 변화를 예측하여, 메타버스 플랫폼 공간에서 일상과 삶, 발달과 놀이 등을 아우르는 총체적 경험을 제공하는 슈가레인 키즈 전용 메타버스 플랫폼입니다.
-                </p>
-                <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-zinc-600 italic leading-relaxed">
-                  놀이처럼 배우고, 도전하며 성장하고, 창의와 사고를 여는 창의융합 프로그램<br />
-                  미래를 살아갈 핵심 역량을 기르는 글로벌 키즈 러닝 랩
-                </p>
-              </div>
-
-              {/* 4가지 핵심 교육 프로그램 */}
-              <div className="mb-4 sm:mb-6">
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 교육 프로그램</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Creative Convergence Curriculum</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1 leading-relaxed">융합형 커리큘럼</p>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">(한글, 수학, 영어, 창의, 예술 등)<br />주제를 다각도로 탐색하며 사고력 확장</p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Play-based Active Learning</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1 leading-relaxed">'흥미 → 몰입 → 성취'로 이어지는</p>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">자기주도 학습 환경 제공</p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Digital & Analog Hybrid System</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1 leading-relaxed">디지털 & 아날로그 하이브리드 시스템</p>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">AI, 인터랙티브 콘텐츠, 실물 조작 활동을 유기적으로 결합<br />단순 디지털 소비형 콘텐츠를 넘어선 '체험형 학습 환경' 제공</p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Project-based & Team Learning</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1 leading-relaxed">팀 기반 프로젝트 수행을 통해 협업,</p>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">리더십, 의사소통 능력 함양<br />혼자가 아닌 '함께 자라는 경험'을 핵심 가치로 설정</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* 3가지 주요 특징 */}
-              <div>
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>주요 특징</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Personalized Learning Data</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1">개인 학습 데이터</p>
-                    <p className="text-xs sm:text-sm text-zinc-700">학습 수행 이력과 활동별 성취를 개인 학습 리포터로 제공합니다.</p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Self-Directed Learning</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1">자기주도 학습</p>
-                    <p className="text-xs sm:text-sm text-zinc-700">개인 태블릿 기반 디지털 학습 환경과 맞춤형 AI 튜터 기능으로 자기주도 학습 역량을 강화합니다.</p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Concept-Based Thinking</h5>
-                    <p className="text-xs sm:text-sm text-zinc-600 mb-1">개념 기반 사고 학습</p>
-                    <p className="text-xs sm:text-sm text-zinc-700">국제 학교 IB 기반의 개념 중심 학습 설계로 문제 해결력과 사고력이 향상됩니다.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Renzulli-AI Coding 아코디언 */}
-        <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
-          <button
-            onClick={() => toggleSection("renzulliAI")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
-          >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
-              Renzulli-AI Coding
-            </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
-              {openSections.renzulliAI ? "▼" : "▶"}
-            </span>
-          </button>
-          
-          {openSections.renzulliAI && (
-            <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
-              <div className="mb-4 sm:mb-6">
-                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>AI Coding Experience Center & Specialized Education Center</p>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  다양한 AI 코딩 프로그램을 자유롭게 체험하고 놀이처럼 배울 수 있는 'AI Coding Experience Center'와, 다양한 AI 코딩 프로그램을 소그룹 수업으로 코딩 전문 강사와 함께 배우는 'AI Coding Specialized Education Center'를 운영합니다.
-                </p>
-              </div>
-
-              {/* AI Coding Experience Center */}
-              <div className="mb-4 sm:mb-6">
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>AI Coding Experience Center</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-navy)" }}>
-                        01
-                      </div>
-                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>체험 성장 중심 활동</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-700">
-                      컴퓨팅 사고력의 핵심 요소인 문제 분해/분석, 추상화, 알고리즘 설계, 자동화를 균형 있게 다루는 활동을 제공합니다.
-                    </p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-navy)" }}>
-                        02
-                      </div>
-                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>자율 코딩 체험 활동</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-700">
-                      고급 디지털 환경에서 상상을 현실로 만드는 자율 코딩 체험 활동을 제공합니다.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* AI Coding Specialized Education Center */}
-              <div>
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>AI Coding Specialized Education Center</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-burgundy)" }}>
-                        01
-                      </div>
-                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>렌쥴리 기반 커리큘럼</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-700">
-                      렌쥴리 부설 연구소의 교육 이론을 바탕으로 학교 교육과정과 연계하여 개발된 AI 코딩 교육 커리큘럼으로 운영됩니다.
-                    </p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full text-white font-bold text-sm sm:text-lg" style={{ background: "var(--brand-burgundy)" }}>
-                        02
-                      </div>
-                      <h5 className="text-sm sm:text-base font-semibold" style={{ color: "var(--brand-navy)" }}>팀 프로젝트 활동</h5>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-700">
-                      팀 프로젝트 활동을 통해 생각하고, 소통하고, 함께 해결하는 힘을 키우는 교육을 제공합니다.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Cedar Hill Power Place 아코디언 */}
+        <div className="grid gap-4 md:grid-cols-2">
         <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
           <button
             onClick={() => toggleSection("powerPlace")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+            className="w-full text-left px-4 sm:px-5 py-3 sm:py-4 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-3"
           >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-sm sm:text-base md:text-lg font-semibold sm:font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               Cedar Hill Power Place
             </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
+            <span className="text-zinc-500 text-sm shrink-0">
               {openSections.powerPlace ? "▼" : "▶"}
             </span>
           </button>
@@ -304,12 +128,12 @@ export default function CoCurricularActivitiesPage() {
         <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
           <button
             onClick={() => toggleSection("nadaunArt")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+            className="w-full text-left px-4 sm:px-5 py-3 sm:py-4 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-3"
           >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-sm sm:text-base md:text-lg font-semibold sm:font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               NADAUN ART
             </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
+            <span className="text-zinc-500 text-sm shrink-0">
               {openSections.nadaunArt ? "▼" : "▶"}
             </span>
           </button>
@@ -401,12 +225,12 @@ export default function CoCurricularActivitiesPage() {
         <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
           <button
             onClick={() => toggleSection("englishLab")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+            className="w-full text-left px-4 sm:px-5 py-3 sm:py-4 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-3"
           >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-sm sm:text-base md:text-lg font-semibold sm:font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               English Lab
             </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
+            <span className="text-zinc-500 text-sm shrink-0">
               {openSections.englishLab ? "▼" : "▶"}
             </span>
           </button>
@@ -474,12 +298,12 @@ export default function CoCurricularActivitiesPage() {
         <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
           <button
             onClick={() => toggleSection("futurum")}
-            className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 hover:bg-zinc-50 transition-colors"
+            className="w-full text-left px-4 sm:px-5 py-3 sm:py-4 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-3"
           >
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold sm:font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
+            <h3 className="text-sm sm:text-base md:text-lg font-semibold sm:font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
               FUTURUM STEAM · 창의융합 프로그램
             </h3>
-            <span className="ml-3 text-zinc-500 text-sm">
+            <span className="text-zinc-500 text-sm shrink-0">
               {openSections.futurum ? "▼" : "▶"}
             </span>
           </button>
@@ -569,6 +393,7 @@ export default function CoCurricularActivitiesPage() {
               </div>
             </div>
           )}
+        </div>
         </div>
       </section>
     </>

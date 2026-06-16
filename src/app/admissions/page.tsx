@@ -72,34 +72,44 @@ export default function AdmissionsPage() {
     <>
       <SubHero title="교습비 안내" breadcrumb="HOME > 교습비 안내" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-8 sm:space-y-10 bg-white">
-        {/* 기관 정보 */}
-        <div className="rounded-2xl border-2 bg-white p-5 sm:p-8 shadow-sm space-y-3" style={{ borderColor: "var(--brand-navy)" }}>
-          <h2 className="text-lg sm:text-xl font-semibold sm:font-bold" style={{ color: "var(--brand-navy)" }}>
-            교습비 등 공개
-          </h2>
-          <dl className="grid gap-2 sm:gap-3 text-sm sm:text-base text-zinc-700">
-            <div className="flex flex-col sm:flex-row sm:gap-2">
-              <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">학원명</dt>
-              <dd>씨더힐글로벌어학원 (표시명: CEDAR HILL Global 어학원)</dd>
+      <section className="page-section space-y-6 sm:space-y-8 bg-white">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border-2 bg-white p-5 sm:p-8 shadow-sm space-y-3" style={{ borderColor: "var(--brand-navy)" }}>
+            <h2 className="text-lg sm:text-xl font-semibold sm:font-bold" style={{ color: "var(--brand-navy)" }}>
+              교습비 등 공개
+            </h2>
+            <dl className="grid gap-2 sm:gap-3 text-sm sm:text-base text-zinc-700">
+              <div className="flex flex-col sm:flex-row sm:gap-2">
+                <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">학원명</dt>
+                <dd>씨더힐글로벌어학원 (표시명: CEDAR HILL Global 어학원)</dd>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:gap-2">
+                <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">등록번호</dt>
+                <dd>인천광역시남부교육지원청 제3866호</dd>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:gap-2">
+                <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">소재지</dt>
+                <dd>인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1</dd>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:gap-2">
+                <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">교습과목</dt>
+                <dd>실용외국어</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="rounded-2xl border-2 p-5 sm:p-6 flex flex-col justify-center" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
+            <div className="text-xs sm:text-sm text-zinc-600">문의</div>
+            <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
+              <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
             </div>
-            <div className="flex flex-col sm:flex-row sm:gap-2">
-              <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">등록번호</dt>
-              <dd>인천광역시남부교육지원청 제3866호</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-2">
-              <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">소재지</dt>
-              <dd>인천광역시 미추홀구 학익로 30, 450동 상가 1층 1-1</dd>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-2">
-              <dt className="font-medium text-zinc-500 shrink-0 sm:w-28">교습과목</dt>
-              <dd>실용외국어</dd>
-            </div>
-          </dl>
+            <p className="mt-2 text-sm leading-relaxed text-zinc-700">
+              과정별 상세 안내는 전화 상담을 통해 안내해 드립니다.
+            </p>
+          </div>
         </div>
 
-        {/* 교습비 표 */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4">
           <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
             아래는 교습비등 (변경)등록 신청서에 따른 1인당 1개월 기준 교습비입니다.
           </p>
@@ -136,17 +146,6 @@ export default function AdmissionsPage() {
               </table>
             </div>
           </div>
-        </div>
-
-        {/* 문의 */}
-        <div className="rounded-2xl border-2 p-5 sm:p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
-          <div className="text-xs sm:text-sm text-zinc-600">문의</div>
-          <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
-            <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
-          </div>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-700">
-            과정별 상세 안내는 전화 상담을 통해 안내해 드립니다.
-          </p>
         </div>
       </section>
     </>

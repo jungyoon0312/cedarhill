@@ -31,18 +31,17 @@ export default async function GalleryDetailPage({ params }: Props) {
     <>
       <SubHero title="갤러리" breadcrumb="HOME > 커뮤니티 > 갤러리" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 bg-white">
-        {/* 뒤로가기 버튼 */}
+      <section className="page-section bg-white">
         <Link
           href="/community"
-          className="inline-flex items-center gap-2 text-sm sm:text-base text-zinc-600 hover:text-zinc-900 mb-6 sm:mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm sm:text-base text-zinc-600 hover:text-zinc-900 mb-4 sm:mb-5 transition-colors"
         >
           <span>←</span>
           <span>목록으로</span>
         </Link>
 
         {/* 갤러리 제목 */}
-        <div className="mb-8 sm:mb-12">
+        <div className="mb-5 sm:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>
             {galleryCategory.title}
           </h1>
@@ -72,7 +71,7 @@ export default async function GalleryDetailPage({ params }: Props) {
         </div>
 
         {/* 하단 네비게이션 */}
-        <div className="mt-8 sm:mt-10 flex justify-center">
+        <div className="mt-6 sm:mt-8 flex justify-center">
           <Link
             href="/community"
             className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"

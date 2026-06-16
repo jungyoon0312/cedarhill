@@ -19,9 +19,10 @@ export default function GreetingPage() {
       <SubHero title="인사말" breadcrumb="HOME > 소개 > 인사말" />
       <AboutTabs currentPath="/about/greeting" />
 
-      <section className="mx-auto max-w-6xl px-4 py-16 space-y-6">
+      <section className="page-section">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
         <div 
-          className="rounded-2xl border-2 p-8 shadow-md space-y-4"
+          className="rounded-2xl border-2 p-6 sm:p-8 shadow-md space-y-4"
           style={{ 
             borderColor: "var(--brand-burgundy)",
             background: "linear-gradient(to bottom, rgba(128, 0, 32, 0.05), rgba(255, 255, 255, 0.95))"
@@ -45,8 +46,15 @@ export default function GreetingPage() {
           </p>
         </div>
 
-        <div className="text-xs sm:text-sm text-zinc-500 leading-relaxed">
-          * 자세한 상담은 032-875-8733~4로 문의해 주세요.
+        <div className="rounded-2xl border-2 p-5 sm:p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
+          <div className="text-xs sm:text-sm text-zinc-600">상담 문의</div>
+          <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
+            <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>
+          </div>
+          <p className="mt-2 text-xs sm:text-sm text-zinc-500 leading-relaxed">
+            자세한 상담은 전화로 문의해 주세요.
+          </p>
+        </div>
         </div>
       </section>
     </>

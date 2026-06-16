@@ -10,7 +10,6 @@ export default function HomePage() {
     "/images/library1.jpg",
     "/images/OUTSIDE1.jpg",
     "/images/lounge1.jpg",
-    "/images/RENZULI4.jpg",
     "/images/meeting room.jpg",
   ];
 
@@ -33,7 +32,7 @@ export default function HomePage() {
             <Image
               key={img}
               src={img}
-              alt={`CEDAR HILL Global 어학원 ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : index === 3 ? 'RENZULI AI Coding Center' : '회의실'}`}
+              alt={`CEDAR HILL Global 어학원 ${index === 0 ? '도서관' : index === 1 ? '건물 외관' : index === 2 ? 'Play & Learn Hub' : '회의실'}`}
               fill
               priority={index === 0}
               quality={85}
@@ -48,8 +47,8 @@ export default function HomePage() {
         </div>
 
         {/* 중앙 콘텐츠 영역 */}
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
-          <div className="flex flex-col items-center justify-center min-h-[500px] sm:min-h-[600px] text-center text-white">
+        <div className="relative mx-auto max-w-6xl px-4 py-10 sm:py-14">
+          <div className="flex flex-col items-center justify-center min-h-[320px] sm:min-h-[400px] text-center text-white">
             <h1 
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4"
               style={{
@@ -110,14 +109,15 @@ export default function HomePage() {
       </section>
 
       {/* 시설 소개 동영상 - 모바일에서 먼저 노출 */}
-      <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-20 bg-white">
-        <div className="mb-6 sm:mb-10">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
-            CEDAR HILL Global 어학원의 전체 시설을 영상으로 만나보세요.
-          </p>
-        </div>
-        <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
+      <section className="page-section bg-white">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center">
+          <div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>시설 소개</h2>
+            <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
+              CEDAR HILL Global 어학원의 전체 시설을 영상으로 만나보세요.
+            </p>
+          </div>
+          <div className="rounded-2xl border-2 overflow-hidden shadow-lg" style={{ borderColor: "var(--brand-navy)" }}>
           <video
             src="/images/cedarhill.mp4"
             controls
@@ -127,14 +127,15 @@ export default function HomePage() {
           >
             브라우저가 비디오를 지원하지 않습니다.
           </video>
+          </div>
         </div>
       </section>
 
       {/* 1) 핵심 강점 3카드 */}
-      <section className="mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-28 bg-white">
-        <div className="mb-6 sm:mb-12">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-4" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+      <section className="page-section bg-white">
+        <div className="mb-5 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>핵심 강점</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
             CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 교육 운영 기준에 맞춘 프로그램을 제공합니다.
           </p>
         </div>
@@ -191,10 +192,10 @@ export default function HomePage() {
       </section>
 
       {/* 2) 대표 프로그램 3카드 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
-        <div className="mb-8 sm:mb-12">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-600 max-w-2xl leading-relaxed">
+      <section className="page-section bg-white">
+        <div className="mb-5 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>대표 프로그램</h2>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
             유아·학령기 학생의 전인적 성장을 위한 다양한 교육 프로그램을 운영합니다.
           </p>
         </div>
@@ -230,10 +231,10 @@ export default function HomePage() {
       </section>
 
       {/* 3) 공지사항 3개 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-28 bg-white">
-        <div className="mb-8 sm:mb-12 flex items-end justify-between gap-4">
+      <section className="page-section bg-white">
+        <div className="mb-5 sm:mb-6 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>공지사항</h2>
             <p className="text-sm sm:text-base md:text-lg text-zinc-600 leading-relaxed">
               최신 소식과 안내를 확인하세요.
             </p>

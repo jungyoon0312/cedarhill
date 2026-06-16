@@ -84,9 +84,8 @@ export default function ProgramsPage() {
     <>
       <SubHero title="프로그램" breadcrumb="HOME > 프로그램" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-8 sm:space-y-12 md:space-y-16 bg-white">
-        {/* 프로그램 소개 */}
-        <div className="space-y-3 sm:space-y-5 max-w-3xl">
+      <section className="page-section space-y-6 sm:space-y-8 bg-white">
+        <div className="space-y-3 sm:space-y-4">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
             CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 유아기의 핵심 발달 영역을 고려한
             통합형 커리큘럼을 기반으로 교육 프로그램을 운영합니다.
@@ -137,16 +136,16 @@ export default function ProgramsPage() {
 
         {/* 연령별 프로그램 탭 */}
         {activeTab === "age" && (
-        <div className="space-y-8">
+        <div className="space-y-6">
         <div>
           <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>연령별 프로그램</h2>
-          <p className="text-sm sm:text-base text-zinc-600 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 mb-4 sm:mb-6 leading-relaxed">
             각 연령대에 맞춘 체계적인 교육 프로그램을 제공합니다.
           </p>
 
-          <div className="space-y-8">
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
             {/* Pre-K Program */}
-            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Pre-K Program (만 3세/한국나이 5세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
@@ -164,7 +163,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Junior Kinder */}
-            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Junior Kinder (만 4세/한국나이 6세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
@@ -182,7 +181,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Senior Kinder */}
-            <div className="rounded-2xl border-2 bg-white p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
               <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
               <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Senior Kinder (만 5세/한국나이 7세)</h3>
               <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">

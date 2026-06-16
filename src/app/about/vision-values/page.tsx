@@ -59,7 +59,8 @@ export default function AboutVisionValuesPage() {
     <>
       <SubHero title="비전과 가치" breadcrumb="HOME > 소개 > 비전과 가치" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16 space-y-8 sm:space-y-12">
+      <section className="page-section space-y-6 sm:space-y-8">
+        <div className="grid gap-6 lg:grid-cols-2">
         {/* 미션 */}
         <div>
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">미션</h2>
@@ -85,8 +86,8 @@ export default function AboutVisionValuesPage() {
             </p>
           </div>
         </div>
+        </div>
 
-        {/* 핵심 가치 카드 */}
         <div>
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4">핵심 가치</h2>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-zinc-500 leading-relaxed">

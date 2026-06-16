@@ -47,16 +47,15 @@ export default function CommunityPage() {
     <>
       <SubHero title="커뮤니티" breadcrumb="HOME > 커뮤니티" />
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 space-y-10 sm:space-y-14 md:space-y-16 bg-white">
-        {/* 안내 요약 */}
-        <div className="space-y-4 sm:space-y-6 max-w-3xl">
+      <section className="page-section page-stack bg-white">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,320px)] lg:items-start">
           <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
             커뮤니티에서는 CEDAR HILL Global 어학원의 공지사항과 주요 소식,
             활동 안내를 확인하실 수 있습니다. 학부모와의 원활한 소통을 위해
             정기적으로 정보를 업데이트합니다.
           </p>
 
-          <div className="rounded-2xl border-2 p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
+          <div className="rounded-2xl border-2 p-5 sm:p-6" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
             <div className="text-xs sm:text-sm text-zinc-600">문의</div>
             <div className="mt-2 text-base sm:text-lg font-semibold" style={{ color: "var(--brand-navy)" }}>
               <a href="tel:032-875-8733" className="hover:underline">032-875-8733~4</a>

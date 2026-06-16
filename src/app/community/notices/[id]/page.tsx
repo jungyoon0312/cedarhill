@@ -31,11 +31,10 @@ export default async function NoticeDetailPage({ params }: Props) {
     <>
       <SubHero title="공지사항" breadcrumb="HOME > 커뮤니티 > 공지사항" />
 
-      <section className="mx-auto max-w-4xl px-4 py-12 sm:py-20 md:py-24 bg-white">
-        {/* 뒤로가기 버튼 */}
+      <section className="mx-auto max-w-4xl px-4 py-8 sm:py-10 md:py-12 bg-white">
         <Link
           href="/community"
-          className="inline-flex items-center gap-2 text-sm sm:text-base text-zinc-600 hover:text-zinc-900 mb-6 sm:mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm sm:text-base text-zinc-600 hover:text-zinc-900 mb-4 sm:mb-5 transition-colors"
         >
           <span>←</span>
           <span>목록으로</span>

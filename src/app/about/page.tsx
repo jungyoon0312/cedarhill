@@ -31,15 +31,16 @@ const cards = [
 
 export default function AboutPage() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12 sm:py-20 md:py-24 bg-white">
-      {/* 타이틀 */}
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
-      <p className="text-sm sm:text-base md:text-lg text-zinc-700 max-w-3xl leading-relaxed">
-        CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 인천 미추홀구 학익동에 위치한 학교교과교습학원으로, 실용외국어 등 국제화 교육 방향의 프로그램을 안내합니다.
-      </p>
+    <section className="page-section bg-white">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:items-start">
+        <div>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold sm:font-bold tracking-tight mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>소개</h1>
+          <p className="text-sm sm:text-base md:text-lg text-zinc-700 leading-relaxed">
+            CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 인천 미추홀구 학익동에 위치한 학교교과교습학원으로, 실용외국어 등 국제화 교육 방향의 프로그램을 안내합니다.
+          </p>
+        </div>
 
-      {/* 카드 그리드 */}
-      <div className="mt-10 sm:mt-14 md:mt-16 grid gap-4 sm:gap-6 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
         {cards.map((card) => (
           <Link
             key={card.title}
@@ -63,6 +64,7 @@ export default function AboutPage() {
             </div>
           </Link>
         ))}
+        </div>
       </div>
     </section>
   );

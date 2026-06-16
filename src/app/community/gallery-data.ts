@@ -8,16 +8,6 @@ export type GalleryCategory = {
 
 export const galleryCategories: GalleryCategory[] = [
   {
-    id: "wittiverse",
-    title: "Wittiverse Learning Center",
-    date: "2026-02",
-    thumbnail: "/images/wittiverse1.jpg",
-    images: [
-      "/images/wittiverse1.jpg",
-      "/images/wittiverse2.jpg",
-    ],
-  },
-  {
     id: "play-learn-hub",
     title: "Play & Learn Hub",
     date: "2026-02",
@@ -87,18 +77,6 @@ export const galleryCategories: GalleryCategory[] = [
     images: [
       "/images/library1.jpg",
       "/images/library2.jpg",
-    ],
-  },
-  {
-    id: "renzuli-ai-coding",
-    title: "RENZULI AI Coding Center",
-    date: "2026-02",
-    thumbnail: "/images/RENZULI1.jpg",
-    images: [
-      "/images/RENZULI1.jpg",
-      "/images/RENZULI2.jpg",
-      "/images/RENZULI3.jpg",
-      "/images/RENZULI4.jpg",
     ],
   },
 ];

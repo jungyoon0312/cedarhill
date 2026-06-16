@@ -216,7 +216,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           fetchPriority="high"
         />
       </head>
-      <body className={`${kr.variable} ${cinzel.variable}`}>
+      <body className={`${kr.variable} ${cinzel.variable} flex min-h-screen flex-col`}>
         {/* 구조화된 데이터 (JSON-LD) - 비동기 로딩 */}
         {/* 구조화된 데이터 (JSON-LD) - EducationalOrganization */}
         <Script
@@ -233,7 +233,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

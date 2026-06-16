@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { noticePosts } from "./community/notices-data";
+import PopupModal from "./components/PopupModal";
 
 const programs = [
   {
@@ -43,6 +44,17 @@ export default function HomePage() {
 
   return (
     <main>
+      <PopupModal
+        imageSrc="/images/summer_camp.png"
+        alt="2026 CEDAR HILL SUMMER CAMP 안내"
+        imageWidth={1632}
+        imageHeight={2176}
+        storageKey="summer-camp-popup-closed"
+        applicationUrl="tel:032-875-8733"
+        ctaAriaLabel="지금 바로 신청하기"
+        ctaArea={{ top: "79%", left: "12.5%", width: "75%", height: "7%" }}
+      />
+
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

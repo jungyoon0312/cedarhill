@@ -1,224 +1,243 @@
-"use client";
-
-import { useState } from "react";
-import type { Metadata } from "next";
 import SubHero from "../components/SubHero";
 
-// Note: metadata는 클라이언트 컴포넌트에서 사용할 수 없으므로 제거했습니다.
+const stats = [
+  { value: "60", unit: "분", label: "매일 구조화된 수업" },
+  { value: "2", unit: "개", label: "맞춤 배치 프로그램" },
+  { value: "4", unit: "가지", label: "핵심 영어 스킬" },
+  { value: "1", unit: "시간", label: "완전한 학습 루틴" },
+];
 
-type ProgramCardProps = {
-  title: string;
-  bullets: string[];
-};
+const dailyRoutine = [
+  {
+    name: "SARAM",
+    time: "10분",
+    title: "태도의 집중",
+    desc: "행동 · 태도 먼저, 배움의 준비. 수업 시작 전 마음을 여는 시간입니다.",
+  },
+  {
+    name: "CORE",
+    time: "45분",
+    title: "구조화된 집중 수업",
+    desc: "Jolly Phonics · Our World 기반의 집중 수업으로 구조화된 몰입 학습을 진행합니다.",
+  },
+  {
+    name: "CAPTURE",
+    time: "5분",
+    title: "기록 · 피드백",
+    desc: "리포트 작성 후 부모님께 당일 전달하여 학습 과정을 함께 확인합니다.",
+  },
+];
 
+const cedarHillApproach = [
+  "소리 → 해독 → 읽기 순서로 기초를 쌓습니다",
+  "Jolly Phonics 3단계 체계적 커리큘럼",
+  "Our World 6레벨 종합 프로그램",
+  "EHRI 기반 진단 배치로 맞춤 수준 설정",
+  "매일 60분 구조화된 수업",
+  "당일 부모 리포트 제공",
+];
 
-function ProgramCard({ title, bullets }: ProgramCardProps) {
-  return (
-    <div className="rounded-2xl border-2 bg-white p-4 sm:p-6 md:p-8 shadow-sm transition hover:shadow-md" style={{ borderColor: "var(--brand-navy)" }}>
-      <div className="h-1 w-12 rounded-full mb-4 sm:mb-6" style={{ background: "var(--brand-burgundy)" }} />
-      <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>{title}</h3>
-      <ul className="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">
-        {bullets.map((b, idx) => (
-          <li key={`${title}-${idx}`}>{b}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const traditionalApproach = [
+  "단어만 암기하기",
+  "패턴 반복 훈련",
+  "두꺼운 교재만 진도 나가기",
+  "숙제 양으로 실력 착각하기",
+  "발음 교정 없음",
+  "읽기 전 말하기 강요",
+];
 
 export default function ProgramsPage() {
-  const [activeTab, setActiveTab] = useState<"age" | "features">("age");
-
-  const programBlocks: ProgramCardProps[] = [
-    {
-      title: "Pre-K 과정",
-      bullets: [
-        "유아 발달 단계에 맞춘 기초 학습 및 언어 활동 중심",
-        "놀이 기반 학습을 통해 학습 흥미 및 습관 형성 지원",
-        "영어를 주요 교수언어로 활용하는 수업 경험 제공",
-      ],
-    },
-    {
-      title: "STEAM 기반 테마 학습",
-      bullets: [
-        "과학·기술·예술·수학을 융합한 주제 중심 수업 구성",
-        "탐구·실험·표현 활동을 통해 사고력 및 창의성 강화",
-        "문제 해결 과정을 경험하며 자기주도 학습 태도 형성",
-      ],
-    },
-    {
-      title: "통합형 활동(SEL/신체/정서)",
-      bullets: [
-        "사회정서학습(SEL)을 바탕으로 관계 형성과 자기조절 지원",
-        "신체 활동을 포함한 균형 있는 일과 구성",
-        "감각·정서 발달을 고려한 교실 활동 및 루틴 운영",
-      ],
-    },
-    {
-      title: "학습·성장 기록 및 가정 연계",
-      bullets: [
-        "학습 과정의 관찰·기록을 기반으로 학생별 성장 지원",
-        "가정과의 정기 소통을 통해 교육 경험을 확장",
-        "학생의 강점과 보완 영역을 균형 있게 관리",
-      ],
-    },
-    {
-      title: "학습 자료 및 운영(교재/도구)",
-      bullets: [
-        "수업 목적에 맞는 학습 자료를 체계적으로 활용",
-        "연령별 수준에 맞춘 활동 구성으로 성취감 강화",
-        "프로젝트형 활동을 통해 협업과 표현 역량 강화",
-      ],
-    },
-    {
-      title: "English Immersion(영어 중심 수업)",
-      bullets: [
-        "일상 소통과 수업에서 영어를 적극 활용하는 환경 제공",
-        "발화 기회를 충분히 제공하여 자신감 있는 표현 지원",
-        "기초 언어 능력과 사고 언어의 자연스러운 연결",
-      ],
-    },
-  ];
-
   return (
     <>
       <SubHero title="프로그램" breadcrumb="HOME > 프로그램" />
 
-      <section className="page-section space-y-6 sm:space-y-8 bg-white">
-        <div className="space-y-3 sm:space-y-4">
-          <p className="text-zinc-800 text-sm sm:text-base md:text-lg leading-relaxed">
-            CEDAR HILL Global 어학원(등록명: 씨더힐글로벌어학원)은 유아기의 핵심 발달 영역을 고려한
-            통합형 커리큘럼을 기반으로 교육 프로그램을 운영합니다.
-            주요 수업에서 영어를 활용하는 환경에서 학생의 성장 단계에 맞춘
-            학습 경험을 제공합니다.
-          </p>
-          <p className="text-zinc-700 text-xs sm:text-sm md:text-base leading-relaxed">
-            본 페이지의 프로그램 구성은 기관 운영 방향에 따라 조정될 수 있으며,
-            상세 사항은 상담을 통해 안내드립니다.
-          </p>
-        </div>
-
-        {/* 탭 네비게이션 */}
-        <div className="border-b-2" style={{ borderColor: "var(--brand-navy)" }}>
-          <div className="flex flex-wrap gap-2 sm:gap-4">
-            <button
-              onClick={() => setActiveTab("age")}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all ${
-                activeTab === "age"
-                  ? "text-white border-b-4"
-                  : "text-zinc-600 hover:text-zinc-800"
-              }`}
-              style={
-                activeTab === "age"
-                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
-                  : {}
-              }
-            >
-              연령별 프로그램
-            </button>
-            <button
-              onClick={() => setActiveTab("features")}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all ${
-                activeTab === "features"
-                  ? "text-white border-b-4"
-                  : "text-zinc-600 hover:text-zinc-800"
-              }`}
-              style={
-                activeTab === "features"
-                  ? { backgroundColor: "var(--brand-navy)", borderBottomColor: "var(--brand-burgundy)" }
-                  : {}
-              }
-            >
-              교육 특징
-            </button>
-          </div>
-        </div>
-
-        {/* 연령별 프로그램 탭 */}
-        {activeTab === "age" && (
-        <div className="space-y-6">
-        <div>
-          <h2 className="font-bold tracking-tight font-title" style={{ color: "var(--brand-navy)" }}>연령별 프로그램</h2>
-          <p className="text-sm sm:text-base text-zinc-600 mb-4 sm:mb-6 leading-relaxed">
-            각 연령대에 맞춘 체계적인 교육 프로그램을 제공합니다.
-          </p>
-
-          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
-            {/* Pre-K Program */}
-            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-              <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Pre-K Program (만 3세/한국나이 5세)</h3>
-              <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                <strong>Experience Early Learning Curriculum</strong>을 기반으로 한 테마 기반 커리큘럼입니다. 매달 새롭고 흥미로운 테마를 도입하여 아이들의 호기심을 자극하고 학습에 대한 흥미를 유지합니다. 각 월별 테마는 문해력, 수학, 과학, 사회, 창의 예술을 의미 있고 실제적인 경험을 통해 연결하도록 설계되었습니다.
+      <section className="page-section bg-white">
+        <div className="page-stack">
+          {/* 소개 */}
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
+            <div>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>
+                AI 시대, 영어의 기초를 다시 봐야 합니다
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-zinc-700 leading-relaxed">
+                CEDAR HILL Global 어학원은 외우는 영어가 아닌, 이해하고 읽고 쓰고 말하는 영어를
+                목표로 합니다. 처음 60분을 어떻게 쌓느냐가 이후 학습 속도를 결정합니다.
               </p>
-              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 특징:</p>
-                <ul className="text-sm text-zinc-700 space-y-1.5 list-disc pl-5 leading-relaxed">
-                  <li>월별 테마 기반 통합 학습 (Family & Pets, Down on the Farm, Community Helpers 등)</li>
-                  <li>문해력, 수학, 과학, 사회, 창의 예술의 통합적 접근</li>
-                  <li>감각 활동(Sensory) 및 블록 활동(Blocks)을 통한 체험 학습</li>
-                  <li>해외 사립학교 교육 현장에서도 활용되는 유형의 커리큘럼</li>
-                </ul>
-              </div>
             </div>
-
-            {/* Junior Kinder */}
-            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-              <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Junior Kinder (만 4세/한국나이 6세)</h3>
-              <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                Experience Early Learning을 기반으로 한 테마/STEAM 기반 커리큘럼으로, 언어와 문해력 발달에 중점을 둡니다. 미국 학년도 Senior Kindergarten에 맞춘 수준의 읽기, 쓰기, 구두 의사소통 기초를 다룹니다.
+            <div
+              className="rounded-2xl border-2 p-5 sm:p-6 md:p-8"
+              style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}
+            >
+              <p className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>
+                외우는 영어는 끝났습니다.
               </p>
-              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 학습 영역:</p>
-                <ul className="text-sm text-zinc-700 space-y-1.5 list-disc pl-5 leading-relaxed">
-                  <li>Numbers & Figures: 수학 및 계산 기초</li>
-                  <li>Theme/Science/Art/Social-Emotional: 테마 기반 통합 학습</li>
-                  <li>Language Art: SPECTRUM Phonics K</li>
-                  <li>Literacy: myView LITERACY K5</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Senior Kinder */}
-            <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm h-full" style={{ borderColor: "var(--brand-navy)" }}>
-              <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
-              <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>Senior Kinder (만 5세/한국나이 7세)</h3>
-              <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
-                연령에 맞춘 심화 학습 활동을 중심으로 읽기, 쓰기, 수학, 과학, 사회 영역을 균형 있게 다룹니다.
-                이 단계에서는 핵심 학과목에 초점을 두어 초등학교 생활에 필요한 기초 지식과 기술을 갖출 수 있도록 지원합니다.
+              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">
+                이해하는 영어, 읽는 영어, 쓰는 영어, 말하는 영어.
+                <br />
+                단어장도, 숙제 폭탄도 없이 매일 60분으로 영어의 기초를 쌓습니다.
               </p>
-              <div className="mt-4 p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>주요 과목:</p>
-                <ul className="text-sm text-zinc-700 space-y-1.5 list-disc pl-5 leading-relaxed">
-                  <li>Language Art / Reading / Science: SPECTRUM Math, 다양한 수학 학습 도구</li>
-                  <li>Science-Additional: Inspire Science Living Things</li>
-                  <li>Social Study: IMPACT SOCIAL STUDIES Learning and Working Together</li>
-                  <li>Additional Reading Program: Renaissance Raz-Kids</li>
-                </ul>
-              </div>
             </div>
           </div>
-        </div>
-        </div>
-        )}
 
-        {/* 교육 특징 탭 */}
-        {activeTab === "features" && (
-        <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold tracking-tight font-title mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>교육 특징</h2>
-          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed mb-4 sm:mb-6">
-            주요 교육 특징을 영역별로 정리하였습니다.
-          </p>
-
-          <div className="mt-4 sm:mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {programBlocks.map((p) => (
-              <ProgramCard key={p.title} title={p.title} bullets={p.bullets} />
+          {/* 핵심 수치 */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {stats.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-2xl border-2 bg-white p-4 sm:p-6 text-center shadow-sm"
+                style={{ borderColor: "var(--brand-navy)" }}
+              >
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: "var(--brand-navy)" }}>
+                  {item.value}
+                  <span className="text-base sm:text-lg md:text-xl font-semibold ml-1">{item.unit}</span>
+                </div>
+                <p className="mt-2 text-xs sm:text-sm text-zinc-600 leading-relaxed">{item.label}</p>
+              </div>
             ))}
           </div>
-        </div>
-        )}
 
+          {/* 두 가지 프로그램 */}
+          <div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>
+              두 가지 프로그램, 한 가지 원칙
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 mb-5 sm:mb-6 leading-relaxed">
+              학생의 영어 수준과 목표에 따라 두 개의 문 중 하나로 맞춤 배치합니다.
+            </p>
+
+            <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
+              <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+                <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-burgundy)" }} />
+                <p className="text-xs sm:text-sm font-semibold tracking-wide mb-2" style={{ color: "var(--brand-burgundy)" }}>
+                  PHONICS CORE
+                </p>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>
+                  영어를 처음 여는 아이를 위한 길
+                </h3>
+                <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
+                  Jolly Phonics · 42 Sounds · Blending · Tricky Words
+                </p>
+                <div className="rounded-lg p-4" style={{ background: "var(--brand-slate)" }}>
+                  <p className="text-xs sm:text-sm text-zinc-600 mb-1">레벨 진행</p>
+                  <p className="text-sm sm:text-base font-medium" style={{ color: "var(--brand-navy)" }}>
+                    Pre-A1 → A1
+                  </p>
+                  <p className="text-sm sm:text-base font-medium mt-1" style={{ color: "var(--brand-navy)" }}>
+                    EHRI Pre → Full Alphabetic
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+                <div className="h-1 w-12 rounded-full mb-4" style={{ background: "var(--brand-navy)" }} />
+                <p className="text-xs sm:text-sm font-semibold tracking-wide mb-2" style={{ color: "var(--brand-navy)" }}>
+                  ENGLISH CORE
+                </p>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>
+                  유창함을 향해 달리는 아이를 위한 길
+                </h3>
+                <p className="text-sm sm:text-base text-zinc-700 mb-4 leading-relaxed">
+                  Our World · Vocabulary · Grammar · Speaking · Writing
+                </p>
+                <div className="rounded-lg p-4" style={{ background: "var(--brand-slate)" }}>
+                  <p className="text-xs sm:text-sm text-zinc-600 mb-1">레벨 진행</p>
+                  <p className="text-sm sm:text-base font-medium" style={{ color: "var(--brand-navy)" }}>
+                    Pre-A1 → B1
+                  </p>
+                  <p className="text-sm sm:text-base font-medium mt-1" style={{ color: "var(--brand-navy)" }}>
+                    EHRI Full → Automatic
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 매일 60분 루틴 */}
+          <div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>
+              매일 이 구조가 반복됩니다
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 mb-5 sm:mb-6 leading-relaxed">
+              매일 60분, 빠짐없이, 꽉 채운 수업. 이게 전부입니다.
+            </p>
+
+            <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+              {dailyRoutine.map((step) => (
+                <div
+                  key={step.name}
+                  className="rounded-2xl border-2 bg-white p-5 sm:p-6 shadow-sm"
+                  style={{ borderColor: "var(--brand-navy)" }}
+                >
+                  <div className="flex items-baseline gap-2 mb-3">
+                    <span className="text-sm sm:text-base font-bold tracking-wide" style={{ color: "var(--brand-burgundy)" }}>
+                      {step.name}
+                    </span>
+                    <span className="text-xs sm:text-sm text-zinc-500">{step.time}</span>
+                  </div>
+                  <h3 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>
+                    {step.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CEDAR HILL vs 기존 방식 */}
+          <div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold sm:font-bold mb-2 sm:mb-3" style={{ color: "var(--brand-navy)" }}>
+              CEDAR HILL 방식
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 mb-5 sm:mb-6 leading-relaxed">
+              숙제 양으로 영어 실력이 느는 시대는 이미 끝났습니다.
+              구조화된 60분으로 기초를 쌓습니다.
+            </p>
+
+            <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
+              <div className="rounded-2xl border-2 p-5 sm:p-6 md:p-8" style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}>
+                <h3 className="text-sm sm:text-base font-semibold mb-4 text-zinc-500">기존 방식</h3>
+                <ul className="space-y-2 text-xs sm:text-sm text-zinc-600 list-disc pl-4 sm:pl-5 leading-relaxed">
+                  {traditionalApproach.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border-2 bg-white p-5 sm:p-6 md:p-8 shadow-sm" style={{ borderColor: "var(--brand-navy)" }}>
+                <h3 className="text-sm sm:text-base font-semibold mb-4" style={{ color: "var(--brand-navy)" }}>
+                  CEDAR HILL 방식
+                </h3>
+                <ul className="space-y-2 text-xs sm:text-sm text-zinc-700 list-disc pl-4 sm:pl-5 leading-relaxed">
+                  {cedarHillApproach.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 마무리 CTA */}
+          <div
+            className="rounded-2xl border-2 p-6 sm:p-8 md:p-10 text-center"
+            style={{ borderColor: "var(--brand-navy)", background: "var(--brand-slate)" }}
+          >
+            <p className="text-base sm:text-lg md:text-xl font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>
+              두 개의 문 · 하나의 방법 · 매일 60분
+            </p>
+            <p className="text-sm sm:text-base text-zinc-600 mb-6 leading-relaxed">
+              Two Programs. One Method. Built to Last.
+              <br />
+              처음 60분이 평생의 속도를 만듭니다.
+            </p>
+            <a
+              href="tel:032-875-8733"
+              className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg"
+              style={{ backgroundColor: "var(--brand-burgundy)" }}
+            >
+              📞 입학 상담 신청하기
+            </a>
+          </div>
+        </div>
       </section>
     </>
   );

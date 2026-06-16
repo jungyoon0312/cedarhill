@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Co-Curricular Activities | CEDAR HILL Global 어학원",
-  description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, English Lab, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
+  description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
   openGraph: {
     title: "Co-Curricular Activities | CEDAR HILL Global 어학원",
-    description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, English Lab, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
+    description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
     url: "https://www.cedarhgp.org/co-curricular-activities",
     type: "website",
     images: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Co-Curricular Activities | CEDAR HILL Global 어학원",
-    description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, English Lab, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
+    description: "CEDAR HILL Global 어학원의 방과후 활동 프로그램을 소개합니다. Power Place, NADAUN ART, FUTURUM 등 다양한 아카데미 프로그램을 확인하세요.",
     images: ["/images/library1.jpg"],
   },
 };

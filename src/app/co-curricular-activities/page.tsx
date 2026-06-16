@@ -7,12 +7,10 @@ export default function CoCurricularActivitiesPage() {
   const [openSections, setOpenSections] = useState<{
     powerPlace: boolean;
     nadaunArt: boolean;
-    englishLab: boolean;
     futurum: boolean;
   }>({
     powerPlace: false,
     nadaunArt: false,
-    englishLab: false,
     futurum: false,
   });
 
@@ -213,79 +211,6 @@ export default function CoCurricularActivitiesPage() {
                     <p className="text-xs sm:text-sm text-zinc-600">
                       6-7세, 초등학생<br />
                       영어책 북아트 & 독후활동
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* English Lab 아코디언 */}
-        <div className="rounded-2xl border-2 bg-white shadow-sm overflow-hidden" style={{ borderColor: "var(--brand-navy)" }}>
-          <button
-            onClick={() => toggleSection("englishLab")}
-            className="w-full text-left px-4 sm:px-5 py-3 sm:py-4 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-3"
-          >
-            <h3 className="text-sm sm:text-base md:text-lg font-semibold sm:font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-white inline-block" style={{ background: "var(--brand-navy)", color: "#ffffff" }}>
-              English Lab
-            </h3>
-            <span className="text-zinc-500 text-sm shrink-0">
-              {openSections.englishLab ? "▼" : "▶"}
-            </span>
-          </button>
-          
-          {openSections.englishLab && (
-            <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2">
-              <div className="mb-4 sm:mb-6">
-                <p className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-burgundy)" }}>ENGLISH PROGRAM</p>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-                  씨더힐 글로벌 어학원 졸업 후 한국 학교 진학을 희망하는 학생, 글로벌 교육 준비생 및 재학생 중 학업 보강이 필요한 학생을 위한 프로그램입니다.
-                </p>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed">
-                  미국 Common Core를 참고한 커리큘럼 구성으로, 영어 학습 역량을 단계적으로 다룰 수 있도록 지원합니다.
-                </p>
-              </div>
-
-              {/* Cedar Hill English Lab Curriculum */}
-              <div className="mb-4 sm:mb-6">
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Cedar Hill English Lab Curriculum</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>World of English</h5>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      언어의 필수 5가지 영역을 학습할 수 있는 디지털 영어 프로그램
-                    </p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Iowa Brain Learning</h5>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      AR레벨별 원서를 기반으로 한 논리·사고력 영어글쓰기
-                    </p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg" style={{ background: "var(--brand-slate)" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-navy)" }}>Renaissance</h5>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      북퀴즈 체계적인 관리 가능한 리딩 프로그램
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Special Activities */}
-              <div>
-                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4" style={{ color: "var(--brand-navy)" }}>Special Activities</h4>
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>MENSA Logic & Reasoning</h5>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      멘사 기반의 창의 사고력 프로세스 영어로 사고하고 논리로 증명하는 Reasoning 훈련
-                    </p>
-                  </div>
-                  <div className="p-3 sm:p-4 rounded-lg border-2" style={{ borderColor: "var(--brand-navy)", background: "white" }}>
-                    <h5 className="text-sm sm:text-base font-semibold mb-2" style={{ color: "var(--brand-burgundy)" }}>Role Box Career</h5>
-                    <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed">
-                      글로벌 직업 현장 그대로의 몰입감 놀이 중심 사고력 프로그램
                     </p>
                   </div>
                 </div>

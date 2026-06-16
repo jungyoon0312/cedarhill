@@ -49,10 +49,9 @@ export default function HomePage() {
         alt="2026 CEDAR HILL SUMMER CAMP 안내"
         imageWidth={1632}
         imageHeight={2176}
-        storageKey="summer-camp-popup-closed"
+        storageKey="summer-camp-popup-closed-v2"
         applicationUrl="tel:032-875-8733"
-        ctaAriaLabel="지금 바로 신청하기"
-        ctaArea={{ top: "79%", left: "12.5%", width: "75%", height: "7%" }}
+        applicationButtonText="지금 바로 신청하기"
       />
 
       {/* HERO */}

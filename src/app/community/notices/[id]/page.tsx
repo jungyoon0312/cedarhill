@@ -126,6 +126,19 @@ export default async function NoticeDetailPage({ params }: Props) {
             </div>
           )}
 
+          {/* 여름캠프 신청 버튼 */}
+          {post.id === "summer-camp-2026" && (
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <a
+                href="tel:032-875-8733"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "var(--brand-burgundy)" }}
+              >
+                지금 바로 신청하기
+              </a>
+            </div>
+          )}
+
           {/* 오픈하우스 신청 버튼 */}
           {post.id === "open-house-2026-03" && (
             <div className="mt-6 sm:mt-8 flex justify-center">

@@ -3,13 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-type CtaArea = {
-  top: string;
-  left: string;
-  width: string;
-  height: string;
-};
-
 interface PopupModalProps {
   imageSrc: string;
   alt: string;
@@ -17,8 +10,7 @@ interface PopupModalProps {
   imageHeight: number;
   storageKey?: string;
   applicationUrl?: string;
-  ctaAriaLabel?: string;
-  ctaArea?: CtaArea;
+  applicationButtonText?: string;
 }
 
 export default function PopupModal({
@@ -28,8 +20,7 @@ export default function PopupModal({
   imageHeight,
   storageKey = "popup-closed",
   applicationUrl,
-  ctaAriaLabel = "지금 바로 신청하기",
-  ctaArea = { top: "79%", left: "12.5%", width: "75%", height: "7%" },
+  applicationButtonText = "지금 바로 신청하기",
 }: PopupModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -78,33 +69,29 @@ export default function PopupModal({
               className="h-auto w-full"
               priority
             />
-            {applicationUrl && (
-              <a
-                href={applicationUrl}
-                className="absolute z-10 cursor-pointer rounded-sm transition-colors hover:bg-white/10"
-                style={{
-                  top: ctaArea.top,
-                  left: ctaArea.left,
-                  width: ctaArea.width,
-                  height: ctaArea.height,
-                }}
-                aria-label={ctaAriaLabel}
-              />
-            )}
           </div>
         </div>
 
         <div
-          className="flex-shrink-0 border-t p-3 sm:p-4"
+          className="flex flex-shrink-0 flex-col gap-2 border-t p-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-4"
           style={{ borderColor: "var(--brand-slate)" }}
         >
           <button
             onClick={handleCloseToday}
-            className="w-full rounded-lg px-4 py-2.5 text-xs font-semibold text-white shadow-lg transition-all hover:scale-[1.02] sm:text-sm"
+            className="w-full rounded-lg px-4 py-2.5 text-xs font-semibold text-white shadow-lg transition-all hover:scale-[1.02] sm:w-auto sm:text-sm"
             style={{ backgroundColor: "var(--brand-navy)" }}
           >
             오늘 하루 보지 않기
           </button>
+          {applicationUrl && (
+            <a
+              href={applicationUrl}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl sm:w-auto sm:py-3"
+              style={{ backgroundColor: "var(--brand-burgundy)" }}
+            >
+              {applicationButtonText}
+            </a>
+          )}
         </div>
       </div>
     </div>

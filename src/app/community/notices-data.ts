@@ -13,8 +13,7 @@ export const noticePosts: NoticePost[] = [
     title: "2026 CEDAR HILL SUMMER CAMP 모집 안내",
     date: "2026-06-02",
     category: "모집",
-    content:
-      "CEDAR HILL Global 어학원 2026 여름캠프에 여러분을 초대합니다.\n\n미술도 체육도 영어로 배웁니다.\n\n【기간】\n2026년 7월 27일 (월) ~ 8월 7일 (금) · 10일\n※ 5일 단위 등록도 가능합니다\n\n【대상】\n7세 ~ 초등 5학년\n\n【시간】\n10:00 ~ 13:40\n\n【비용】\n10일 기준 58만 원\n\n【프로그램】\n• Language Art\n• Real Art\n• Fun P.E.\n\n【문의 및 신청】\n032-875-8733\n\n【장소】\n시티오씨엘 4단지 상가 1층 (학익동 30)",
+    content: "",
     images: ["/images/summer_camp.png"],
   },
   {

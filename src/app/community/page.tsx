@@ -81,9 +81,22 @@ export default function CommunityPage() {
               {noticePosts.map((post) => (
                 <div
                   key={post.id}
-                  className="rounded-2xl border-2 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all"
+                  className="rounded-2xl border-2 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden"
                   style={{ borderColor: "var(--brand-navy)" }}
                 >
+                  {post.id === "summer-camp-2026" && post.images?.[0] ? (
+                    <Link href={`/community/notices/${post.id}`} className="block">
+                      <Image
+                        src={post.images[0]}
+                        alt={post.title}
+                        width={1200}
+                        height={1600}
+                        quality={85}
+                        className="w-full h-auto"
+                      />
+                    </Link>
+                  ) : (
+                  <div className="p-4 sm:p-6">
                   <Link
                     href={`/community/notices/${post.id}`}
                     className="block"
@@ -125,6 +138,8 @@ export default function CommunityPage() {
                         3회 입학설명회 및 체험수업 신청하기
                       </a>
                     </div>
+                  )}
+                  </div>
                   )}
                 </div>
               ))}
